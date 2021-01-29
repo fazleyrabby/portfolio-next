@@ -587,7 +587,7 @@
 		window.onload = function(){
 			document.getElementById('form').addEventListener('submit', function(event){
 				event.preventDefault();
-				emailjs.sendForm('service_tg7uyjk','template_h7sl3ys', this);
+				emailjs.sendForm("service_tg7uyjk","template_h7sl3ys", this);
 				alert('Message Send Successfully!');
 				document.getElementById('form').reset();
 			});
