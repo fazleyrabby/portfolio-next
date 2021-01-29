@@ -330,7 +330,7 @@
             <h2 class="bg-text">Contact</h2>
             <div class="contacts">
                 <div class="form">
-                    <form class="mb2 mt4" netlify>
+                    <form class="mb2 mt4" id="form">
                         <div class="form-group">
                             <span id="email__err"></span>
                             <input type="email" class="email" name="email" placeholder="&nbsp;" />
@@ -571,7 +571,28 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         })
+
+
+
     </script>
+
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+	<script type="text/javascript">
+	(function() {
+	emailjs.init("user_htm9b5hAkt5XKVtSvHokv");
+	})();
+	</script>
+
+	<script>
+		window.onload = function(){
+			document.getElementById('form').addEventListener('submit', function(event){
+				event.preventDefault();
+				emailjs.sendForm('service_tg7uyjk','template_h7sl3ys', this);
+				alert('Message Send Successfully!');
+				document.getElementById('form').reset();
+			});
+		};
+	</script>
 </body>
 
 </html>
