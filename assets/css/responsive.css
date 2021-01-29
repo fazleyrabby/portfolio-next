@@ -1,0 +1,214 @@
+
+@media screen and (max-width: 500px) {
+    footer{
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 1.4em !important;
+      }
+    .flex-wrapper,
+    .flex-wrapper-reverse {
+        flex-direction: column !important;
+    }
+
+    .slogan{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .slogan .btn{
+        width: 80%;
+        text-align: center;
+    }
+    
+    .exp-details{
+        flex-direction: column !important;
+    }
+
+    .exp-details .card{
+        margin: 12px 0 !important;
+        font-size: 1em;
+    }
+    .card-body ul li{
+        padding: 5px 0 !important;
+        margin: 5px 0 !important;
+    }
+
+    #experience .container .flex-wrapper-reverse{
+        padding: 0 !important;
+    }
+
+    .work-items{ 
+        grid-template-columns: 1fr !important;
+        width: 100%;
+    }
+    #contact {
+        margin-top: 20em !important;
+    }
+
+    .modal-content{
+        margin: 50% auto !important;
+        width: 80% !important;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .burger {
+		display: block !important;
+    }
+
+    .burger.show-x .bar:nth-of-type(1) {
+		transform: translate(-50%, 50%) rotate(225deg);
+	}
+	
+	.burger.show-x .bar:nth-of-type(2) {
+		transform: translate(-50%, -150%) rotate(-225deg);
+	}
+	
+	.burger.show-x .bar:nth-of-type(3) {
+		display: none;
+    } 
+
+    .menu ul {
+		background-color: #fff;
+		box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        justify-content: center;
+		text-align: center;
+		position: fixed;
+		top: 80px;
+		left: 10%;
+		transform: translateX(120%);
+        width: 80%;
+        min-height: 50vh;
+		transition: transform 0.3s ease-in;
+		z-index: 100;
+    }
+    .menu ul li {
+        margin: 0 !important;
+        font-size: 1.4em;
+    }
+    ul.show {
+		transform: translateX(0);
+	}
+	
+	ul li {
+        margin: 15px;
+        padding: 10px;
+    } 
+    ul li a{
+        font-size: 1.4rem !important;
+    }
+    .flex-wrapper,.flex-wrapper-reverse{
+        padding: 0 !important;
+    }
+    #about{
+        margin: 7rem 0 0 0 ;
+    }
+    #about .container .flex-wrapper{
+        flex-direction: column;
+    }
+    .skills{
+        width: 100%;
+        padding: 0 !important;
+    }
+    .skills ul li {
+        padding: 2px;
+        margin: 1rem 0;
+    }
+    
+ 
+    .exp-illustration img{
+        display: none;
+        /* transform: scale(1.2) translateX(0) !important; */
+    }
+    .form{
+        width: 100%;
+    }
+    .work-item-details h2{
+        font-size: 1rem;
+    }
+    .work-item-details p {
+        font-size: 0.8rem;
+    }
+    .work-item-tech li{
+        font-size: 0.6rem;
+    }  
+    .work-item-details{
+        padding: 4px;
+    }
+    #experience .container .flex-wrapper-reverse{
+        flex-direction: column;
+    }
+    .exp{
+       flex: auto;
+       align-self: center;
+    }
+    .exp-details{
+        flex-direction: row;
+    }
+    .exp-details .card{
+        width: 100% !important;
+        font-size: 1em;
+    }
+    .card-title{
+        font-size: 1.1rem;
+    }
+    .card-body{
+        font-size: 1rem;
+    }
+    .work-items{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
+    }
+    /* .work-items .card{ 
+        width: 48%;
+        height: 200px;
+        margin: 15px 0;
+    } */
+    /* .work-item-details p{
+        display: none;
+    }
+    .work-items .card img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    } */
+
+    
+
+}
+
+@media (max-width: 479px) {
+    .skill .skill-icons img {
+      width: 60px;
+    }
+  }
+  @media (max-width: 479px) {
+    .skill .skill-icons span {
+      text-align: center;
+      -ms-flex-preferred-size: 33%;
+          flex-basis: 33%;
+    }
+  }
+  @media (max-width: 479px) {
+    .skill .skill-icons-learning img {
+      width: 60px;
+    }
+  }
+  
+  @media (max-width: 479px) {
+    .skill .marquee-item li img,
+    .skill .marquee-item2 li img {
+      width: 100% !important;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .skill .marquee-item li img,
+    .skill .marquee-item2 li img {
+      width: 80% !important;
+    }
+  }

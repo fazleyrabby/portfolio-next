@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio Site">
+</head>
+<title> Portfolio | V3 </title>
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
+</head>
+
+<body>
+
+    <header>
+        <nav class="container">
+            <a href="" class="logo">Fazley</a>
+            <div class="menu">
+                <button id="burger" class="burger" name="burger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </button>
+                <ul>
+                    <li><a data-page="home" href="#home">Home</a></li>
+                    <li><a data-page="about" href="#about">About</a></li>
+                    <li><a data-page="experience" href="#experience">Experience</a></li>
+                    <li><a data-page="works" href="#works">Works</a></li>
+                    <li><a data-page="contact" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--------------------------------------- 
+        -top/hero section here
+        -slogan title
+        -my name
+        -action button for contact or CV
+        -maybe personal image / any artwork
+    ---------------------------------------->
+    <section id="home">
+        <div class="container">
+            <!-- <h2 class="bg-text" data-shadow="Home">Home</h2> -->
+            <div class="flex-wrapper">
+                <div class="slogan">
+                    <div class="title mb1">
+                        <h1>Hello there! <img class="hi" src="./assets/images/waving-hand.svg" alt="HEY!!"></h1>
+                        <p>I am Md. Fazley Rabbi</p>
+                    </div>
+                    <div class="desc mb1" id="slogan_data">
+                        <p><span class="text_1" id="txt1">Front-End Developer</span><span class="text_2" id="txt2">PHP
+                                Developer</span></p>
+                    </div>
+                    <!-- <a class="btn btn-primary rounded mr1" href="#contact">Contact</a> -->
+                    <a class="btn btn-primary rounded mr1" href="./assets/cv.pdf" target="_blank">CV Download</a>
+                </div>
+                <div class="home-illustration">
+                    <img src="svg/undraw_code_thinking_1jeh.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="arrow-down">
+            <img src="./assets/images/arrow.svg" alt="">
+            <img src="./assets/images/arrow.svg" alt="">
+            <img src="./assets/images/arrow.svg" alt="">
+        </div>
+    </section>
+
+
+    <!--------------------------------------- 
+        -my skills
+        -technology I have most experience with
+        -technology that I am learning
+        -tech img/icons
+    ----------------------------------------->
+
+
+    <section id="about">
+        <div class="container">
+            <div class="flex-wrapper">
+                <div class="aboutme">
+                    <h2 class="bg-text mb2">About me</h2>
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="./assets/images/me.jpg" alt="">
+                        </div>
+                        <div class="about-top">
+                            <h3>I'm a Full Stack web developer</h3>
+                            <p>Based on Bangladesh</p>
+                            <p>Currenty Working from home</p>
+                        </div>
+                        <div class="about-bottom">
+                            Started as a Front End Web developer. Have some experience in PSD to HTML conversion using
+                            bootstrap. Currently working on PHP native,Python and also frameworks like
+                            React,Codeigniter, Django. Looking forward to learn more.
+                        </div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h2 class="bg-text mb2">Skills</h2>
+                    <!-- <ul class="skill-items">
+                        <li>
+                            <progress value="90" max="100"></progress>
+                            <span class="skill-item">HTML</span>
+                        </li>
+                        <li><progress value="90" max="100"></progress>
+                            <span class="skill-item">CSS</span>
+                        </li>
+                        <li><progress value="80" max="100"></progress>
+                            <span class="skill-item">Javascript ES6</span>
+                        </li>
+                        <li><progress value="80" max="100"></progress>
+                            <span class="skill-item">PHP</span>
+                        </li>
+                        <li><progress value="70" max="100"></progress>
+                            <span class="skill-item">Mysql</span>
+                        </li>
+                        <li><progress value="70" max="100"></progress>
+                            <span class="skill-item">Codeigniter</span>
+                        </li>
+                    </ul>
+
+                    <ul class="skill-learn">
+                        <h3>Learning</h3>
+                        <li><progress></progress>
+                            <span class="skill-item">React</span>
+                        </li>
+                        <li><progress></progress>
+                            <span class="skill-item">Django</span>
+                        </li>
+                    </ul> -->
+
+
+                        <div class="skill section-bg">
+                            <h3>Working With</h3>
+                            <div class="skill-icons marquee">
+                                <ul class="skill-items marquee-item">
+                                    <li><img src="assets/icons/007-html.svg" alt="html"></li>
+                                    <li><img src="assets/icons/005-css.svg" alt="html"></li>
+                                    <li><img src="assets/icons/015-js-format-1.svg" alt="html"></li>
+                                    
+                                    <li><img src="assets/icons/009-sass-1.svg" alt="html"></li>
+                                    <li><img src="assets/icons/010-php.svg" alt="html"></li>
+                                    <li><img src="assets/icons/001-mysql.svg" alt="html"></li>
+                                </ul>
+                            </div>
+                            <h3>Learning</h3>
+                            <div class="skill-icons-learning">
+                                <img src="assets/icons/django.svg" alt="django">
+                                <img src="assets/icons/laravel.svg" alt="laravel">
+                                <img src="assets/icons/react.svg" alt="react">
+                        	</div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-----------------------------------------
+        -experience section here
+        -company name
+        -from - to 
+        -my role
+        -tech I have used
+        -challege I have faced
+        -&& my current position
+    ------------------------------------------>
+
+
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="bg-text" data-shadow="Experience">Experience</h2>
+            <div class="flex-wrapper-reverse">
+                <div class="exp">
+                    <div class="exp-details">
+                        <div class="exp1 card">
+                            <div class="work-title card-title">
+                                <div class="company-name">
+                                    <h3>R-creation</h3>
+                                </div>
+                                <div class="working-period">
+                                    <h5>{ January 2018 - January 2020 }</h5>
+                                </div>
+                            </div>
+                            <div class="my-role card-body">
+                                <div class="role-title">
+                                    My Role :
+                                </div>
+                                <ul>
+                                    <li>PSD to HTML Conversion</li>
+                                    <li>
+                                        Building Responive Site using HTML,CSS,Bootstrap
+                                    </li>
+                                    <li>Migrated A whole project from php 5.6 to php 7.3</li>
+                                    <li>Backend Application Using PHP native &amp; Mysql</li>
+                                    <li>
+                                        Backend Application Using Codeigniter Framework
+                                    </li>
+                                    <li>Debugging Existing Web apps</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="exp2 card">
+                            <div class="work-title card-title">
+                                <div class="company-name">
+                                    <h3>Freelancer</h3>
+                                </div>
+                                <div class="working-period">
+                                    <h5>{ September 2019 - Present }</h5>
+                                </div>
+                            </div>
+                            <div class="my-role card-body">
+                                <div class="role-title">
+                                    My Role :
+                                </div>
+                                <ul>
+                                    <li>Building Responsive Web apps</li>
+                                    <li>Building Backend Web apps with PHP &amp; Mysql</li>
+                                    <li>Building Backend Web apps with Laravel</li>
+                                    <li>Debugging apps</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="exp2 card">
+                            <div class="work-title card-title">
+                                <div class="company-name">
+                                    <h3>PHP Laravel Intern</h3>
+                                </div>
+                                <div class="working-period">
+                                    <h5>{ January 2021 - Present }</h5>
+                                </div>
+                            </div>
+                            <div class="my-role card-body">
+                                <div class="role-title">
+                                    My Role :
+                                </div>
+                                <ul>
+                                    <li>Building Backend Web apps with Laravel</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="exp-illustration">
+                    <img src="svg/undraw_site_content_ihgn.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!------------------------------------------
+        -previous work/portfolio section here 
+        -project title
+        -project sample screenshots
+        -project brief description
+        -technology used
+        -minimum 2/3 project that makes sense
+    ------------------------------------------->
+
+    <section id="works" class="mt3">
+        <div class="container">
+            <h2 class="bg-text" data-shadow="Work">Work</h2>
+            <div class="work-items">
+                <div class="card">
+                    <img src="./assets/images/osellers.png" alt="">
+                    <div class="work-item-details">
+                        <button class="item-link btn btn-primary modalBtn" id="modal-oseller">
+                            Details
+                        </button>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <img src="./assets/images/ctghelc.PNG" alt="">
+                    <div class="work-item-details">
+                        <button class="item-link btn btn-primary modalBtn" id="modal-hydrogen">
+                            Details
+                        </button>
+                    </div>
+                </div> -->
+
+                <div class="card">
+                    <img src="./assets/images/rms.PNG" alt="">
+                    <div class="work-item-details">
+                        <button class="item-link btn btn-primary modalBtn" id="modal-rms">
+                            Details
+                        </button>
+                    </div>
+                </div>
+                <!-- <div class="card">
+                    <img src="./assets/images/agency.png" alt="">
+                    <div class="work-item-details">
+                        <button class="item-link btn btn-primary modalBtn" id="modal-digital-agency">
+                            Details
+                        </button>
+                    </div>
+                </div> -->
+                <div class="card">
+                    <img src="./assets/images/photography.PNG" alt="">
+                    <div class="work-item-details">
+                        <button class="item-link btn btn-primary modalBtn" id="modal-photography">
+                            Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- <div class="card">
+                    <img src="./assets/images/amr-it.PNG" alt="">
+                    <div class="work-item-details">
+                        <button class="item-link btn btn-primary modalBtn" id="modal-amr-it">
+                            Details
+                        </button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!------------------------------------------
+        -contact section here 
+        -contact form
+        -other social links
+    ------------------------------------------->
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="bg-text">Contact</h2>
+            <div class="contacts">
+                <div class="form">
+                    <form class="mb2 mt4" netlify>
+                        <div class="form-group">
+                            <span id="email__err"></span>
+                            <input type="email" class="email" name="email" placeholder="&nbsp;" />
+                            <label for="email">
+                                <span class="label-name">Email</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="contact" name="contact" placeholder="&nbsp;" />
+                            <label for="contact">
+                                <span class="label-name">Contact No.</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="" cols="10" rows="4" placeholder="&nbsp;"></textarea>
+                            <label for="message">
+                                <span class="label-name">Message</span>
+                            </label>
+                        </div>
+                        <button name="submit" class="btn btn-secondary mt2" type="submit" id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="social">
+                <a target="_blank" href="https://github.com/fazleyrabby"><i class="fab fa-github-square"></i></a>
+                <a target="_blank" href="https://www.instagram.com/fazleyrabbiii/"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/fazley-rabby/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.youtube.com/channel/UC92vlvRLbBB7qeiUlIuxUiQ" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- modal-oseller  -->
+    <div data-modal="#modal-oseller" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><span><strong>Osellers</strong></span>
+                <span class="closeBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Ecommerce Web Application (for R-creation)</p>
+                <p>PSD to HTML</p>
+                <div class="tech">
+                    <p>Tech:</p>
+                    <ul class="work-item-tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap 4</li>
+                        <li>Jquery</li>
+                    </ul>
+                </div>
+                <a class="item-link btn btn-primary" rel="noopener" href="https://osellers.com" target="_blank">
+                    Link
+                </a>
+            </div>
+        </div>
+    </div>
+
+       <!-- modal-rms  -->
+
+    <div data-modal="#modal-rms" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><span><strong>Routine Management System</strong></span>
+                <span class="closeBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Routine Management System</p>
+                <p>Final year project for uni</p>
+                <div class="tech">
+                    <p>Tech:</p>
+                    <ul class="work-item-tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Jquery</li>
+                        <li>Bootstrap 4</li>
+                        <li>PHP (Laravel)</li>
+                        <li>Mysql</li>
+                    </ul>
+                </div>
+                <a class="item-link btn btn-primary" rel="noopener" href="https://github.com/fazleyrabby/routine-management-system.git" target="_blank">
+                    Github Link
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal-hydrogen  -->
+<!-- 
+    <div data-modal="#modal-hydrogen" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><span><strong>Hydrogen Lab Ctg</strong></span>
+                <span class="closeBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <p>Govt. Project (for R-creation)</p>
+                <p>Backend CMS, Salary Management</p>
+                <div class="tech">
+                    <p>Tech:</p>
+                    <ul class="work-item-tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Jquery</li>
+                        <li>PHP</li>
+                        <li>Mysql</li>
+                    </ul>
+                </div>
+                <a class="item-link btn btn-primary" rel="noopener" href="http://www.ctghelc.com.bd/" target="_blank">
+                    Link
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- modal-digital-agency  -->
+
+    <div data-modal="#modal-digital-agency" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><span><strong>Digital Agency Landing Page</strong></span>
+                <span class="closeBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="tech">
+                    <p>Tech:</p>
+                    <ul class="work-item-tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap 4</li>
+                    </ul>
+                </div>
+                <a class="item-link btn btn-primary" rel="noopener" href="https://digital-agency-demo.herokuapp.com/"
+                    target="_blank">
+                    Link
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal-photography  -->
+
+    <div data-modal="#modal-photography" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><span><strong>Personal Photography Portfolio</strong></span>
+                <span class="closeBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="tech">
+                    <p>Tech:</p>
+                    <ul class="work-item-tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Web Scraping from Instagram</li>
+                    </ul>
+                </div>
+                <a class="item-link btn btn-primary" rel="noopener" href="https://fazley-photography.herokuapp.com/"
+                    target="_blank">
+                    Link
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+       <!-- modal-amr-it  -->
+
+       <div data-modal="#modal-amr-it" class="modal">
+        <div class="modal-content">
+            <div class="modal-header"><span><strong>AMR-IT Landing Page</strong></span>
+                <span class="closeBtn">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="tech">
+                    <p>Tech:</p>
+                    <ul class="work-item-tech">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+                <a class="item-link btn btn-primary" rel="noopener" href="http://amr-it.netlify.app/"
+                    target="_blank">
+                    Link
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!------------------------------------------
+        -footer with a copyright logo
+        -or an emoji
+    ------------------------------------------->
+
+    <footer>
+        <div class="container">
+            Designed & Developed by Md. Fazley Rabbi &copy; 2020
+        </div>
+    </footer>
+
+    <button name="top" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+    <script src="https://kit.fontawesome.com/03e233b384.js" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.10/dist/sweetalert2.all.min.js"></script>
+    <script src="assets/js/google_sheet.js"></script>
+
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        // window.onscroll = function () { scrollFunction() };
+
+        window.addEventListener('scroll', () => {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        })
+
+
+        document.getElementById('myBtn').addEventListener('click', () => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        })
+    </script>
+</body>
+
+</html>
