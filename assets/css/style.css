@@ -529,8 +529,9 @@ header nav .logo {
   font-size: 1rem;
 }
 .about-bottom {
+  text-align: justify;
   padding: 2px 2rem 2rem 2rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 /* ----------EXPERIENCE STYLES---------- */
