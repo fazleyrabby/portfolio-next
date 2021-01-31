@@ -219,7 +219,7 @@
                                 </ul>
                             </div>
                           </div>
-                          
+
                         <div class="exp1 card">
                             <div class="work-title card-title">
                                 <div class="company-name">
@@ -553,7 +553,8 @@
 
     <footer>
         <div class="container">
-            Designed & Developed by Md. Fazley Rabbi &copy; 2020
+            Designed & Developed by Md. Fazley Rabbi &copy; 
+            <span id="year"></span>
         </div>
     </footer>
 
@@ -565,6 +566,8 @@
 
 
     <script>
+    	
+
         // When the user scrolls down 20px from the top of the document, show the button
         // window.onscroll = function () { scrollFunction() };
 
@@ -595,6 +598,8 @@
 
 	<script>
 		window.onload = function(){
+			let d = new Date();
+    		document.getElementById('year').innerText = d.getFullYear();
 			document.getElementById('form').addEventListener('submit', function(event){
 				event.preventDefault();
 				emailjs.sendForm("service_tg7uyjk","template_bc7wqa8", this);
