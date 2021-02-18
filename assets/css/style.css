@@ -529,6 +529,14 @@ header nav .logo {
   justify-content: space-between;
 }
 
+.company{
+  color: #fff;
+}
+
+.company:hover{
+  opacity: 0.8;
+}
+
 .card {
   box-shadow: 0 0 10px 0 rgba(97, 97, 97, 0.1), 0 0 5px 0 rgba(97, 97, 97, 0.3);
   margin: 10px 0;
