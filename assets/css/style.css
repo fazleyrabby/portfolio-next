@@ -14,8 +14,11 @@
   z-index: -1;
 }
 
-
 :root{
+  --font-lg: 28px;
+  --font-md: 20px;
+  --font-sm-header: 14px;
+  --font-sm: 12px;
   --marquee-width: 100%;
   --marquee-height: 20vh;
   /* --marquee-elements: 9; */
@@ -24,6 +27,10 @@
   --marquee-animation-duration: calc(var(--marquee-elements) * 7s);
 }
 
+small{
+  font-size: var(--font-sm);
+  color: #363062;
+}
 
 @keyframes titleshadow {
   0% {
@@ -317,6 +324,7 @@ header nav .logo {
 }
 
 /* ----------ABOUT STYLES---------- */
+
 #about .container .flex-wrapper {
   align-items: flex-start;
 }
@@ -328,47 +336,6 @@ header nav .logo {
   padding: 0 1rem;
 }
 
-/* .skill-item {
-  top: -35px;
-  left: 2%;
-  position: relative;
-  font-size: 1.4rem;
-  font-weight: bolder;
-  color: #fff;
-}
-
-.skill-items progress {
-  background-color: #f3f3f3;
-  border: 0;
-  height: 2em;
-  width: 100%;
-}
-.skill-learn progress {
-  background-color: #f3f3f3;
-  border: 0;
-  height: 2em;
-  width: 100%;
-}
-
-.skill-items progress::-webkit-progress-bar {
-  background-color: var(--secondary-light-color);
-}
-
-.skill-items progress::-webkit-progress-value {
-  background-color: var(--secondary-color);
-}
-
-.skill-items progress::-moz-progress-bar {
-  background-color: var(--light-color);
-} */
-
-/* .skill {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  padding-top: 20px;
-} */
 
 .skill h3 {
   padding: 2em 0;
@@ -526,8 +493,17 @@ header nav .logo {
 
 .about-top p {
   position: relative;
-  font-size: 1rem;
 }
+
+.location{
+  font-size: var(--font-sm-header);
+  color:  var(--primary-color);
+}
+.current-state{
+  font-size: var(--font-sm-header);
+  color:  var(--primary-color);
+}
+
 .about-bottom {
   text-align: justify;
   padding: 2px 2rem 2rem 2rem;
@@ -667,6 +643,26 @@ header nav .logo {
 .work-item-details p {
   font-size: 1rem;
   margin: 2px 0;
+}
+
+.work-items .card.coming-soon{
+  pointer-events: none;
+  position: relative;
+  z-index: -1;
+}
+.work-items .card .disabled{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: #fff;
+  font-weight: 800;
+  z-index: 1;
+  font-size: var(--font-lg);
+  top: 0;
+  background-color: var(--primary-color);
 }
 /*------------------- CONTACT -------------------*/
 
