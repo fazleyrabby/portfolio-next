@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: fazleyrabbi.me
+Token: e66099a62f430d7bdd78aa74f935a7ba3e5b5d45644876dae1a9119dcee77725
