@@ -273,7 +273,7 @@
                             </label>
                         </div>
                         <div class="form-group">
-                            <textarea name="message" id="" cols="10" rows="4" placeholder="&nbsp;"></textarea>
+                            <textarea name="message" class="textarea" id="" cols="10" rows="4" placeholder="&nbsp;"></textarea>
                             <label for="message">
                                 <span class="label-name">Message</span>
                             </label>
@@ -426,9 +426,16 @@
 	<script>
 		window.onload = function(){
 			let d = new Date();
+            const email = document.querySelector(".email");
+            const contact = document.querySelector(".contact");
+            const textarea = document.querySelector(".textarea");
     		document.getElementById('year').innerText = d.getFullYear();
 			document.getElementById('form').addEventListener('submit', function(event){
 				event.preventDefault();
+                if (email.value.length == 0 || contact.value.length == 0 || textarea.value.length == 0) {
+                    alert('Please fill up all the input!');
+                    return;
+                }
 				emailjs.sendForm("service_tg7uyjk","template_bc7wqa8", this);
 				alert('Message Send Successfully!');
 				document.getElementById('form').reset();
