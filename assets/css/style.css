@@ -363,6 +363,15 @@ header nav .logo {
   bottom: 1rem;
   transition: opacity 100ms ease-in;
   pointer-events: none;
+  animation: bounce 1.5s infinite alternate;
+}
+@keyframes bounce {
+  from{
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(30px);
+  }
 }
 .image-thumb-lg{
   width: 500px;
