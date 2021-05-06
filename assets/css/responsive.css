@@ -52,6 +52,10 @@
         width: 80% !important;
     }
 
+    .image-thumb{
+        display: none;
+    }
+
   
 }
 
@@ -60,7 +64,7 @@
 		display: block !important;
     }
     .image-thumb{
-        left: -40px !important;
+        display: none;
     }
 
     .burger.show-x .bar:nth-of-type(1) {
