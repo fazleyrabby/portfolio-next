@@ -52,11 +52,15 @@
         width: 80% !important;
     }
 
+  
 }
 
 @media screen and (max-width: 800px) {
     .burger {
 		display: block !important;
+    }
+    .image-thumb{
+        left: -40px !important;
     }
 
     .burger.show-x .bar:nth-of-type(1) {
