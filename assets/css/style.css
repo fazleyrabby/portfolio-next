@@ -331,10 +331,56 @@ header nav .logo {
 .aboutme {
   flex: 0.45;
 }
+
+.aboutme .card .card-image img{
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 3.5+ */
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
+  transition: filter 400ms ease-in;
+}
+
+.aboutme .card .card-image img:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+
+.about-links{
+  font-weight: bold;
+}
+
+.image-box{
+  position: relative;
+}
+.image-thumb-bg{
+  background: #fff;
+  padding: 10px;
+}
+.image-thumb{
+  width: 100px;
+  position: absolute;
+  left: 100%;
+  opacity: 0;
+  bottom: 1rem;
+  transition: opacity 100ms ease-in;
+  pointer-events: none;
+}
+.image-thumb-lg{
+  width: 500px;
+}
+.image-thumb-xl{
+  width: 600px;
+}
+.image-box:hover .image-thumb,
+.image-box:hover .image-thumb-lg
+{
+  opacity: 1;
+}
 .skills {
   flex: 0.55;
   padding: 0 1rem;
 }
+
+
 
 
 .skill h3 {
@@ -371,9 +417,11 @@ header nav .logo {
   cursor: pointer;
 }
 
+.animate-spin-scale:hover{
+  transform: rotate(180deg) scale(1.2);
+}
 
-
-.skill .skill-icons img:hover {
+.animate-scale:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -401,10 +449,6 @@ header nav .logo {
 
 
 
-.skill .skill-icons-learning img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
 
 
 .skill .marquee {
@@ -852,3 +896,5 @@ footer {
 .social a:hover{
   transform: scale(1.2);
 }
+
+
