@@ -1,5 +1,4 @@
 /* ----------GLOBAL STYLES---------- */
-
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Euphoria+Script&display=swap");
 @import "./util.css";
@@ -21,7 +20,6 @@
   --font-sm: 12px;
   --marquee-width: 100%;
   --marquee-height: 20vh;
-  /* --marquee-elements: 9; */
   --marquee-elements-displayed: 5;
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
   --marquee-animation-duration: calc(var(--marquee-elements) * 7s);

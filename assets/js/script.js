@@ -1,8 +1,3 @@
-// import * as mydata from './data.js'
-// document.getElementById("title").textContent = mydata.data.topSection.title;
-// console.log(mydata.data);
-// document.getElementById("slogan_data").textContent = mydata.data.topSection.slogan;
-
 const root = document.documentElement;
 const burger = document.getElementById('burger');
 const ul = document.querySelector('.menu ul');
@@ -15,8 +10,6 @@ const inactive = getComputedStyle(root).getPropertyValue('--primary-color');
 const modalBtn = document.querySelectorAll('.modalBtn');
 const modalContent = document.querySelectorAll('[data-modal]');
 const closeBtn = document.querySelectorAll('.closeBtn');
-
-
 
 const options = {
     threshold: 0.3
@@ -61,11 +54,6 @@ sections.forEach(section =>{
     observer.observe(section);
 })
 
-
-// modalContent.forEach(e => {
-// 	console.log(e.dataset.modal);
-// })
-
 modalBtn.forEach(element => {
   element.addEventListener('click', (e)=>{
     showModal(e);
@@ -101,14 +89,9 @@ function closeOpenedModal(e){
   });
 }
 
-
-
 const marqueeElementDislayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
-
 const marqueeContent = document.querySelector(".marquee-item");
-
 root.style.setProperty("--marquee-elements", marqueeContent.children.length);
-
 for (let i = 0; i < marqueeElementDislayed; i++) {
     marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
 }
