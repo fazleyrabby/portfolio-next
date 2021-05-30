@@ -905,3 +905,14 @@ footer {
 }
 
 
+
+
+.gitstats{
+  width: 70%;
+  margin: 4rem auto;
+}
+
+.gitstats h5{
+  text-align: center;
+  margin-bottom: 15px;
+}
