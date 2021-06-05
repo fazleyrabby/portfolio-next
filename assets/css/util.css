@@ -41,6 +41,7 @@ input[type=email]:-internal-autofill-selected{
 }
 
 
+
 .p1{ padding: 1rem;}
 .p2{ padding: 2rem;}
 .p3{ padding: 3rem;}
@@ -139,7 +140,16 @@ button{
     color:#fff; 
     border:1px solid transparent;
 }
-
+.btn-outline{
+  background:  var(--primary-color);
+  border: 1px solid #fff;
+  color: #fff;
+}
+.btn-outline:hover{ 
+  background: var(--light-color);
+  border: 1px solid transparent;
+  color:#fff; 
+}
 .btn-light{ 
     background: var(--light-color); 
     color: #fff;

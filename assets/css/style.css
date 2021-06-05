@@ -776,7 +776,7 @@ header nav .logo {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  margin: 5px 0 0 0;
+  margin: 15px 0 0 0;
   overflow: hidden;
 }
 
@@ -915,4 +915,10 @@ footer {
 .gitstats h5{
   text-align: center;
   margin-bottom: 15px;
+}
+
+
+button[name="submit"]{
+  width: 100%;
+  padding: 20px 0;
 }
