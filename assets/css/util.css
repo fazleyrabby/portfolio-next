@@ -164,31 +164,40 @@ button{
     animation: text2;
   }
   
-  .text_1, .text_2 {
+  .text_1, 
+  .text_2 {
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
     position: relative;
-    animation-duration: 15s;
-    animation-timing-function: steps(25, end);
+    animation-duration: 14s;
+    animation-timing-function: steps(30, end);
     animation-iteration-count: infinite;
   }
+  .text_3{
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+  }
   
-  .text_1::after, .text_2::after {
+  .text_1::after, 
+  .text_2::after {
     content: "|";
     position: absolute;
     right: 0;
     animation: caret infinite;
     animation-duration: 0.6s;
-    animation-timing-function: steps(1, end);
+    animation-timing-function: steps(2, end);
   }
+
   
   @keyframes text2 {
     0%, 50%, 100% {
       width: 0;
     }
     60%, 90% {
-      width: 8em;
+      width: 3.75em;
     }
   }
   
@@ -197,7 +206,7 @@ button{
       width: 0;
     }
     10%, 40% {
-      width: 11em;
+      width: 5.3em;
     }
   }
   
