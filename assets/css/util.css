@@ -29,8 +29,9 @@ html,body{
     --primary-font: sans-serif;
     --base-margin: 15px; 
     
-    --main-font: 'Montserrat', sans-serif;
-    --narrow-font:'Montserrat', sans-serif;
+    --main-font: 'Jost', sans-serif;
+    /* 'Montserrat', sans-serif; */
+    --narrow-font:'Jost', sans-serif;
     --cursive-font : 'Euphoria Script';
 }
 
@@ -197,7 +198,7 @@ button{
       width: 0;
     }
     60%, 90% {
-      width: 3.75em;
+      width: 3em;
     }
   }
   
@@ -206,7 +207,7 @@ button{
       width: 0;
     }
     10%, 40% {
-      width: 5.3em;
+      width: 4.2em;
     }
   }
   

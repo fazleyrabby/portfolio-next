@@ -1,5 +1,6 @@
 /* ----------GLOBAL STYLES---------- */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"); */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
 @import url("https://fonts.googleapis.com/css?family=Euphoria+Script&display=swap");
 @import "./util.css";
 
@@ -255,7 +256,7 @@ header nav .logo {
 }
 
 .title h1 {
-  font-size: 2em;
+  font-size: 3em;
 }
 .hi {
   width: 50px;
