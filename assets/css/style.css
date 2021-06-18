@@ -5,6 +5,18 @@
 @import url("https://fonts.googleapis.com/css?family=Euphoria+Script&display=swap");
 @import "./util.css";
 
+#my-scrollbar{
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  /* height: -webkit-fill-available; */
+  /* top: 0;
+  bottom:0;
+  position:fixed;
+  overflow-y:scroll;
+  overflow-x:hidden; */
+}
+
 .bg-text:first-child {
   top: 100px;
 }
@@ -58,6 +70,10 @@ img {
 section {
   min-height: calc(100vh - 7rem);
   margin-top: 7rem;
+}
+section.footer{
+  min-height: 0;
+  margin: 0;
 }
 
 body {
@@ -257,8 +273,11 @@ header nav .logo {
 }
 
 .title h1 {
-  font-size: 3em;
+  font-size: 2.5em;
+  line-height: 5rem;
 }
+
+
 .hi {
   width: 50px;
   animation: rotate 4s infinite linear;
@@ -572,9 +591,12 @@ header nav .logo {
 .exp-illustration {
   flex: 1;
 }
+.exp-illustration{
+  z-index: -1;
+}
 .exp-illustration img {
-  transform: scale(1.5) translateX(-40%);
-  width: 100%;
+  transform: scale(1.5) translateX(0%);
+  width: 70%;
 }
 .exp-details {
   display: flex;
@@ -855,7 +877,7 @@ footer {
   text-align: center;
   display: flex;
   align-items: center;
-  padding: 2em;
+  padding: 1em 0 6.5em 0;
   text-transform: uppercase;
   color: #fff;
   background-color: var(--light-color);

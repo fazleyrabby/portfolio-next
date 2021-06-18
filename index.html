@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
 <title> Portfolio | Fazley 💻 </title>
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <header>
         <nav class="container">
@@ -24,46 +26,51 @@
                     <li><a data-page="experience" href="#experience">Experience</a></li>
                     <li><a data-page="works" href="#works">Works</a></li>
                     <li><a data-page="contact" href="#contact">Contact</a></li>
-                    <li><a target="_blank"  href="/blog">Blog</a></li>
+                    <li><a target="_blank" href="/blog">Blog</a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <!--------------------------------------- 
+
+    <div id="my-scrollbar">
+
+        <!--------------------------------------- 
         -top/hero section here
         -slogan title
         -my name
         -action button for contact or CV
         -maybe personal image / any artwork
     ---------------------------------------->
-    <section id="home">
-        <div class="container">
-            <div class="flex-wrapper">
-                <div class="slogan">
-                    <div class="title mb1">
-                        <h1>Hello there! <img class="hi" src="./assets/images/waving-hand.svg" alt="HEY!!"></h1>
-                        <p>I am Md. Fazley Rabbi</p>
-                    </div>
-                    <div class="desc mb1" id="slogan_data">
-                        <p><span class="text_1" id="txt1">Front-End</span><span class="text_2" id="txt2">Laravel
+
+        <section id="home">
+            <div class="container">
+                <div class="flex-wrapper">
+                    <div class="slogan">
+                        <div class="title mb1">
+                            <h1 class="gradient-animation">Hit me up if you need a cool website like this! <img class="hi"
+                                    src="./assets/images/waving-hand.svg" alt="HEY!!"></h1>
+                            <p>I am Md. Fazley Rabbi</p>
+                        </div>
+                        <div class="desc mb1" id="slogan_data">
+                            <p><span class="text_1" id="txt1">Front-End</span><span class="text_2" id="txt2">Laravel
                                 </span><span class="text_3">Developer</span></p>
+                        </div>
+                        <a class="btn btn-primary rounded mr1" href="./assets/cv.pdf" target="_blank">CV Download</a>
                     </div>
-                    <a class="btn btn-primary rounded mr1" href="./assets/cv.pdf" target="_blank">CV Download</a>
-                </div>
-                <div class="home-illustration">
-                    <img src="svg/undraw_code_thinking_1jeh.svg" alt="">
+                    <div class="home-illustration">
+                        <img src="svg/update/top.svg" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="arrow-down">
-            <img src="./assets/images/arrow.svg" alt="">
-            <img src="./assets/images/arrow.svg" alt="">
-            <img src="./assets/images/arrow.svg" alt="">
-        </div>
-    </section>
+            <div class="arrow-down">
+                <img src="./assets/images/arrow.svg" alt="">
+                <img src="./assets/images/arrow.svg" alt="">
+                <img src="./assets/images/arrow.svg" alt="">
+            </div>
+        </section>
 
 
-    <!--------------------------------------- 
+        <!--------------------------------------- 
         -my skills
         -technology I have most experience with
         -technology that I am learning
@@ -71,35 +78,42 @@
     ----------------------------------------->
 
 
-    <section id="about">
-        <div class="container">
-            <div class="flex-wrapper">
-                <div class="aboutme">
-                    <h2 class="bg-text mb2">About me</h2>
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="./assets/images/me.jpg" alt="">
+        <section id="about">
+            <div class="container">
+                <div class="flex-wrapper">
+                    <div class="aboutme">
+                        <h2 class="bg-text mb2">About me</h2>
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="./assets/images/me.jpg" alt="">
+                            </div>
+                            <div class="about-top">
+                                <h3>Laravel Developer</h3>
+                                <p class="location"># Backend Developement</p>
+                                <p class="location"># Based on Bangladesh</p>
+                                <p class="current-state"># Currenty Working from home</p>
+                            </div>
+                            <div class="about-bottom">
+                                Started as a Front End Web developer. Currently working as a fulltime Laravel Developer.
+                                Learning about new technology is one of my passion. Learning
+                                <span class="image-box">
+                                    <a class="about-links" target="_blank"
+                                        href="https://laravel-livewire.com/docs/2.x/quickstart">Livewire</a>
+                                    <img class="image-thumb image-thumb-lg" src="./svg/livewire.svg" alt="">
+                                </span>,
+                                <span class="image-box">
+                                    <a class="about-links" target="_blank" href="https://reactjs.org/">React</a>
+                                    <img class="image-thumb image-thumb-bg" src="./svg/react.svg" alt="">
+                                </span>,
+                                <span class="image-box"><a class="about-links" data-img="" target="_blank"
+                                        href="https://inertiajs.com/">Inertia JS</a><img class="image-thumb"
+                                        src="https://avatars.githubusercontent.com/u/47703742?s=200&v=4" alt=""></span>.
+                                Working with <span class="image-box"><a class="about-links" target="_blank"
+                                        href="https://codecanyon.net/user/amcoders/portfolio"> AMCODERS </a><img
+                                        class="image-thumb image-thumb-xl" src="./assets/images/amcoders.PNG"
+                                        alt=""></span>team
+                            </div>
                         </div>
-                        <div class="about-top">
-                            <h3>Laravel Developer</h3>
-                            <p class="location"># Backend Developement</p>
-                            <p class="location"># Based on Bangladesh</p>
-                            <p class="current-state"># Currenty Working from home</p>
-                        </div>
-                        <div class="about-bottom">
-                            Started as a Front End Web developer. Currently working as a fulltime Laravel Developer. Learning about new technology is one of my passion. Learning 
-                            <span class="image-box">
-                            <a class="about-links" target="_blank" href="https://laravel-livewire.com/docs/2.x/quickstart">Livewire</a>
-                            <img class="image-thumb image-thumb-lg" src="./svg/livewire.svg" alt="">
-                            </span>, 
-                            <span class="image-box">
-                                <a class="about-links" target="_blank" href="https://reactjs.org/">React</a>
-                                <img class="image-thumb image-thumb-bg" src="./svg/react.svg" alt="">
-                            </span>, 
-                            <span class="image-box"><a class="about-links" data-img="" target="_blank" href="https://inertiajs.com/">Inertia JS</a><img class="image-thumb" src="https://avatars.githubusercontent.com/u/47703742?s=200&v=4" alt=""></span>. Working with <span class="image-box"><a class="about-links" target="_blank" href="https://codecanyon.net/user/amcoders/portfolio"> AMCODERS </a><img class="image-thumb image-thumb-xl" src="./assets/images/amcoders.PNG" alt=""></span>team
-                        </div>
-                     </div>
-                        
                     </div>
                     <div class="skills">
                         <h2 class="bg-text mb2">Skills</h2>
@@ -107,12 +121,13 @@
                             <h3>Working With</h3>
                             <div class="skill-icons marquee">
                                 <ul class="skill-items marquee-item">
-                                    <li><img class="animate-scale"  src="assets/icons/007-html.svg" alt="html"></li>
-                                    <li><img class="animate-scale"  src="assets/icons/005-css.svg" alt="html"></li>
-                                    <li><img class="animate-scale" src="assets/icons/015-js-format-1.svg" alt="html"></li>
+                                    <li><img class="animate-scale" src="assets/icons/007-html.svg" alt="html"></li>
+                                    <li><img class="animate-scale" src="assets/icons/005-css.svg" alt="html"></li>
+                                    <li><img class="animate-scale" src="assets/icons/015-js-format-1.svg" alt="html">
+                                    </li>
                                     <li><img class="animate-scale" src="assets/icons/009-sass-1.svg" alt="html"></li>
-                                    <li><img class="animate-scale"  src="assets/icons/010-php.svg" alt="html"></li>
-                                    <li><img class="animate-scale"  src="assets/icons/001-mysql.svg" alt="html"></li>
+                                    <li><img class="animate-scale" src="assets/icons/010-php.svg" alt="html"></li>
+                                    <li><img class="animate-scale" src="assets/icons/001-mysql.svg" alt="html"></li>
                                 </ul>
                             </div>
                             <h3>Learning</h3>
@@ -124,24 +139,24 @@
                         <div class="gitstats">
                             <h5>Github Stats</h5>
                             <a href="https://github.com/fazleyrabby" target="_blank">
-                                <img src="https://github-readme-stats-green-three.vercel.app/api?username=fazleyrabby&count_private=true&theme=tokyonight" alt="">
-                                
+                                <img src="https://github-readme-stats-green-three.vercel.app/api?username=fazleyrabby&count_private=true&theme=tokyonight"
+                                    alt="">
+
                             </a>
                             <h5>Languages Used (Git Repos)</h5>
                             <a href="https://github.com/fazleyrabby" target="_blank">
-                                <img src="https://github-readme-stats-green-three.vercel.app/api/top-langs/?username=fazleyrabby&layout=compact&theme=tokyonight" alt="">
+                                <img src="https://github-readme-stats-green-three.vercel.app/api/top-langs/?username=fazleyrabby&layout=compact&theme=tokyonight"
+                                    alt="">
                             </a>
-                            
+
                         </div>
-                        
+
                     </div>
                 </div>
-               
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-----------------------------------------
+        <!-----------------------------------------
         -experience section here
         -company name
         -time range
@@ -152,83 +167,82 @@
     ------------------------------------------>
 
 
+        <section id="experience">
+            <div class="container">
+                <h2 class="bg-text" data-shadow="Experience">Experience</h2>
+                <div class="flex-wrapper-reverse">
+                    <div class="exp">
+                        <div class="exp-details">
+                            <div class="exp2 card">
+                                <div class="work-title card-title">
+                                    <div class="company-name">
+                                        <h3>PHP Laravel Developer - <a class="company" target="_blank"
+                                                href="https://codecanyon.net/user/amcoders/portfolio">AMCoders</a></h3>
+                                    </div>
+                                    <div class="working-period">
+                                        <h5>{ January 2021 - Present }</h5>
+                                    </div>
+                                </div>
+                                <div class="my-role card-body">
+                                    <div class="role-title">
+                                        My Role :
+                                    </div>
+                                    <ul>
+                                        <li>Building Backend Web app with Laravel</li>
+                                        <li>Payment Gateway Integration</li>
+                                        <li>Two Step Authentication, Multi Auth,Email queue</li>
+                                        <li>Custom Middleware Implementation</li>
+                                        <li>
+                                            <a target="_blank"
+                                                href="https://codecanyon.net/item/ebank-complete-online-banking-system-with-dps-loan/30597974?s_rank=3">
+                                                <strong>E-Bank</strong>
+                                            </a>
+                                            Banking SASS Project
+                                        </li>
+                                        <li>
+                                            <a target="_blank"
+                                                href="https://codecanyon.net/item/lenden-multipurpose-payment-gateway-system-saas/32131005?s_rank=1">
+                                                <strong>Lenden</strong>
+                                            </a>
+                                            Payment Gateway Based SASS Project
+                                        </li>
+                                        <li>
+                                            <a target="_blank"
+                                                href="https://codecanyon.net/item/timelock-project-management-system-with-screenshot-capture/32354442?s_rank=1">
+                                                <strong>Timelock</strong>
+                                            </a>
+                                            Project Management System
+                                        </li>
+                                        <li>Bus Ticket System Project</li>
+                                    </ul>
+                                </div>
+                            </div>
 
-    <section id="experience">
-        <div class="container">
-            <h2 class="bg-text" data-shadow="Experience">Experience</h2>
-            <div class="flex-wrapper-reverse">
-                <div class="exp">
-                    <div class="exp-details">
-                        <div class="exp2 card">
-                            <div class="work-title card-title">
-                                <div class="company-name">
-                                    <h3>PHP Laravel Developer - <a class="company" target="_blank"
-                                            href="https://codecanyon.net/user/amcoders/portfolio">AMCoders</a></h3>
+                            <div class="exp2 card">
+                                <div class="work-title card-title">
+                                    <div class="company-name">
+                                        <h3>Web Developer - Rcreation</h3>
+                                    </div>
+                                    <div class="working-period">
+                                        <h5>{ January 2019 - January 2020 }</h5>
+                                    </div>
                                 </div>
-                                <div class="working-period">
-                                    <h5>{ January 2021 - Present }</h5>
+                                <div class="my-role card-body">
+                                    <div class="role-title">
+                                        Worked On
+                                    </div>
+                                    <ul>
+                                        <li>PSD to HTML Conversion</li>
+                                        <li>Building Responive Site using HTML,CSS,Bootstrap, Jquery </li>
+                                        <li>Backend Application Using PHP native,Codeigniter& Mysql</li>
+                                        <li>Planning and designing Database </li>
+                                        <li>Converted full project from php 5.6 to 7.3</li>
+                                        <li>Debugging Existing Web apps</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="my-role card-body">
-                                <div class="role-title">
-                                    My Role :
-                                </div>
-                                <ul>
-                                    <li>Building Backend Web app with Laravel</li>
-                                    <li>Payment Gateway Integration</li>
-                                    <li>Two Step Authentication, Multi Auth,Email queue</li>
-                                    <li>Custom Middleware Implementation</li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="https://codecanyon.net/item/ebank-complete-online-banking-system-with-dps-loan/30597974?s_rank=3">
-                                            <strong>E-Bank</strong>
-                                        </a>
-                                        Banking SASS Project
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="https://codecanyon.net/item/lenden-multipurpose-payment-gateway-system-saas/32131005?s_rank=1">
-                                            <strong>Lenden</strong>
-                                        </a>
-                                        Payment Gateway Based SASS Project
-                                    </li>
-                                    <li>
-                                        <a target="_blank"
-                                            href="https://codecanyon.net/item/timelock-project-management-system-with-screenshot-capture/32354442?s_rank=1">
-                                            <strong>Timelock</strong>
-                                        </a>
-                                        Project Management System 
-                                    </li>
-                                    <li>Bus Ticket System Project</li>
-                                </ul>
-                            </div>
-                        </div>
 
-                        <div class="exp2 card">
-                            <div class="work-title card-title">
-                                <div class="company-name">
-                                    <h3>Web Developer - Rcreation</h3>
-                                </div>
-                                <div class="working-period">
-                                    <h5>{ January 2019 - January 2020 }</h5>
-                                </div>
-                            </div>
-                            <div class="my-role card-body">
-                                <div class="role-title">
-                                    Worked On
-                                </div>
-                                <ul>
-                                    <li>PSD to HTML Conversion</li>
-                                    <li>Building Responive Site using HTML,CSS,Bootstrap, Jquery </li>
-                                    <li>Backend Application Using PHP native,Codeigniter& Mysql</li>
-                                    <li>Planning and designing Database </li>
-                                    <li>Converted full project from php 5.6 to 7.3</li>
-                                    <li>Debugging Existing Web apps</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- <div class="exp2 card">
+                            <!-- <div class="exp2 card">
                             <div class="work-title card-title">
                                 <div class="company-name">
                                     <h3>Freelancer</h3>
@@ -249,16 +263,16 @@
                                 </ul>
                             </div>
                         </div> -->
+                        </div>
+                    </div>
+                    <div class="exp-illustration">
+                        <img src="svg/update/drawkit-grape-pack-illustration-12.svg" alt="">
                     </div>
                 </div>
-                <div class="exp-illustration">
-                    <img src="svg/undraw_site_content_ihgn.svg" alt="">
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!------------------------------------------
+        <!------------------------------------------
         -previous work/portfolio section here 
         -project title
         -project sample screenshots
@@ -267,54 +281,52 @@
         -minimum 2/3 project that makes sense
     ------------------------------------------->
 
-    <section id="works" class="mt3">
-        <div class="container">
-            <h2 class="bg-text" data-shadow="Work">Work</h2>
-            <div class="work-items">
-                <div class="card">
-                    <img src="./assets/images/ebank.jpg" alt="">
-                    <div class="work-item-details">
-                        <button class="item-link btn btn-primary modalBtn" id="modal-ebank">
-                            Details
-                        </button>
+        <section id="works" class="mt3">
+            <div class="container">
+                <h2 class="bg-text" data-shadow="Work">Work</h2>
+                <div class="work-items">
+                    <div class="card">
+                        <img src="./assets/images/ebank.jpg" alt="">
+                        <div class="work-item-details">
+                            <button class="item-link btn btn-primary modalBtn" id="modal-ebank">
+                                Details
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/lenden.png" alt="">
-                    <div class="work-item-details">
-                        <button class="item-link btn btn-primary modalBtn" id="modal-lenden">
-                            Details
-                        </button>
+                    <div class="card">
+                        <img src="./assets/images/lenden.png" alt="">
+                        <div class="work-item-details">
+                            <button class="item-link btn btn-primary modalBtn" id="modal-lenden">
+                                Details
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/timelock.png" alt="">
-                    <div class="work-item-details">
-                        <button class="item-link btn btn-primary modalBtn" id="modal-timelock">
-                            Details
-                        </button>
+                    <div class="card">
+                        <img src="./assets/images/timelock.png" alt="">
+                        <div class="work-item-details">
+                            <button class="item-link btn btn-primary modalBtn" id="modal-timelock">
+                                Details
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/routine.png" alt="">
-                    <div class="work-item-details">
-                        <button class="item-link btn btn-primary modalBtn" id="modal-rms">
-                            Details
-                        </button>
+                    <div class="card">
+                        <img src="./assets/images/routine.png" alt="">
+                        <div class="work-item-details">
+                            <button class="item-link btn btn-primary modalBtn" id="modal-rms">
+                                Details
+                            </button>
+                        </div>
                     </div>
-                </div>
-                <div class="card">
-                    <img src="./assets/images/ces.png" alt="">
-                    <div class="work-item-details">
-                        <button class="item-link btn btn-primary modalBtn" id="modal-ces">
-                            Details
-                        </button>
+                    <div class="card">
+                        <img src="./assets/images/ces.png" alt="">
+                        <div class="work-item-details">
+                            <button class="item-link btn btn-primary modalBtn" id="modal-ces">
+                                Details
+                            </button>
+                        </div>
                     </div>
-                </div>
 
-                
-
-                <!-- <div class="card coming-soon">
+                    <!-- <div class="card coming-soon">
                     <img src="./assets/images/photography.PNG" alt="">
                     <div class="work-item-details">
                         <button class="item-link btn btn-primary modalBtn" id="modal-photography">
@@ -325,58 +337,77 @@
                         Coming soon...
                     </div>
                 </div> -->
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!------------------------------------------
+        <!------------------------------------------
         -contact section here 
         -contact form
         -other social links
     ------------------------------------------->
 
-    <section id="contact">
-        <div class="container">
-            <h2 class="bg-text">Contact</h2>
-            <div class="contacts">
-                <div class="form">
-                    <form class="mb2 mt4" id="form">
-                        <div class="form-group">
-                            <span id="email__err"></span>
-                            <input type="email" class="email" name="email" placeholder="&nbsp;" />
-                            <label for="email">
-                                <span class="label-name">Email</span>
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="contact" name="contact" placeholder="&nbsp;" />
-                            <label for="contact">
-                                <span class="label-name">Contact No.</span>
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" class="textarea" id="" cols="10" rows="4"
-                                placeholder="&nbsp;"></textarea>
-                            <label for="message">
-                                <span class="label-name">Message</span>
-                            </label>
-                        </div>
-                        <button name="submit" class="btn btn-outline mt2" type="submit" id="submit">Submit</button>
-                    </form>
+        <section id="contact">
+            <div class="container">
+                <h2 class="bg-text">Contact</h2>
+                <div class="contacts">
+                    <div class="form">
+                        <form class="mb2 mt4" id="form">
+                            <div class="form-group">
+                                <span id="email__err"></span>
+                                <input type="email" class="email" name="email" placeholder="&nbsp;" />
+                                <label for="email">
+                                    <span class="label-name">Email</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="contact" name="contact" placeholder="&nbsp;" />
+                                <label for="contact">
+                                    <span class="label-name">Contact No.</span>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" class="textarea" id="" cols="10" rows="4"
+                                    placeholder="&nbsp;"></textarea>
+                                <label for="message">
+                                    <span class="label-name">Message</span>
+                                </label>
+                            </div>
+                            <button name="submit" class="btn btn-outline mt2" type="submit" id="submit">Submit</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
 
-            <div class="social">
-                <a target="_blank" href="https://github.com/fazleyrabby"><i class="fab fa-github-square"></i></a>
-                <a target="_blank" href="https://www.instagram.com/fazleyrabbiii/"><i class="fab fa-instagram"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/fazley-rabby/"><i
-                        class="fab fa-linkedin-in"></i></a>
-                <a href="https://www.youtube.com/channel/UC92vlvRLbBB7qeiUlIuxUiQ" target="_blank"><i
-                        class="fab fa-youtube"></i></a>
-            </div>
+                <div class="social">
+                    <a target="_blank" href="https://github.com/fazleyrabby"><i class="fab fa-github-square"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/fazleyrabbiii/"><i
+                            class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/fazley-rabby/"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.youtube.com/channel/UC92vlvRLbBB7qeiUlIuxUiQ" target="_blank"><i
+                            class="fab fa-youtube"></i></a>
+                </div>
 
+            </div>
+        </section>
+
+        <div class="footer">
+        <!------------------------------------------
+            -footer with a copyright logo
+            -or an emoji
+        ------------------------------------------->
+
+            <footer>
+                <div class="container">
+                    Designed & Developed by Md. Fazley Rabbi &copy;
+                    <span id="year"></span>
+                </div>
+            </footer>
         </div>
-    </section>
+    </div>
+
+
+
     <!-- modal-rms  -->
 
     <div data-modal="#modal-rms" class="modal">
@@ -505,7 +536,7 @@
         </div>
     </div>
 
-   
+
 
     <!-- modal timelock  -->
     <div data-modal="#modal-timelock" class="modal">
@@ -549,23 +580,53 @@
 
 
 
-    <!------------------------------------------
-        -footer with a copyright logo
-        -or an emoji
-    ------------------------------------------->
 
-    <footer>
-        <div class="container">
-            Designed & Developed by Md. Fazley Rabbi &copy;
-            <span id="year"></span>
-        </div>
-    </footer>
 
     <button name="top" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
     <script src="https://kit.fontawesome.com/03e233b384.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.10/dist/sweetalert2.all.min.js"></script>
     <script src="assets/js/google_sheet.js"></script>
+
+    <script src="assets/js/smooth-scrollbar.js"></script>
+
+    <script>
+        var Scrollbar = window.Scrollbar;
+
+        // Scrollbar.init(document.querySelector('#my-scrollbar'));
+
+        let slider = document.querySelectorAll('[data-page]');
+
+        const hash = window.location.hash;
+        const scrollbar = Scrollbar.init(document.querySelector('#my-scrollbar'), {
+            continuousScrolling: false,
+            alwaysShowTracks: true,
+            plugins: {}
+        });
+        if (hash) {
+            const target = document.getElementById(hash.substring(1));
+            if (target) {
+                scrollbar.scrollIntoView(target, {
+                    offsetTop: -scrollbar.containerEl.scrollTop,
+                });
+            }
+        }
+
+        // For opening link in the same page
+        window.addEventListener('hashchange', function () {
+            const hash = window.location.hash;
+            if (hash) {
+                const target = document.getElementById(hash.substring(1));
+                if (target) {
+                    scrollbar.scrollIntoView(target, {
+                        offsetTop: -scrollbar.containerEl.scrollTop,
+                    });
+                }
+            }
+        }, false);
+
+    </script>
+
 
     <script>
         window.addEventListener('scroll', () => {
