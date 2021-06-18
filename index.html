@@ -591,39 +591,39 @@
     <script src="assets/js/smooth-scrollbar.js"></script>
 
     <script>
-        var Scrollbar = window.Scrollbar;
+        // var Scrollbar = window.Scrollbar;
 
-        // Scrollbar.init(document.querySelector('#my-scrollbar'));
+        // // Scrollbar.init(document.querySelector('#my-scrollbar'));
 
-        let slider = document.querySelectorAll('[data-page]');
+        // let slider = document.querySelectorAll('[data-page]');
 
-        const hash = window.location.hash;
-        const scrollbar = Scrollbar.init(document.querySelector('#my-scrollbar'), {
-            continuousScrolling: false,
-            alwaysShowTracks: true,
-            plugins: {}
-        });
-        if (hash) {
-            const target = document.getElementById(hash.substring(1));
-            if (target) {
-                scrollbar.scrollIntoView(target, {
-                    offsetTop: -scrollbar.containerEl.scrollTop,
-                });
-            }
-        }
+        // const hash = window.location.hash;
+        // const scrollbar = Scrollbar.init(document.querySelector('#my-scrollbar'), {
+        //     continuousScrolling: false,
+        //     alwaysShowTracks: true,
+        //     plugins: {}
+        // });
+        // if (hash) {
+        //     const target = document.getElementById(hash.substring(1));
+        //     if (target) {
+        //         scrollbar.scrollIntoView(target, {
+        //             offsetTop: -scrollbar.containerEl.scrollTop,
+        //         });
+        //     }
+        // }
 
-        // For opening link in the same page
-        window.addEventListener('hashchange', function () {
-            const hash = window.location.hash;
-            if (hash) {
-                const target = document.getElementById(hash.substring(1));
-                if (target) {
-                    scrollbar.scrollIntoView(target, {
-                        offsetTop: -scrollbar.containerEl.scrollTop,
-                    });
-                }
-            }
-        }, false);
+        // // For opening link in the same page
+        // window.addEventListener('hashchange', function () {
+        //     const hash = window.location.hash;
+        //     if (hash) {
+        //         const target = document.getElementById(hash.substring(1));
+        //         if (target) {
+        //             scrollbar.scrollIntoView(target, {
+        //                 offsetTop: -scrollbar.containerEl.scrollTop,
+        //             });
+        //         }
+        //     }
+        // }, false);
 
     </script>
 
