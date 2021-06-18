@@ -29,9 +29,9 @@ html,body{
     --primary-font: sans-serif;
     --base-margin: 15px; 
     
-    --main-font: 'Jost', sans-serif;
+    --main-font: 'Poppins', sans-serif;
     /* 'Montserrat', sans-serif; */
-    --narrow-font:'Jost', sans-serif;
+    --narrow-font:'Poppins', sans-serif;
     --cursive-font : 'Euphoria Script';
 }
 
@@ -198,7 +198,7 @@ button{
       width: 0;
     }
     60%, 90% {
-      width: 3em;
+      width: 3.6em;
     }
   }
   
@@ -207,7 +207,7 @@ button{
       width: 0;
     }
     10%, 40% {
-      width: 4.2em;
+      width: 5em;
     }
   }
   
