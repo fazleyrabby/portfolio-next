@@ -282,7 +282,7 @@ button{
   background-size: 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: flow 12s ease-in-out infinite;
+  animation: flow 8s ease-in-out infinite;
 }
 @keyframes flow {
   0%{  background-position:  0 50%; }
