@@ -877,7 +877,7 @@ footer {
   text-align: center;
   display: flex;
   align-items: center;
-  padding: 1em 0 6.5em 0;
+  padding: 2em;
   text-transform: uppercase;
   color: #fff;
   background-color: var(--light-color);
