@@ -197,6 +197,13 @@ header nav .logo {
   animation: nav 300ms ease;
 }
 
+  
+@media (max-width: 768px) {
+  .menu ul li a{
+      width: auto;
+  }
+}
+
 @keyframes nav {
   from {
     transform: translateX(-100%);
