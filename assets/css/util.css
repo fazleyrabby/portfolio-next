@@ -29,8 +29,9 @@ html,body{
     --primary-font: sans-serif;
     --base-margin: 15px; 
     
-    --main-font: 'Montserrat', sans-serif;
-    --narrow-font:'Montserrat', sans-serif;
+    --main-font: 'Poppins', sans-serif;
+    /* 'Montserrat', sans-serif; */
+    --narrow-font:'Poppins', sans-serif;
     --cursive-font : 'Euphoria Script';
 }
 
@@ -197,7 +198,7 @@ button{
       width: 0;
     }
     60%, 90% {
-      width: 3.75em;
+      width: 3.6em;
     }
   }
   
@@ -206,7 +207,7 @@ button{
       width: 0;
     }
     10%, 40% {
-      width: 5.3em;
+      width: 5em;
     }
   }
   
@@ -274,4 +275,17 @@ button{
   padding: 10px;
   color: #fff;
   font-size: 12px;
+}
+
+.gradient-animation {
+  background: linear-gradient(90deg, #12c2e9, #c471ed, #f64f59);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: flow 8s ease-in-out infinite;
+}
+@keyframes flow {
+  0%{  background-position:  0 50%; }
+  50%{ background-position:  100% 50%; }
+  100%{ background-position:  0 50%; }
 }

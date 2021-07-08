@@ -1,7 +1,6 @@
 const root = document.documentElement;
 const burger = document.getElementById('burger');
 const ul = document.querySelector('.menu ul');
-
 const body = document.getElementsByTagName("body")[0];
 const header = document.getElementsByTagName("header")[0];
 const sections = document.querySelectorAll('section');
@@ -57,7 +56,6 @@ sections.forEach(section =>{
 modalBtn.forEach(element => {
   element.addEventListener('click', (e)=>{
     showModal(e);
-
   })
 });
 

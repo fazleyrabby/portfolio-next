@@ -193,26 +193,23 @@
     .skill .skill-icons img {
       width: 60px;
     }
-  }
-  @media (max-width: 479px) {
+
     .skill .skill-icons span {
-      text-align: center;
-      -ms-flex-preferred-size: 33%;
-          flex-basis: 33%;
+        text-align: center;
+        -ms-flex-preferred-size: 33%;
+            flex-basis: 33%;
     }
-  }
-  @media (max-width: 479px) {
+
     .skill .skill-icons-learning img {
-      width: 60px;
+        width: 60px;
     }
-  }
-  
-  @media (max-width: 479px) {
+
     .skill .marquee-item li img,
     .skill .marquee-item2 li img {
-      width: 100% !important;
+        width: 100% !important;
     }
   }
+
   
   @media (max-width: 768px) {
     .skill .marquee-item li img,
