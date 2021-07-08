@@ -933,6 +933,7 @@ footer {
     position: relative;
 }
 .social a::before{
+  pointer-events: none;
   content: attr(data-tooltip);
   position: absolute;
   font-size: 12px;
