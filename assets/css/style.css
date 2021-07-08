@@ -899,9 +899,25 @@ footer {
     margin: 0 20px;
     font-size: 2rem;
     color: #fff;
+    position: relative;
+}
+.social a::before{
+  content: attr(data-tooltip);
+  position: absolute;
+  font-size: 12px;
+  text-transform: capitalize;
+  top: -1rem;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  opacity: 0;
+  transition: transform 200ms ease, opacity 300ms;
 }
 .social a:hover{
   transform: scale(1.2);
+}
+.social a:hover::before{
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 
