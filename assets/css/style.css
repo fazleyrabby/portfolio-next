@@ -990,6 +990,11 @@ button[name="submit"]{
   z-index: 9999;
   animation: loader 2s cubic-bezier(0.19, 1, 0.22, 1) 4s both;
 }
+@media (max-width: 768px) {
+  .loader{
+    font-size: 1.3rem;
+  }
+}
 .loader-wrapper{
   height: 100px;
   width: 600px;
