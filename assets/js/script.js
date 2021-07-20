@@ -3,21 +3,42 @@ const burger = document.getElementById('burger');
 const ul = document.querySelector('.menu ul');
 const body = document.getElementsByTagName("body")[0];
 const header = document.getElementsByTagName("header")[0];
-const sections = document.querySelectorAll('section');
 const active = getComputedStyle(root).getPropertyValue('--light-color');
 const inactive = getComputedStyle(root).getPropertyValue('--primary-color');
 const modalBtn = document.querySelectorAll('.modalBtn');
 const modalContent = document.querySelectorAll('[data-modal]');
 const closeBtn = document.querySelectorAll('.closeBtn');
 
-const options = {
-    threshold: 0.3
-}
-let observer = new IntersectionObserver(navCheck, options);
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.menu ul li a');
+
+
+
+// const options = {
+//     threshold: 0.3
+// }
+// let observer = new IntersectionObserver(navCheck, options);
 
 window.onscroll = function () {
      scrollFunction() 
+     navActive()
 };
+
+function navActive(){
+  sections.forEach(section => {
+    let top = window.scrollY;
+    let offset = section.offsetTop - 118;
+    let height = section.offsetHeight;
+    let id = section.getAttribute('id');
+    
+    if(top >= offset && top < height + offset){
+      navLinks.forEach(link => {
+        link.classList.remove('active')
+        document.querySelector(`.menu ul li a[href*='${id}']`).classList.add('active');
+      })
+    }
+  })
+}
 
 function scrollFunction() {
     if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
@@ -34,24 +55,24 @@ burger.addEventListener('click', () => {
 });
 
 
-function navCheck(elms){
-    elms.forEach(elm => {
-        const id = elm.target.getAttribute('id');
-        const activeAnchor = document.querySelector(`[data-page=${id}]`);
-        if (elm.isIntersecting) {
-            // activeAnchor.style.setProperty('color', `${active}`);
-            activeAnchor.classList.add('active');
-        }
-        else{
-            // activeAnchor.style.setProperty('color', `${inactive}`);
-            activeAnchor.classList.remove('active');
-        }
-    })
-}
+// function navCheck(elms){
+//     elms.forEach(elm => {
+//         const id = elm.target.getAttribute('id');
+//         const activeAnchor = document.querySelector(`[data-page=${id}]`);
+//         if (elm.isIntersecting) {
+//             // activeAnchor.style.setProperty('color', `${active}`);
+//             activeAnchor.classList.add('active');
+//         }
+//         else{
+//             // activeAnchor.style.setProperty('color', `${inactive}`);
+//             activeAnchor.classList.remove('active');
+//         }
+//     })
+// }
 
-sections.forEach(section =>{
-    observer.observe(section);
-})
+// sections.forEach(section =>{
+//     observer.observe(section);
+// })
 
 modalBtn.forEach(element => {
   element.addEventListener('click', (e)=>{
