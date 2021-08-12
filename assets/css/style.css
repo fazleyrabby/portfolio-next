@@ -798,10 +798,12 @@ header nav .logo {
   justify-content: center;
   align-items: center;
 }
+
 .form {
   max-width: 100%;
   min-width: 50%;
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
@@ -841,6 +843,7 @@ label::after {
   left: 0;
   transition: all 0.3s ease;
 }
+
 .form-group input,
 .form-group textarea {
   all: inherit;
@@ -852,6 +855,7 @@ label::after {
   width: 100%;
   padding: 30px 0 5px 0;
 }
+
 .form-group textarea {
   border-bottom: 1px solid;
   padding: 0;
@@ -865,11 +869,13 @@ label::after {
   transform: translateY(-150%);
   font-size: 1rem;
 }
+
 .form-group textarea:focus + label .label-name,
 .form-group textarea:not(:placeholder-shown) + label .label-name {
   transform: translateY(-550%);
   font-size: 1rem;
 }
+
 .form-group textarea:focus + label::after {
   transform: translateX(0);
 }
@@ -879,7 +885,6 @@ label::after {
 }
 
 /* ----------FOOTER STYLES---------- */
-
 footer {
   text-align: center;
   display: flex;
@@ -891,7 +896,6 @@ footer {
 }
 
 /* SCROLL TO TOP BTN  */
-
 #myBtn {
   display: none;
   position: fixed;
@@ -925,6 +929,7 @@ footer {
     align-items: center;
     height: 150px;
 }
+
 .social a{
     transition: 100ms ease-in-out;
     margin: 0 20px;
@@ -932,6 +937,7 @@ footer {
     color: #fff;
     position: relative;
 }
+
 .social a::before{
   pointer-events: none;
   content: attr(data-tooltip);
@@ -944,6 +950,7 @@ footer {
   opacity: 0;
   transition: transform 200ms ease, opacity 300ms;
 }
+
 .social a:hover{
   transform: scale(1.2);
 }
@@ -951,8 +958,6 @@ footer {
   opacity: 1;
   transform: translate(-50%, 0);
 }
-
-
 
 
 .gitstats{
@@ -973,15 +978,12 @@ button[name="submit"]{
 
 
 /* extra animation  */
-
-
 .loader{
   position: absolute;
   background-color: #fff;
   height: 100%;
   width: 100%;
-  top: 0;
-  left: 0;
+  inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -990,16 +992,19 @@ button[name="submit"]{
   z-index: 9999;
   animation: loader 2s cubic-bezier(0.19, 1, 0.22, 1) 4s both;
 }
+
 @media (max-width: 768px) {
   .loader{
     font-size: 1.3rem;
   }
 }
+
 .loader-wrapper{
   height: 100px;
   width: 600px;
   overflow: hidden;
 }
+
 .loader-wrapper .element{
   width: 100%;
   height: 100%;
@@ -1007,12 +1012,15 @@ button[name="submit"]{
   justify-content: center;
   align-items: center;
 }
+
 .loader-wrapper .element:nth-child(1){
   animation: loadertext 1s cubic-bezier(0.19, 1, 0.22, 1) 1s both;
 }
+
 .loader-wrapper .element:nth-child(2){
   animation: loadertext 1s cubic-bezier(0.19, 1, 0.22, 1) 2s both;
 }
+
 @keyframes loadertext {
   to{
       margin-top: -100px;
