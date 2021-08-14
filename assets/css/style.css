@@ -635,6 +635,9 @@ header nav .logo {
 .my-role .role-title {
   font-weight: 600;
 }
+.contribution{
+  margin-top: 12px;
+}
 .my-role ul li {
   padding: 10px 0;
   font-size: 1.2rem;
