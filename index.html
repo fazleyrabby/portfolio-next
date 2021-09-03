@@ -9,13 +9,13 @@
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="loader">
+    <!-- <div class="loader">
         <div class="loader-wrapper">
             <div class="element">Fazley Rabbi 👋 </div>
             <div class="element">Passionate Web Developer</div>
             <div class="element">Will Create website for you!</div>
         </div>
-    </div>
+    </div> -->
     <header>
         <nav class="container">
             <a href="" class="logo">Fazley</a>
@@ -626,49 +626,7 @@
     <button name="top" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
     <script src="https://kit.fontawesome.com/03e233b384.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.10/dist/sweetalert2.all.min.js"></script>
-    <script src="assets/js/google_sheet.js"></script>
-
-    <script src="assets/js/smooth-scrollbar.js"></script>
-
-    <script>
-        // var Scrollbar = window.Scrollbar;
-
-        // // Scrollbar.init(document.querySelector('#my-scrollbar'));
-
-        // let slider = document.querySelectorAll('[data-page]');
-
-        // const hash = window.location.hash;
-        // const scrollbar = Scrollbar.init(document.querySelector('#my-scrollbar'), {
-        //     continuousScrolling: false,
-        //     alwaysShowTracks: true,
-        //     plugins: {}
-        // });
-        // if (hash) {
-        //     const target = document.getElementById(hash.substring(1));
-        //     if (target) {
-        //         scrollbar.scrollIntoView(target, {
-        //             offsetTop: -scrollbar.containerEl.scrollTop,
-        //         });
-        //     }
-        // }
-
-        // // For opening link in the same page
-        // window.addEventListener('hashchange', function () {
-        //     const hash = window.location.hash;
-        //     if (hash) {
-        //         const target = document.getElementById(hash.substring(1));
-        //         if (target) {
-        //             scrollbar.scrollIntoView(target, {
-        //                 offsetTop: -scrollbar.containerEl.scrollTop,
-        //             });
-        //         }
-        //     }
-        // }, false);
-
-    </script>
-
-
+    
     <script>
         window.addEventListener('scroll', () => {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -678,13 +636,10 @@
             }
         })
 
-
         document.getElementById('myBtn').addEventListener('click', () => {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         })
-
-
 
     </script>
 
@@ -698,12 +653,14 @@
     <script>
         window.onload = function () {
             let d = new Date();
-            document.getElementById('year').innerText = d.getFullYear();
+            // document.getElementById('year').innerText = d.getFullYear();
+            const form = document.getElementById("form");
+            console.log(form);
             const email = document.querySelector(".email");
             const contact = document.querySelector(".contact");
             const textarea = document.querySelector(".textarea");
-            document.getElementById('form').addEventListener('submit', function (event) {
-                event.preventDefault();
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
                 if (email.value.length == 0 || contact.value.length == 0 || textarea.value.length == 0) {
                     alert('Please fill up all the input!');
                     return;
