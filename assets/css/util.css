@@ -1,4 +1,11 @@
-@import './responsive.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Euphoria+Script&display=swap");
+/* fancy fonts  */
+@import url('http://fonts.cdnfonts.com/css/sofia-pro');
+@import url('http://fonts.cdnfonts.com/css/futura-std-4');
+
+/* serif font */
+@import url('http://fonts.cdnfonts.com/css/recoleta'); 
 
 *{
     box-sizing: border-box;
@@ -29,9 +36,10 @@ html,body{
     --primary-font: sans-serif;
     --base-margin: 15px; 
     
-    --main-font: 'Poppins', sans-serif;
+    --main-font: 'Sofia Pro','Poppins', sans-serif;
     /* 'Montserrat', sans-serif; */
-    --narrow-font:'Poppins', sans-serif;
+    --narrow-font:'Sofia Pro','Poppins', sans-serif;
+    --serif-font: 'Josefin Slab','Recoleta';
     --cursive-font : 'Euphoria Script';
 }
 
@@ -283,6 +291,7 @@ button{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: flow 8s ease-in-out infinite;
+  font-weight: bolder;
 }
 @keyframes flow {
   0%{  background-position:  0 50%; }

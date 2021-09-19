@@ -1,5 +1,10 @@
-
 @media screen and (max-width: 500px) {
+    .gitstats{
+        width: 100% !important;
+    }
+    header nav{
+        min-height: 5rem !important;
+    }
     footer{
         font-size: 1rem;
     }
@@ -55,11 +60,10 @@
     .image-thumb{
         display: none;
     }
-
-  
 }
 
 @media screen and (max-width: 800px) {
+    
     .burger {
 		display: block !important;
     }
@@ -214,6 +218,6 @@
   @media (max-width: 768px) {
     .skill .marquee-item li img,
     .skill .marquee-item2 li img {
-      width: 80% !important;
+      width: 95% !important;
     }
   }
