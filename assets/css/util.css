@@ -39,8 +39,8 @@ html,body{
     --main-font: 'Sofia Pro','Poppins', sans-serif;
     /* 'Montserrat', sans-serif; */
     --narrow-font:'Sofia Pro','Poppins', sans-serif;
-    --serif-font: 'Josefin Slab','Recoleta';
-    --cursive-font : 'Euphoria Script';
+    --serif-font: 'Josefin Slab','Recoleta', var(--main-font);
+    --cursive-font : 'Euphoria Script', var(--main-font);
 }
 
 
