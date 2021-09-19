@@ -753,7 +753,7 @@ header nav .logo {
 
 #contact {
   margin-top: 15em;
-  min-height: calc(100vh - 70vh);
+  min-height: calc(100vh - 12rem);
   position: relative;
   background-color: var(--primary-color);
 }
