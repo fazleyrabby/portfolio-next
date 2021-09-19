@@ -49,7 +49,11 @@
         width: 100%;
     }
     #contact {
-        margin-top: 20em !important;
+        /* margin-top: 20em !important; */
+    }
+
+    .wave{
+        margin-top: 4rem;
     }
 
     .modal-content{
