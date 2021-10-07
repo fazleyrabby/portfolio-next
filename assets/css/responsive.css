@@ -216,6 +216,8 @@
     .skill .marquee-item2 li img {
         width: 100% !important;
     }
+
+    
   }
 
   
@@ -223,5 +225,16 @@
     .skill .marquee-item li img,
     .skill .marquee-item2 li img {
       width: 95% !important;
+    }
+    .tab-container{
+        flex-direction: column; 
+    }
+    .tab-container .tab{
+        display: flex;
+    }
+    .tab-container .tab ul{
+        display: flex;
+        width: 100%;
+        justify-content: center;
     }
   }

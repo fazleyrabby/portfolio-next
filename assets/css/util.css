@@ -200,7 +200,12 @@ button{
     animation-timing-function: steps(2, end);
   }
 
-  
+
+  .center{
+    display: grid;
+    place-content: center;
+    gap: 3px;
+  }
   @keyframes text2 {
     0%, 50%, 100% {
       width: 0;

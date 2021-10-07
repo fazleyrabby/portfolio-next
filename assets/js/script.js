@@ -12,8 +12,22 @@ const closeBtn = document.querySelectorAll('.closeBtn');
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.menu ul li a');
 
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabItems = document.querySelectorAll('.tab-item .card');
 
+tabBtns.forEach((button) => {
+  button.addEventListener('click', (e) => {
+    let activeTabName = e.target.dataset.tab;
+    let activeTab = document.getElementById(activeTabName);
 
+    tabItems.forEach(e => e.classList.remove('active'));
+    activeTab.classList.add('active');
+
+    tabBtns.forEach(e => e.classList.remove('active'));
+    e.target.classList.add('active');
+    console.log(e.target);
+  })
+})
 // const options = {
 //     threshold: 0.3
 // }

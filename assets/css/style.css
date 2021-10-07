@@ -611,7 +611,8 @@ header nav .logo {
 
 .card {
   box-shadow: 0 0 10px 0 rgba(97, 97, 97, 0.1), 0 0 5px 0 rgba(97, 97, 97, 0.3);
-  margin: 10px 0;
+  margin: 0 0 10px 0;
+  min-width: max-content;
 }
 .card-title {
   background-color: var(--secondary-color);
@@ -1038,4 +1039,29 @@ button[name="submit"]{
   }
 }
 
+
+
+.tab-container{
+  display: flex;
+  gap: 1rem;
+}
+.tab-container .tab ul li button{
+  padding: 15px 25px;
+  margin: 0 0 5px 0;
+  width: 100%;
+}
+.tab-btn.active{
+  background-color: black;
+  pointer-events: none;
+}
+
+.tab-btn.active:hover{
+  background-color: #363062;
+}
+.tab-item .card{
+  display: none;
+}
+.tab-item .card.active{
+  display: block;
+}
 
