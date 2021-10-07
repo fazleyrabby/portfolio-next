@@ -612,7 +612,6 @@ header nav .logo {
 .card {
   box-shadow: 0 0 10px 0 rgba(97, 97, 97, 0.1), 0 0 5px 0 rgba(97, 97, 97, 0.3);
   margin: 0 0 10px 0;
-  min-width: max-content;
 }
 .card-title {
   background-color: var(--secondary-color);
