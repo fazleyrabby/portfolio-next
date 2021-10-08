@@ -584,6 +584,10 @@ header nav .logo {
   align-items: flex-start;
   padding: 2rem;
 }
+#experience{
+  min-height: max-content;
+  margin-bottom: 3rem;
+}
 .exp,
 .exp-illustration {
   flex: 1;
@@ -770,6 +774,7 @@ section#contact{
   padding-top: 0;
   margin-top: 0;
 }
+
 
 .wave{
   margin-bottom: -10px;
