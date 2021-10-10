@@ -5,6 +5,8 @@
 @import './timeline.css';
 
 
+
+
 .bg-text:first-child {
   top: 100px;
 }
@@ -584,6 +586,7 @@ header nav .logo {
   align-items: flex-start;
   padding: 2rem;
 }
+
 #experience{
   min-height: max-content;
   margin-bottom: 3rem;
