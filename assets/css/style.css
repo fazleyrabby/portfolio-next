@@ -443,14 +443,41 @@ header nav .logo {
   transition: all .2s ease-in-out;
   cursor: pointer;
 }
+.skill-item{
+  position: relative;
+}
+.skill-item::before{
+  content: attr(alt);
+  position: absolute;
+  display: grid;
+  place-content: center;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0) scale(0);
+  border-radius: 25px;
+  background: var(--primary-color);
+  height: 25%;
+  width: max-content;
+  font-size: 16px;
+  color: #fff;
+  padding: 4px 12px;
+  transition: transform 100ms ease-in-out;
+  text-transform: capitalize;
+  z-index: 1;
+}
+
+.skill-item:hover::before{
+  transform: translate(-50%, 0) scale(1);
+  transform-origin: center;
+}
 
 .animate-spin-scale:hover{
-  transform: rotate(180deg) scale(1.2);
+  transform: rotate(180deg) scale(1.1);
 }
 
 .animate-scale:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 
