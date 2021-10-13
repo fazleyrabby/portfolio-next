@@ -53,9 +53,16 @@ body[data-theme="light"] p {
   color: var(--black);
 }
 
-body[data-theme="dark"] {
+body[data-theme="dark"],
+body[data-theme="dark"] header nav .menu ul
+{
   background: var(--black);
   color: var(--white);
+}
+
+body[data-theme="dark"] header nav .menu #burger .bar
+{
+    background: var(--white);
 }
 
 body[data-theme="dark"] header {
@@ -68,6 +75,7 @@ body[data-theme="dark"] h2,
 body[data-theme="dark"] p,
 body[data-theme="dark"] header nav a,
 body[data-theme="dark"] header nav .logo,
+
 body[data-theme="dark"] section .arrow-down {
   color: var(--white);
 }
