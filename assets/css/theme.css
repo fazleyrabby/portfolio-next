@@ -1,0 +1,88 @@
+#theme-toggle {
+  position: absolute;
+  display: grid;
+  place-content: center;
+  min-height: 100%;
+  top: -0.2rem;
+  right: 5%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  width: max-content;
+  height: max-content;
+}
+
+#theme-toggle.fa-moon {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+#theme-toggle.fa-sun {
+  color: var(--primary-color);
+  animation: spin 6s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+/* @media (max-width: 500px) {
+  #theme-toggle {
+    top: -1.1rem !important;
+  }
+} */
+
+@media (max-width: 768px) {
+  #theme-toggle {
+    top: 0rem;
+  }
+}
+
+body[data-theme="light"] {
+  background: var(--white);
+  color: var(--black);
+}
+body[data-theme="light"] h1,
+body[data-theme="light"] h2,
+body[data-theme="light"] p {
+  color: var(--black);
+}
+
+body[data-theme="dark"] {
+  background: var(--black);
+  color: var(--white);
+}
+
+body[data-theme="dark"] header {
+  background: var(--black);
+  color: var(--white);
+}
+
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h2,
+body[data-theme="dark"] p,
+body[data-theme="dark"] header nav a,
+body[data-theme="dark"] header nav .logo,
+body[data-theme="dark"] section .arrow-down {
+  color: var(--white);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #fff;
+    /* 0 0 10px #fff, 0 0 5px #e60073; */
+    /* 0 0 40px #e60073, 0 0 50px #e60073, 
+      0 0 60px #e60073, 0 0 70px #e60073; */
+  }
+  to {
+    text-shadow: 0 0 10px #fff;
+    /* 0 0 20px #ff4da6, 0 0 10px #ff4da6; */
+    /* 0 0 50px #ff4da6, 0 0 60px #ff4da6, 
+      0 0 70px #ff4da6, 0 0 80px #ff4da6; */
+  }
+}

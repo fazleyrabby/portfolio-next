@@ -2,10 +2,8 @@
 @import "./util.css";
 /* responsive */
 @import './responsive.css';
-@import './timeline.css';
-
-
-
+/* Theme  */
+@import './theme.css';
 
 .bg-text:first-child {
   top: 100px;
@@ -29,6 +27,8 @@
   --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
   --marquee-animation-duration: calc(var(--marquee-elements) * 7s);
 }
+
+
 
 small{
   font-size: var(--font-sm);

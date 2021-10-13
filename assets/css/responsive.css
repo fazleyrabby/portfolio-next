@@ -1,4 +1,5 @@
 @media screen and (max-width: 500px) {
+
     .gitstats{
         width: 100% !important;
     }
@@ -216,6 +217,8 @@
     .skill .marquee-item2 li img {
         width: 100% !important;
     }
+
+   
 
     
   }
