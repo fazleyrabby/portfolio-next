@@ -70,12 +70,15 @@ body[data-theme="dark"] header {
   color: var(--white);
 }
 
+body[data-theme="dark"] #click-here{
+    opacity: 0.5;
+}
+
 body[data-theme="dark"] h1,
 body[data-theme="dark"] h2,
 body[data-theme="dark"] p,
 body[data-theme="dark"] header nav a,
 body[data-theme="dark"] header nav .logo,
-
 body[data-theme="dark"] section .arrow-down {
   color: var(--white);
 }

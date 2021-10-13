@@ -259,6 +259,17 @@ header nav .logo {
 
 
 /* ----------TOP/HERO STYLES---------- */
+#click-here{
+  width: 15rem;
+  position: absolute;
+  right: 5%;
+  top: 90px;
+  z-index: 9999;
+  opacity: 0.1;
+}
+#click-here img{
+  width: 100%;
+}
 
 .slogan,
 .home-illustration {
@@ -1099,4 +1110,7 @@ button[name="submit"]{
 .tab-item .card.active{
   display: block;
 }
+
+
+
 

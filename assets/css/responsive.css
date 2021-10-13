@@ -1,5 +1,7 @@
 @media screen and (max-width: 500px) {
-
+    #click-here{
+        display: none;
+    }
     .gitstats{
         width: 100% !important;
     }
@@ -68,6 +70,7 @@
 }
 
 @media screen and (max-width: 800px) {
+    
     
     .burger {
 		display: block !important;
@@ -240,4 +243,5 @@
         width: 100%;
         justify-content: center;
     }
+   
   }
