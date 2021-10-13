@@ -341,6 +341,10 @@ input:-webkit-autofill:active{
     top: inherit !important;
     bottom: 5rem !important;
     left: 0 !important;
+    right: inherit !important;
+  }
+  .blurry__animate.xl{
+    top: 15rem !important;
   }
 }
 .object1{
