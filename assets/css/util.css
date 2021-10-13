@@ -45,7 +45,7 @@ html,body{
     --cursive-font : 'Euphoria Script', var(--main-font);
     --blurry-object-hw: 200px; 
     --blurry-object-blur: blur(3rem); 
-    --blurry-object-opacity: 0.7; 
+    --blurry-object-opacity: 0.6; 
 }
 
 
@@ -320,7 +320,6 @@ input:-webkit-autofill:active{
 .blurry__animate.xl 
 {
   --blurry-object-hw: 300px;
-  --blurry-object-opacity: 0.4;
   left: 0;
 }
 .blurry__animate.md{
@@ -347,7 +346,7 @@ input:-webkit-autofill:active{
   opacity: var(--blurry-object-opacity);
   top: 0;
   left: -1rem;
-  animation: animate-blob 5s ease infinite alternate;
+  animation: animate-blob 3s ease infinite alternate;
 }
 .object2{
   position: absolute;
@@ -360,7 +359,7 @@ input:-webkit-autofill:active{
   opacity: var(--blurry-object-opacity);
   top: 0;
   right: -1rem;
-  animation: animate-blob 5s ease infinite alternate;
+  animation: animate-blob 3s ease infinite alternate;
   animation-delay: 2s;
 }
 .object3{
@@ -374,12 +373,12 @@ input:-webkit-autofill:active{
   mix-blend-mode: multiply;
   opacity: var(--blurry-object-opacity);
   bottom: -8rem;
-  animation: animate-blob 5s ease infinite alternate;
+  animation: animate-blob 3s ease infinite alternate;
   animation-delay: 4s;
 }
 
 @keyframes animate-blob{
   to{
-    transform: scale(1.4);
+    transform: scale(1.8);
   }
 }
