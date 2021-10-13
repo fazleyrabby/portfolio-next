@@ -335,6 +335,14 @@ input:-webkit-autofill:active{
   top: 10rem;
   right: 25%;
 }
+@media (max-width: 900px) {
+  .blurry__animate{
+    --blurry-object-hw: 75px !important;
+    top: inherit !important;
+    bottom: 5rem !important;
+    left: 0 !important;
+  }
+}
 .object1{
   position: absolute;
   width: var(--blurry-object-hw);
@@ -379,6 +387,6 @@ input:-webkit-autofill:active{
 
 @keyframes animate-blob{
   to{
-    transform: scale(1.8);
+    transform: scale(1.6);
   }
 }
