@@ -43,6 +43,9 @@ html,body{
     --narrow-font:'Sofia Pro','Poppins', sans-serif;
     --serif-font: 'Josefin Slab','Recoleta', var(--main-font);
     --cursive-font : 'Euphoria Script', var(--main-font);
+    --blurry-object-hw: 200px; 
+    --blurry-object-blur: blur(3rem); 
+    --blurry-object-opacity: 0.7; 
 }
 
 
@@ -313,4 +316,70 @@ input:-webkit-autofill:hover,
 input:-webkit-autofill:focus, 
 input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px #8c7eab inset !important;
+}
+.blurry__animate.xl 
+{
+  --blurry-object-hw: 300px;
+  --blurry-object-opacity: 0.4;
+  left: 0;
+}
+.blurry__animate.md{
+  --blurry-object-hw: 150px;
+  z-index: -9;
+}
+
+.blurry__animate{
+  --blurry-object-hw: 250px;
+  position: absolute;
+  width: max-content;
+  height: 40vh;
+  top: 10rem;
+  right: 25%;
+}
+.object1{
+  position: absolute;
+  width: var(--blurry-object-hw);
+  height: var(--blurry-object-hw);
+  border-radius: 50%;
+  filter: var(--blurry-object-blur);
+  background: rgb(252, 211, 77);
+  mix-blend-mode: multiply;
+  opacity: var(--blurry-object-opacity);
+  top: 0;
+  left: -1rem;
+  animation: animate-blob 5s ease infinite alternate;
+}
+.object2{
+  position: absolute;
+  width: var(--blurry-object-hw);
+  height: var(--blurry-object-hw);
+  border-radius: 50%;
+  filter: var(--blurry-object-blur);
+  background: rgb(249, 168, 212);
+  mix-blend-mode: multiply;
+  opacity: var(--blurry-object-opacity);
+  top: 0;
+  right: -1rem;
+  animation: animate-blob 5s ease infinite alternate;
+  animation-delay: 2s;
+}
+.object3{
+  position: absolute;
+  width: var(--blurry-object-hw);
+  height: var(--blurry-object-hw);
+  border-radius: 50%;
+  filter: var(--blurry-object-blur);
+  background: rgb(196, 181, 253);
+  left: 5rem;
+  mix-blend-mode: multiply;
+  opacity: var(--blurry-object-opacity);
+  bottom: -8rem;
+  animation: animate-blob 5s ease infinite alternate;
+  animation-delay: 4s;
+}
+
+@keyframes animate-blob{
+  to{
+    transform: scale(1.4);
+  }
 }

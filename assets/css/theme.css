@@ -31,12 +31,6 @@
   }
 }
 
-/* @media (max-width: 500px) {
-  #theme-toggle {
-    top: -1.1rem !important;
-  }
-} */
-
 @media (max-width: 768px) {
   #theme-toggle {
     top: 0rem;
@@ -53,8 +47,15 @@ body[data-theme="light"] p {
   color: var(--black);
 }
 
+body[data-theme="dark"] .skill-icons,
+body[data-theme="dark"] .skill .marquee:before,
+body[data-theme="dark"] .skill .marquee:after{
+  background: transparent;
+}
+
 body[data-theme="dark"],
-body[data-theme="dark"] header nav .menu ul
+body[data-theme="dark"] header nav .menu ul,
+body[data-theme="dark"] .aboutme .card
 {
   background: var(--black);
   color: var(--white);
@@ -99,3 +100,8 @@ body[data-theme="dark"] section .arrow-down {
       0 0 90px #ff4da6, 0 0 100px #ff4da6; */
   }
 }
+
+
+/* body[data-theme="dark"] .blurry__animate{
+  visibility: hidden;
+} */
