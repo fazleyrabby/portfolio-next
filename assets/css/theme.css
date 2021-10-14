@@ -17,7 +17,7 @@
 
 #theme-toggle.fa-sun {
   color: var(--primary-color);
-  animation: spin 6s infinite linear;
+  animation: spin 10s infinite linear, glow 1s ease-in-out infinite alternate;
 }
 
 @keyframes spin {

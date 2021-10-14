@@ -38,14 +38,14 @@ themeToggle.addEventListener('click', e => {
 function themeIcon(type, target) {
   console.log({type, target});
   if (type == 'dark') {
-    target.classList.remove('fa-sun')
+    target.classList.remove('fa-moon')
     target.dataset.mode = 'light'
-    target.classList.add('fa-moon')
+    target.classList.add('fa-sun')
     theme.dataset.theme = 'dark'
   } else {
-    target.classList.remove('fa-moon')
+    target.classList.remove('fa-sun')
     target.dataset.mode = 'dark'
-    target.classList.add('fa-sun')
+    target.classList.add('fa-moon')
     theme.dataset.theme = 'light'
   }
 }
