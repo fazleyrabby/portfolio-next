@@ -1097,7 +1097,7 @@ button[name="submit"]{
   width: 100%;
 }
 .tab-btn.active{
-  background-color: black;
+  background-color: black !important;
   pointer-events: none;
 }
 

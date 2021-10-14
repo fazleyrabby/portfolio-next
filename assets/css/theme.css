@@ -12,12 +12,12 @@
 }
 
 #theme-toggle.fa-moon {
-  animation: glow 1s ease-in-out infinite alternate;
+  /* animation: glow 1s ease-in-out infinite alternate; */
 }
 
 #theme-toggle.fa-sun {
-  color: var(--black);
-  animation: spin 10s infinite linear, glow 1s ease-in-out infinite alternate;
+  color: var(--white);
+  animation: spin 10s infinite linear;
 }
 
 @keyframes spin {

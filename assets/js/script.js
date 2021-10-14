@@ -52,15 +52,17 @@ function themeIcon(type, target) {
 
 tabBtns.forEach((button) => {
   button.addEventListener('click', (e) => {
+    tabItems.forEach(e => e.classList.remove('active'));
+    tabBtns.forEach(e => e.classList.remove('active'));
+    
     let activeTabName = e.target.dataset.tab;
     let activeTab = document.getElementById(activeTabName);
 
-    tabItems.forEach(e => e.classList.remove('active'));
-    activeTab.classList.add('active');
+    
 
-    tabBtns.forEach(e => e.classList.remove('active'));
+    activeTab.classList.add('active');
     e.target.classList.add('active');
-    console.log(e.target);
+    
   })
 })
 // const options = {
