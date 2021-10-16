@@ -71,9 +71,7 @@ body[data-theme="dark"] header {
   color: var(--white);
 }
 
-body[data-theme="dark"] #click-here{
-    opacity: 0.5;
-}
+
 
 body[data-theme="dark"] h1,
 body[data-theme="dark"] h2,

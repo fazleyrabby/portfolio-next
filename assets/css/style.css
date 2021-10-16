@@ -158,7 +158,7 @@ header nav .logo {
   transition: transform 0.5s ease;
 }
 .menu ul li {
-  margin: 0 0 0 3rem;
+  margin: 0 0 0 1.75rem;
 }
 .menu ul li a {
   font-weight: 600;
@@ -179,10 +179,11 @@ header nav .logo {
 .menu ul li a.active::before{
   content: '';
   height: 5px;
-  width: 100%;
+  width: 20px;
   position: absolute;
   bottom: 0;
   left: 0;
+  border-radius: 20px;
   transform: translateX(0);
   background-color: var(--light-color);
   animation: nav 300ms ease;
@@ -208,10 +209,11 @@ header nav .logo {
   /* color: var(--light-color); */
   content: '';
   height: 5px;
-  width: 100%;
+  width: 20px;
   position: absolute;
   bottom: 0;
   left: 0;
+  border-radius: 20px;
   transform: translateX(0);
   background-color: var(--light-color);
   animation: nav 300ms ease;
@@ -265,9 +267,9 @@ header nav .logo {
   right: 5%;
   top: 90px;
   z-index: 9999;
-  opacity: 0.1;
+  opacity: 0.2;
 }
-#click-here img{
+#click-here object{
   width: 100%;
 }
 
@@ -1084,8 +1086,6 @@ button[name="submit"]{
       transform: translateY(-100%);
   }
 }
-
-
 
 .tab-container{
   display: flex;

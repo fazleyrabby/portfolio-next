@@ -50,6 +50,8 @@ function themeIcon(type, target) {
   }
 }
 
+
+
 tabBtns.forEach((button) => {
   button.addEventListener('click', (e) => {
     tabItems.forEach(e => e.classList.remove('active'));
@@ -65,10 +67,6 @@ tabBtns.forEach((button) => {
     
   })
 })
-// const options = {
-//     threshold: 0.3
-// }
-// let observer = new IntersectionObserver(navCheck, options);
 
 window.onscroll = function () {
   scrollFunction()
@@ -85,7 +83,10 @@ function navActive() {
     if (top >= offset && top < height + offset) {
       navLinks.forEach(link => {
         link.classList.remove('active')
-        document.querySelector(`.menu ul li a[href*='${id}']`).classList.add('active');
+        const navLink = document.querySelector(`.menu ul li a[href*='${id}']`);
+        if(navLink){
+          navLink.classList.add('active');
+        }
       })
     }
   })
@@ -105,25 +106,6 @@ burger.addEventListener('click', () => {
   ul.classList.toggle('show');
 });
 
-
-// function navCheck(elms){
-//     elms.forEach(elm => {
-//         const id = elm.target.getAttribute('id');
-//         const activeAnchor = document.querySelector(`[data-page=${id}]`);
-//         if (elm.isIntersecting) {
-//             // activeAnchor.style.setProperty('color', `${active}`);
-//             activeAnchor.classList.add('active');
-//         }
-//         else{
-//             // activeAnchor.style.setProperty('color', `${inactive}`);
-//             activeAnchor.classList.remove('active');
-//         }
-//     })
-// }
-
-// sections.forEach(section =>{
-//     observer.observe(section);
-// })
 
 modalBtn.forEach(element => {
   element.addEventListener('click', (e) => {
