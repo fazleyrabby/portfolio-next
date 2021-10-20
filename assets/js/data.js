@@ -1,19 +1,22 @@
-const data = {
+export const data = {
     topSection : {
         "title" : "Md. Fazley Rabbi",
-        "slogan" : "A passionate web developer. Love to learn about new technology & try to keep myself updated with new trends. Started as a Frontend Developer currently working with Backend as well. I have 2.5years of experience in Web Developement."
+        "slogan" : "I am Md. Fazley Rabbi",
+        "role" : "Web Developer",
     },
     experience : {
         0 : {
-            "title" : "R-creation",
-            "time" : "Jan,2018-Jan,2020",
-            "role" : {  0 : "PSD to HTML Conversion", 
-                        1 : "Building Responive Site using HTML,CSS,Bootstrap", 
-                        2 : "Backend Application Using PHP native & Mysql", 
-                        3 : "Backend Application Using Codeigniter Framework", 
-                        4 : "Debugging Existing Web apps",  
-                        5 : "Team work"
+            "title" : "Electronic First",
+            "link" : "https://www.electronicfirst.com/",
+            "time" : "October 2021 - Present",
+            "role" : {  0 : "Backend Maintenance", 
+                        1 : "Adding New Features", 
+                        2 : "Software version upgrades", 
+                        3 : "Debugging existing errors", 
+                        4 : "Software / Code optimization",
                      },
+            "contribution" : {  
+            },
             "tech" : {  0 : "HTML",
                         1 : "CSS",
                         2 : "Bootstrap",
@@ -25,21 +28,58 @@ const data = {
             }
         },
         1 : {
-            "title" : "Freelancing",
-            "time" : "Sept,2019-Jan,2020",
-            "role" : {  0 : "PSD to HTML Conversion", 
-                        1:  "Building Responive Site using HTML,CSS,Bootstrap", 
-                        2 : "Backend Application Using PHP native & Mysql"
+            "title" : "Amcoders",
+            "link" : "https://codecanyon.net/user/amcoders/portfolio",
+            "time" : "January 2021 - July 2021",
+            "role" : {  0 : "Building Backend Web app with Laravel", 
+                        1 : "Payment Gateway Integration", 
+                        2 : "Two Step Authentication, Multi Auth,Email queue", 
+                        3 : "Custom Middleware Implementation", 
                      },
-            "tech" : {  0 : "HTML",
-                        1 : "CSS",
-                        2 : "Bootstrap",
-                        3 : "Jquery",
-                        4 : "Javascript",
-                        5 : "PHP",
-                        6 : "Mysql"
-            }
-        }
+            "contribution" : {  
+                        0 : {
+                            "a" : "E-bank",
+                            "link" : "https://codecanyon.net/item/ebank-complete-online-banking-system-with-dps-loan/30597974?s_rank=3",
+                            "text" : "Banking SASS Project",
+                        }, 
+                        1 : {
+                            "a" : "Lenden",
+                            "link" : "https://codecanyon.net/item/lenden-multipurpose-payment-gateway-system-saas/32131005?s_rank=1",
+                            "text" : "Payment Gateway Based SASS Project",
+                        },
+                        2 : {
+                            "a" : "Timelock",
+                            "link" : "https://codecanyon.net/item/timelock-project-management-system-with-screenshot-capture/32354442?s_rank=1",
+                            "text" : "Project Management System",
+                        },
+                        3 : {
+                            "a" : "Porichoy",
+                            "link" : "https://codecanyon.net/item/porichoy-multitenancy-based-portfolio-platform-saas/33458337?s_rank=1",
+                            "text" : "Portfolio Platform (SAAS)",
+                        },
+                        3 : {
+                            "a" : "",
+                            "link" : "#",
+                            "text" : "Bus Ticket System Project",
+                        },
+            },
+            "tech" : { 
+                        'top': {
+                            0 : "HTML",
+                            1 : "CSS",
+                            2 : "Bootstrap",
+                            3 : "Jquery",
+                            4 : "Javascript",
+                            5 : "PHP",
+                            6 : "Mysql",
+                            7 : "Codeigniter"
+                        } ,
+                        'bottom': {
+                            0 : "Laravel",
+                            1 : "React",
+                        }
+                    },
+        },
     },
     work : {
         0 : {
@@ -106,5 +146,4 @@ const data = {
     }
 }
 
-export { data };
 

@@ -1,3 +1,4 @@
+// root consts 
 const root = document.documentElement;
 const burger = document.getElementById('burger');
 const ul = document.querySelector('.menu ul');
@@ -5,16 +6,11 @@ const body = document.getElementsByTagName("body")[0];
 const header = document.getElementsByTagName("header")[0];
 const active = getComputedStyle(root).getPropertyValue('--light-color');
 const inactive = getComputedStyle(root).getPropertyValue('--primary-color');
-const modalBtn = document.querySelectorAll('.modalBtn');
-const modalContent = document.querySelectorAll('[data-modal]');
-const closeBtn = document.querySelectorAll('.closeBtn');
 
-const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('.menu ul li a');
 
-const tabBtns = document.querySelectorAll('.tab-btn');
-const tabItems = document.querySelectorAll('.tab-item .card');
+// ====================== THEME ====================== //
 
+// theme consts 
 const themeToggle = document.getElementById('theme-toggle');
 const theme = document.querySelector('[data-theme]');
 
@@ -24,6 +20,7 @@ theme.dataset.theme = localStorage.getItem("theme") ?? 'light';
 //toggle icon and change theme accorging to theme
 themeIcon(localStorage.getItem("theme") , themeToggle);
 
+// themetoggle button events
 themeToggle.addEventListener('click', e => {
   const targetTheme = e.target.dataset.mode;
   if (targetTheme == 'dark') {
@@ -35,8 +32,8 @@ themeToggle.addEventListener('click', e => {
   }
 })
 
+// set theme function 
 function themeIcon(type, target) {
-  console.log({type, target});
   if (type == 'dark') {
     target.classList.remove('fa-moon')
     target.dataset.mode = 'light'
@@ -50,23 +47,29 @@ function themeIcon(type, target) {
   }
 }
 
+// ====================== DYNAMIC TAB ====================== //
 
+// tab consts
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabItems = document.querySelectorAll('.tab-item .card');
 
+// Dynamic tab
 tabBtns.forEach((button) => {
   button.addEventListener('click', (e) => {
     tabItems.forEach(e => e.classList.remove('active'));
     tabBtns.forEach(e => e.classList.remove('active'));
-    
     let activeTabName = e.target.dataset.tab;
     let activeTab = document.getElementById(activeTabName);
-
-    
-
     activeTab.classList.add('active');
     e.target.classList.add('active');
     
   })
 })
+
+
+// ====================== NAV TRIGGER & SET ACTIVE SECTIONS ====================== //
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('.menu ul li a');
 
 window.onscroll = function () {
   scrollFunction()
@@ -107,6 +110,14 @@ burger.addEventListener('click', () => {
 });
 
 
+
+
+// ====================== DYNAMIC MODAL ====================== //
+
+const modalBtn = document.querySelectorAll('.modalBtn');
+const modalContent = document.querySelectorAll('[data-modal]');
+const closeBtn = document.querySelectorAll('.closeBtn');
+
 modalBtn.forEach(element => {
   element.addEventListener('click', (e) => {
     showModal(e);
@@ -140,6 +151,9 @@ function closeOpenedModal(e) {
     }
   });
 }
+
+
+// ====================== DYNAMIC STACK MARQUEE ====================== //
 
 const marqueeElementDislayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
 const marqueeContent = document.querySelector(".marquee-item");
