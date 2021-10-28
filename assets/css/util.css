@@ -263,7 +263,7 @@ button{
   top: 0;
   animation: modalAnimation;
   animation-duration: 0.5s;
-  z-index: 1;
+  z-index: 999;
 }
 
 .modal-content{
