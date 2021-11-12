@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-@import url("https://fonts.googleapis.com/css?family=Euphoria+Script&display=swap");
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Euphoria+Script&display=swap"); */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap');
+
 /* fancy fonts  */
 @import url('https://fonts.cdnfonts.com/css/sofia-pro');
-@import url('https://fonts.cdnfonts.com/css/futura-std-4');
+/* @import url('https://fonts.cdnfonts.com/css/futura-std-4'); */
 
 /* serif font */
 @import url('https://fonts.cdnfonts.com/css/recoleta'); 
@@ -37,11 +41,9 @@ html,body{
                         0 100px 80px rgba(0, 0, 0, 0.12);
     --primary-font: sans-serif;
     --base-margin: 15px; 
-    
-    --main-font: 'Sofia Pro','Poppins', sans-serif;
-    /* 'Montserrat', sans-serif; */
-    --narrow-font:'Sofia Pro','Poppins', sans-serif;
-    --serif-font: 'Josefin Slab','Recoleta', var(--main-font);
+    --main-font: 'Jost','Sofia Pro','Inter','Poppins', sans-serif;
+    --narrow-font: 'Jost','Sofia Pro','Poppins', sans-serif;
+    --serif-font: 'Lora','Jost','Josefin Slab','Recoleta', var(--main-font);
     --cursive-font : 'Euphoria Script', var(--main-font);
     --blurry-object-hw: 200px; 
     --blurry-object-blur: blur(3rem); 
@@ -107,7 +109,9 @@ input[type=email]:-internal-autofill-selected{
 .mb4{ margin-bottom: 4rem;}
 .mb5{ margin-bottom: 5rem;}
 
-
+.d-block{
+  display: block;
+}
 button{
    background-color: none;
 }
