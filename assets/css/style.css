@@ -993,7 +993,7 @@ footer {
   background-color: var(--primary-color);
   color: #fff;
   cursor: pointer;
-  border: 1px solid #f3f3f3;
+  /* border: 1px solid #f3f3f3; */
   border-radius: 4px;
   padding: 10px;
   transition: transform 2s ease;

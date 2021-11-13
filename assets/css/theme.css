@@ -37,14 +37,18 @@
   }
 }
 
+body[data-theme="dark"]{
+  --purple : #261C2C;
+}
+
 body[data-theme="light"] {
   background: var(--white);
-  color: var(--black);
+  color: var(--purple);
 }
 body[data-theme="light"] h1,
 body[data-theme="light"] h2,
 body[data-theme="light"] p {
-  color: var(--black);
+  color: var(--purple);
 }
 
 body[data-theme="dark"] .skill-icons,
@@ -57,7 +61,7 @@ body[data-theme="dark"],
 body[data-theme="dark"] header nav .menu ul,
 body[data-theme="dark"] .aboutme .card
 {
-  background: var(--black);
+  background: var(--purple);
   color: var(--white);
 }
 
@@ -67,7 +71,7 @@ body[data-theme="dark"] header nav .menu #burger .bar
 }
 
 body[data-theme="dark"] header {
-  background: var(--black);
+  background: var(--purple);
   color: var(--white);
 }
 
@@ -87,7 +91,7 @@ body[data-theme="dark"] .arrow-down{
 }
 
 body[data-theme="dark"] .arrow-down > .arrow{
-  background-color: #f5f5f5;
+  background-color:  var(--white);
 }
 
 @keyframes glow {

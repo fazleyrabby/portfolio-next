@@ -46,11 +46,15 @@ html,body{
     --serif-font: 'Lora','Jost','Josefin Slab','Recoleta', var(--main-font);
     --cursive-font : 'Euphoria Script', var(--main-font);
     --blurry-object-hw: 200px; 
-    --blurry-object-blur: blur(3rem); 
+    --blurry-object-blur: blur(5rem); 
     --blurry-object-opacity: 0.6; 
 }
 
 
+.serif{
+  font-family: var(--main-font);
+  font-weight: 700;
+}
 
 input[type=email]:-internal-autofill-selected{
   background: var(--primary-color) !important;
@@ -321,6 +325,11 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active{
     -webkit-box-shadow: 0 0 0 30px #8c7eab inset !important;
 }
+.blurry__animate.xxl 
+{
+  --blurry-object-hw: 400px;
+  left: 0;
+}
 .blurry__animate.xl 
 {
   --blurry-object-hw: 300px;
@@ -362,7 +371,7 @@ input:-webkit-autofill:active{
   opacity: var(--blurry-object-opacity);
   top: 0;
   left: -1rem;
-  animation: animate-blob 3s ease infinite alternate;
+  /* animation: animate-blob 3s ease infinite alternate; */
 }
 .object2{
   position: absolute;
@@ -375,7 +384,7 @@ input:-webkit-autofill:active{
   opacity: var(--blurry-object-opacity);
   top: 0;
   right: -1rem;
-  animation: animate-blob 3s ease infinite alternate;
+  /* animation: animate-blob 3s ease infinite alternate; */
   animation-delay: 2s;
 }
 .object3{
@@ -389,7 +398,7 @@ input:-webkit-autofill:active{
   mix-blend-mode: multiply;
   opacity: var(--blurry-object-opacity);
   bottom: -8rem;
-  animation: animate-blob 3s ease infinite alternate;
+  /* animation: animate-blob 3s ease infinite alternate; */
   animation-delay: 4s;
 }
 
