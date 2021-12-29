@@ -121,6 +121,10 @@ body[data-theme="dark"] .arrow-down > .arrow {
   background-color: var(--white);
 }
 
+body[data-theme="dark"] .about-bottom a {
+  color: var(--secondary-light-color);
+}
+
 @keyframes glow {
   from {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 5px #e60073, 0 0 40px #e60073,

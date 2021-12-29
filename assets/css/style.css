@@ -428,6 +428,7 @@ header nav .logo {
   transition: opacity 100ms ease-in;
   pointer-events: none;
   animation: bounce 1.5s infinite alternate;
+  z-index: 100;
 }
 @keyframes bounce {
   from{
