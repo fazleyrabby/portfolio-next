@@ -76,8 +76,10 @@ body[data-theme="light"] {
   background: var(--white);
   color: var(--purple);
 }
+
 body[data-theme="light"] h1,
 body[data-theme="light"] h2,
+body[data-theme="light"] span,
 body[data-theme="light"] p {
   color: var(--purple);
 }
@@ -107,6 +109,7 @@ body[data-theme="dark"] header {
 body[data-theme="dark"] h1,
 body[data-theme="dark"] h2,
 body[data-theme="dark"] p,
+body[data-theme="dark"] span,
 body[data-theme="dark"] header nav a,
 body[data-theme="dark"] header nav .logo,
 body[data-theme="dark"] section .arrow-down {

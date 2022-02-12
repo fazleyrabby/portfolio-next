@@ -50,8 +50,9 @@ html,body{
     --blurry-object-opacity: 0.6; 
 }
 
-
-
+.font-bold{
+  font-weight: 800;
+}
 
 .serif{
   font-family: var(--main-font);
@@ -190,11 +191,14 @@ button{
   
   .text_1, 
   .text_2 {
+    top: 10px;
+    padding-left: 5px;
+    margin-left: 2px;
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
     position: relative;
-    animation-duration: 14s;
+    animation-duration: 8s;
     animation-timing-function: steps(30, end);
     animation-iteration-count: infinite;
   }
@@ -221,6 +225,7 @@ button{
     place-content: center;
     gap: 3px;
   }
+
   @keyframes text2 {
     0%, 50%, 100% {
       width: 0;
@@ -232,10 +237,10 @@ button{
   
   @keyframes text1 {
     0%, 50%, 100% {
-      width: 0;
+      width: 0em;
     }
     10%, 40% {
-      width: 5em;
+      width: 4.4em;
     }
   }
   
