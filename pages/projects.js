@@ -11,8 +11,8 @@ export default function About() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <main className='mb-5'>
-                <div className='mb-4 custom-section-height'>
+            <main>
+                <div className='mb-4'>
                     <h1 className="text-3xl font-bold mb-4">Projects</h1>
                     {projects.map((item) => (
                         <div key={item.title}>
