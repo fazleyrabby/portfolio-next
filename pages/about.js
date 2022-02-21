@@ -11,9 +11,9 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-       <h1 className="text-5xl font-bold mb-4">{about.title}</h1>
-        <p className='text-xl'>{about.description}</p>
+      <main className="custom-height">
+       <h1 className="text-3xl font-bold mb-4">{about.title}</h1>
+        <p>{about.description}</p>
       </main>
 
     </Container>

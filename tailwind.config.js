@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   darkMode: 'class',
   content: [
@@ -8,6 +10,11 @@ module.exports = {
     container: false
   },
   theme: {
+    fontFamily: {
+      'sans' : ['Inter','sans-serif'],
+      'serif' : ['Lora','serif'],
+      'jost' : ['Jost','sans-serif'],
+    },
     container: {
       padding: {
         DEFAULT: '1rem',
@@ -19,18 +26,18 @@ module.exports = {
     },
     extend: {
       animation: {
-        wiggle: 'wiggle 1s ease-in-out infinite',
+        wiggle: 'wiggle 3s ease-in-out infinite',
       },
       keyframes: {
         wiggle: {
-          '0%, 100%': { transform: 'rotate(-3deg)' },
-          '50%': { transform: 'rotate(3deg)' },
+          '0%, 100%': { transform: 'rotate(-4deg)' },
+          '50%': { transform: 'rotate(4deg)' },
         }
       }
     },
   },
   plugins: [
-    function ({ addComponents }) {
+    plugin(function ({ addVariant, e, postcss, addComponents }) {
       addComponents({
         '.container': {
           maxWidth: '100%',
@@ -47,7 +54,23 @@ module.exports = {
             maxWidth: '1050px',
           },
         }
-      })
-    }
+      }),
+
+      addVariant('firefox', ({ container, separator }) => {
+      const isFirefoxRule = postcss.atRule({
+        name: '-moz-document',
+        params: 'url-prefix()',
+      });
+  
+      isFirefoxRule.append(container.nodes);
+      container.append(isFirefoxRule);
+
+      isFirefoxRule.walkRules((rule) => {
+        rule.selector = `.${e(
+        `firefox${separator}${rule.selector.slice(1)}`
+        )}`;
+      });
+      });
+    }),
   ],
 }

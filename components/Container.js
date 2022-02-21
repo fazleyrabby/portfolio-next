@@ -3,14 +3,14 @@ import { Navbar } from "./Navbar"
 
 export const Container = ({ children }) => {
     return (
+        <>
+        <Navbar />
         <div className='flex flex-col h-screen justify-between'>
-            <div className='container mx-auto px-4 w-full'>
-                <Navbar />
-                <div>
+            <div className='container mx-auto w-full mt-32 md:mt-24'>
                     {children}
-                </div>
             </div>
             <Footer />
         </div>
+        </>
     )
 }
