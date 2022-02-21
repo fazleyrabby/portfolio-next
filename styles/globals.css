@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-section-height{
+  min-height: calc(100vh - 96px);
+}
+
 :root {
   /* Your default theme */
   --background: white;
