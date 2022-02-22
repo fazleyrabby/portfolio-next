@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Container } from '../components/Container'
-import { about } from '../lib/data'
+import { about } from '../lib/static'
 
 export default function About() {
   return (
@@ -11,8 +11,8 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="custom-height">
-       <h1 className="text-3xl font-bold mb-4">{about.title}</h1>
+      <main>
+      <h1 className="text-4xl font-bold m-6 text-center">About</h1>
         <p>{about.description}</p>
       </main>
 

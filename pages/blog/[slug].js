@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import { Container } from '../../components/Container'
-import { blogPosts } from '../../lib/data';
+import { getPosts } from '../../lib/data';
+import { blogPosts } from '../../lib/static';
+import { format, parseISO } from 'date-fns'
 
 export default function BlogPage({title, date, content}) {
   return (
@@ -13,7 +15,8 @@ export default function BlogPage({title, date, content}) {
 
       <main>
         <h1 className="text-3xl font-bold mb-4">{title}</h1>
-        {/* <div className='mb-4 text-sm'>{date.toString()}</div> */}
+        <div className='mb-4 text-sm text-slate-700 dark:text-slate-400 border-b-2 pb-2'>
+          {format(parseISO(date),'MMMM do, uuu')}</div>
         <p className='text-xl'>{content}</p>
       </main>
 
@@ -24,16 +27,22 @@ export default function BlogPage({title, date, content}) {
 
 export async function getStaticProps(context) {
     const { params } = context
+    const allPosts = getPosts();
+    const { data, content} = allPosts.find(post => post.slug === params.slug)
     return {
-      props: blogPosts.find(item => item.slug === params.slug)
+      props: {
+        ...data,
+        date: data.date,
+        content
+      }
     }
 }
 
 export async function getStaticPaths() {
     return {
-       paths: blogPosts.map(item => ({
+       paths: getPosts().map(post => ({
            params:{
-               slug: item.slug
+               slug: post.slug
            }
        })),
        fallback: false,

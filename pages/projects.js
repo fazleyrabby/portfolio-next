@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { Container } from '../components/Container'
-import { projects } from '../lib/data'
+import { projects } from '../lib/static'
 
 export default function About() {
     return (
@@ -13,15 +13,45 @@ export default function About() {
 
             <main>
                 <div className='mb-4'>
-                    <h1 className="text-3xl font-bold mb-4">Projects</h1>
-                    {projects.map((item) => (
-                        <div key={item.title}>
-                            <div className='text-2xl mb-4'>{item.title}</div>
-                            <a className='' href={item.link}>Link</a>
-                            <a className='' href={item.github}>Github</a>
-                            <div className='mb-4'>{item.description}</div>
+                    <h1 className="text-4xl font-bold m-6 text-center">Projects</h1>
+                    <div className='mb-4 custom-height'>
+                        <div className='mx-auto space-y-2 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2'>
+                            {projects.map((item) => (
+                                <div class="flex justify-center" key={item.title}>
+                                    <div class="rounded-lg shadow-md hover:shadow-xl bg-white max-w-md">
+                                        <a href="#!" data-mdb-ripple="true" data-mdb-ripple-color="light">
+                                            <img src="https://mdbootstrap.com/img/new/standard/nature/182.jpg" alt="" />
+                                        </a>
+                                        <div class="p-6">
+                                            <h5 class="text-gray-900 text-2xl font-medium mb-2">{item.title}</h5>
+                                            <p class="text-gray-700 text-base mb-4">
+                                                Some quick example text to build on the card title and make up the bulk of the card's
+                                                content.
+                                            </p>
+                                            <div className="flex justify-between">
+                                                <p className='flex space-x-1'>{item.tech?.map(each => (
+                                                    <span className="px-3 py-1  border rounded-md text-slate-500 uppercase text-xs">{each}</span>
+                                                ))}</p>
+
+                                                <div className='flex gap-2'>
+                                                    <a href={item.github}>
+                                                        <svg height="24" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="20" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+                                                            <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                                                        </svg>
+                                                    </a>
+
+                                                    <a href={item.github}>
+                                                        <svg className="w-6 h-6 stroke-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    ))}
+                    </div>
                 </div>
             </main>
 

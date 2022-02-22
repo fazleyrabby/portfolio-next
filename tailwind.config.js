@@ -27,12 +27,14 @@ module.exports = {
     extend: {
       animation: {
         wiggle: 'wiggle 3s ease-in-out infinite',
+        bounce: 'bounce 2s ease-in-out infinite',
       },
       keyframes: {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-4deg)' },
           '50%': { transform: 'rotate(4deg)' },
         }
+        
       }
     },
   },
@@ -40,7 +42,7 @@ module.exports = {
     plugin(function ({ addVariant, e, postcss, addComponents }) {
       addComponents({
         '.container': {
-          maxWidth: '100%',
+          maxWidth: '80%',
           '@screen sm': {
             maxWidth: '640px',
           },
@@ -48,10 +50,10 @@ module.exports = {
             maxWidth: '768px',
           },
           '@screen lg': {
-            maxWidth: '980px',
+            maxWidth: '860px',
           },
           '@screen xl': {
-            maxWidth: '1050px',
+            maxWidth: '900px',
           },
         }
       }),

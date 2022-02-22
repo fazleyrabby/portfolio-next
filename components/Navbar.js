@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { DarkMode } from './DarkMode';
 
 export const Navbar = () => {
@@ -14,18 +14,15 @@ export const Navbar = () => {
 
     return (
         <div className="fixed w-full z-10 top-0 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 firefox:bg-white firefox:dark:bg-gray firefox:bg-opacity-20">
-            <nav className='container mx-auto flex items-center justify-items-center justify-between flex-wrap bg-white py-6 text-black dark:text-white dark:bg-transparent order-1 gap-4 '>
-
+            <nav className='container mx-auto flex items-center justify-items-center justify-between flex-wrap bg-transparent py-6 text-black dark:text-white dark:bg-transparent order-1 gap-4 '>
                 <Link href='/'>
                     <a className='inline-flex items-center mr-4'>
-                        <span className='text-2xl text-black dark:text-white font-bold uppercase tracking-widest font-serif font-bold'>
+                        <span className='text-2xl text-black dark:text-white font-bold uppercase tracking-wide'>
                             Fazley
                         </span>
                     </a>
                 </Link>
 
-                
-                
                 <div
                     className={`${active ? '' : 'hidden'
                         }   w-full lg:inline-flex lg:flex-grow lg:w-auto order-2`}
@@ -51,8 +48,8 @@ export const Navbar = () => {
 
                     </div>
                 </div>
-                
-                
+
+
 
                 <div className='lg:order-3'>
                     <button
@@ -74,7 +71,7 @@ export const Navbar = () => {
                             />
                         </svg>
                     </button>
-                    <DarkMode/>
+                    <DarkMode />
                 </div>
             </nav>
         </div>

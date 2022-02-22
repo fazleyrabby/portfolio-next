@@ -1,5 +1,4 @@
-import { Navbar } from '../components/Navbar'
-import { Footer } from '../components/Footer'
+import { ScrollToTop } from '../components/ScrollToTop'
 import { ThemeProvider } from 'next-themes'
 import '../styles/globals.css'
 
@@ -7,6 +6,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system">
       <Component {...pageProps}/>
+      <ScrollToTop/>
     </ThemeProvider>
     
   )
