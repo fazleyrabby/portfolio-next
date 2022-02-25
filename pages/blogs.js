@@ -31,7 +31,7 @@ export default function Blogs({posts}) {
 
 
 export async function getServerSideProps(){
-
+    // console.log(process.env.STRAPI_URL)
     const postRes = await axios.get(`${process.env.STRAPI_URL}/posts?&sort=publishedAt:desc`);
     return {
         props: {

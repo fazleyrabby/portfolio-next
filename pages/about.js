@@ -1,9 +1,17 @@
+import axios from 'axios'
+import MarkdownIt from 'markdown-it/lib'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Container } from '../components/Container'
-import { about } from '../lib/static'
+// import { about } from '../lib/static'
 
-export default function About() {
+export default function About({about}) {
+  const md = new MarkdownIt({
+    html: true
+  });
+  const html = about.content.replace(/<script[^>]*>(?:(?!<\/script>)[^])*<\/script>/g, "")
+  const markdown_content = md.render(html)
+
   return (
     <Container>
       <Head>
@@ -13,8 +21,10 @@ export default function About() {
       </Head>
 
       <main>
-        <h1 className="text-4xl font-bold m-6 text-center">About</h1>
-        <p className='mb-6'>{about.description}</p>
+        <h1 className="text-4xl font-bold m-6 text-center">{about.title}</h1>
+        <section className='markdown text-center mb-4'> 
+          <div className='prose dark:prose-invert w-full text-justify mr-0 ml-0 inline' dangerouslySetInnerHTML={{__html: markdown_content}}></div>
+        </section>
 
 
         <h3 className='mb-4'>Connect with me on</h3>
@@ -44,4 +54,18 @@ export default function About() {
 
     </Container>
   )
+}
+
+
+export async function getServerSideProps(){
+  const about = await axios.get(`https://next-portfolio-strapi-cms.herokuapp.com/api/about`);
+  const data = about?.data?.data?.attributes
+  if (!about?.data?.data?.attributes || !data) {
+    return { notFound: true };
+  }
+  return {
+      props: {
+          about: data
+      }
+  }
 }

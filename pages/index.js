@@ -9,7 +9,6 @@ import axios from 'axios';
 import { SingleBlogItem } from '../components/SingleBlogItem';
 
 export default function Home({posts}) {
-
   experiences.sort((a, b) => new Date(b.timeline) - new Date(a.timeline))
 
 
@@ -36,7 +35,7 @@ export default function Home({posts}) {
           <div className='mx-auto space-y-2 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2'>
             {projects.map((item) => (
               <div className="flex justify-center" key={item.title}>
-                <div className="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform bg-white max-w-md">
+                <div className="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform bg-white max-w-md overflow-hidden">
                   <a href={item.live || item.github || '#!'} target="_blank" rel="noreferrer " data-mdb-ripple="true" data-mdb-ripple-color="light">
                     <img src={item.thumbnail} alt="" className='h-60 w-full object-cover object-left-top' />
                   </a>
