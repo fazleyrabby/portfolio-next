@@ -22,7 +22,7 @@ export default function Home({posts}) {
       <main className='mb-auto'>
         <div className='mb-6 custom-section-height flex flex-col justify-center items-center -mt-6 text-center'>
           <div className='mb-4'>
-            <Image src="/me.jpg" width={240} height={240} className='rounded-full overflow-hidden' />
+            <img src="/me.jpg" width={240} height={240} className='rounded-full overflow-hidden' />
           </div>
           <h1 className="lg:text-5xl text-3xl font-bold mb-4">I am Fazley Rabbi <span className="animate-wiggle inline-flex origin-bottom">👋</span></h1>
           <p className='mb-4'>A Passionate Web Developer & Tech Enthusiast</p>
@@ -38,7 +38,7 @@ export default function Home({posts}) {
               <div className="flex justify-center" key={item.title}>
                 <div className="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform bg-white max-w-md">
                   <a href={item.live || item.github || '#!'} target="_blank" rel="noreferrer " data-mdb-ripple="true" data-mdb-ripple-color="light">
-                    <Image src={item.thumbnail} alt="" className='h-60 w-full object-cover object-left-top' />
+                    <img src={item.thumbnail} alt="" className='h-60 w-full object-cover object-left-top' />
                   </a>
                   <div className="p-6">
                     <h5 className="text-gray-900 text-2xl font-bold mb-2">{item.title}</h5>
