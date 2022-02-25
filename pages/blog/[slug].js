@@ -43,7 +43,7 @@ export default function BlogPage({post}) {
 
 // export async function getServerSideProps(context){
 //   const { params } = context
-//   const postRes = await axios.get(`http://127.0.0.1:1337/api/posts/?filters[slug]=${params.slug}`);
+//   const postRes = await axios.get(`${process.env.STRAPI_URL}/api/posts/?filters[slug]=${params.slug}`);
 
 //   return {
 //       props: {
