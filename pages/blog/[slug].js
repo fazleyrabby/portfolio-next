@@ -8,7 +8,6 @@ import Link from 'next/link';
 import MarkdownIt from 'markdown-it'
 
 export default function BlogPage({post}) {
-
   const md = new MarkdownIt({
     html: true
   });
@@ -41,17 +40,19 @@ export default function BlogPage({post}) {
 }
 
 
-// export async function getServerSideProps(context){
-//   const { params } = context
-//   const postRes = await axios.get(`${process.env.STRAPI_URL}/api/posts/?filters[slug]=${params.slug}`);
-
-//   return {
-//       props: {
-//           post: postRes?.data?.data[0]?.attributes
-//       },
-//       fallback: false
-//   }
-// }
+export async function getServerSideProps(context){
+  const { params } = context
+  const postRes = await axios.get(`${process.env.STRAPI_URL}/posts/?filters[slug]=${params.slug}`);
+  const data = postRes?.data?.data[0]?.attributes
+  if (!data) {
+    return { notFound: true };
+  }
+  return {
+      props: {
+          post: data
+      }
+  }
+}
 
 // export async function getStaticProps(context) {
 //     const { params } = context
@@ -65,26 +66,26 @@ export default function BlogPage({post}) {
 //       }
 //     }
 // }
-export async function getStaticProps({params}) {
-  const post = await axios.get(`${process.env.STRAPI_URL}/posts/?filters[slug]=${params.slug}`);
-   return {
-      props: {
-          post: post?.data?.data[0]?.attributes
-      }
-  }
-}
-export async function getStaticPaths() {
-    const postRes = await axios.get(`${process.env.STRAPI_URL}/posts`);
+// export async function getStaticProps({params}) {
+//   const post = await axios.get(`${process.env.STRAPI_URL}/posts/?filters[slug]=${params.slug}`);
+//    return {
+//       props: {
+//           post: post?.data?.data[0]?.attributes
+//       }
+//   }
+// }
+// export async function getStaticPaths() {
+//     const postRes = await axios.get(`${process.env.STRAPI_URL}/posts`);
     
-    const paths = postRes.data.data.map(({id, attributes}) => {
-      return { params: { slug: attributes.slug } }
-    })
+//     const paths = postRes.data.data.map(({id, attributes}) => {
+//       return { params: { slug: attributes.slug } }
+//     })
     
-    return {
-      paths,
-      fallback: false
-    }
-  }
+//     return {
+//       paths,
+//       fallback: false
+//     }
+//   }
   
   
   
