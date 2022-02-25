@@ -29,19 +29,19 @@ export const Navbar = () => {
                 >
                     <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex flex-col lg:h-auto gap-4 font-semibold'>
                         <Link href='/about'>
-                            <a className={`${router.pathname.includes("/about") ? 'bg-gray-100 dark:text-black' : ""} lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black items-center dark:text-white justify-center hover:bg-gray-100 dark:hover:text-black`}>
+                            <a className={`${router.pathname.includes("/about") ? 'bg-gray-100 ' : "dark:text-white"} lg:inline-flex lg:w-auto w-full px-3 py-2 rounded   items-center text-black  justify-center hover:bg-gray-100 dark:hover:text-black`}>
                                 About
                             </a>
                         </Link>
 
                         <Link href='/projects'>
-                            <a className={`${router.pathname.includes("/projects") ? 'bg-gray-100 dark:text-black' : ""} lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black items-center justify-center dark:text-white hover:bg-gray-100 dark:hover:text-black`}>
+                            <a className={`${router.pathname.includes("/projects") ? 'bg-gray-100' : "dark:text-white"} lg:inline-flex lg:w-auto w-full px-3 py-2 rounded  items-center justify-center text-black hover:bg-gray-100 dark:hover:text-black`}>
                                 Project
                             </a>
                         </Link>
 
                         <Link href='/blogs'>
-                            <a className={`${router.pathname.includes("/blogs") || router.pathname.includes("/blog") ? 'bg-gray-100 dark:text-black' : ""} lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-black items-center justify-center dark:text-white hover:bg-gray-100 dark:hover:text-black`}>
+                            <a className={`${router.pathname.includes("/blogs") || router.pathname.includes("/blog") ? 'bg-gray-100' : "dark:text-white"} lg:inline-flex lg:w-auto w-full text-black px-3 py-2 rounded items-center justify-center hover:bg-gray-100 dark:hover:text-black`}>
                                 Blogs
                             </a>
                         </Link>
