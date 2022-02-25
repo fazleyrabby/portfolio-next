@@ -30,7 +30,7 @@ export default function BlogPage({post}) {
           <div className='mb-4 prose dark:prose-invert' dangerouslySetInnerHTML={{__html: markdown_content}}></div>
         </section>
         <Link href={`/blogs`}>
-        <a class="inline-block bg-black dark:bg-white dark:text-black hover:text-slate-100 text-white text-xs py-2 px-3 rounded group mb-12">
+        <a className="inline-block bg-black dark:bg-white dark:text-black hover:text-slate-100 text-white text-xs py-2 px-3 rounded group mb-12">
             <span className='inline-block group-hover:-translate-x-1 transition-transform mr-1'>{`<--`}</span>
            Go Back
         </a>
