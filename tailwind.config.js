@@ -3,6 +3,7 @@ const plugin = require('tailwindcss/plugin');
 module.exports = {
   darkMode: 'class',
   variants: {
+    typography: ['dark'],
     extend: {
         // ...
         translate: ['dark'],
@@ -16,6 +17,7 @@ module.exports = {
     container: false
   },
   theme: {
+    
     fontFamily: {
       'sans' : ['Inter','sans-serif'],
       'serif' : ['Lora','serif'],
@@ -50,6 +52,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/typography'),
     require("tailwindcss-animation-delay"),
     plugin(function ({ addVariant, e, postcss, addComponents }) {
       addComponents({

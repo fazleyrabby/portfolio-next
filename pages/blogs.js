@@ -1,9 +1,11 @@
 import Head from 'next/head'
 import { Container } from '../components/Container'
 // import { blogPosts } from '../lib/data'
-import Link from 'next/link';
+import axios from 'axios';
+import { SingleBlogItem } from '../components/SingleBlogItem';
 
-export default function Blogs() {
+export default function Blogs({posts}) {
+   
     return (
         <Container>
             <Head>
@@ -16,9 +18,10 @@ export default function Blogs() {
                 <div className='mb-4'>
                     <h1 className="text-4xl font-bold m-6 text-center">Blogs</h1>
                     <div className="space-y-5">
-                        {/* {blogPosts.map((item) => (
-                            <BlogListItem key={item.slug} {...item} />
-                        ))} */}
+                        {posts.data.map(({id, attributes}) => {
+                            attributes.id = id
+                            return <SingleBlogItem key={id} {...attributes} />
+                        })}
                     </div>
                 </div>
             </main>
@@ -27,12 +30,14 @@ export default function Blogs() {
 }
 
 
-function BlogListItem({ slug, title, date, content }) {
-    return (<div className="py-4">
-        <Link href={`/blog/${slug}`}>
-            <a className='text-2xl font-bold mb-2 block'>{title}</a>
-        </Link>
-        <div className='mb-4 text-sm text-slate-700'>{date.toString()}</div>
-        <div>{content}</div>
-    </div>)
+export async function getServerSideProps(){
+
+    const postRes = await axios.get(`${process.env.STRAPI_URL}/posts?&sort=publishedAt:desc`);
+    return {
+        props: {
+            posts: postRes.data
+        }
+    }
 }
+
+

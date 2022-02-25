@@ -3,6 +3,43 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* 
+html.dark 
+.markdown p,
+.markdown div,
+.markdown article,
+.markdown span, 
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.markdown ul
+{
+  color: #fff !important;
+}
+
+html.light .markdown > p,
+.markdown div,
+.markdown article,
+.markdown span, 
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.markdown ul
+{
+  color: #111 !important;
+} */
+
+#nprogress .bar {
+  background: #29d !important;
+}
+  
 .custom-height{
   min-height: calc(100vh - 96px - 56px);
 }
