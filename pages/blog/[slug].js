@@ -21,7 +21,7 @@ export default function BlogPage({post}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main className='mt-10'>
         <h1 className="text-3xl font-bold mb-4 capitalize">{post.title}</h1>
         <div className='text-md text-slate-600 mb-2 dark:text-slate-400'>{format(parseISO(post.publishedAt),'MMMM do, uuu, HH:mm:ss')}</div>
         <div className='mb-4 text-sm text-slate-700 dark:text-slate-400 border-b-2 pb-2'>{post.description}</div>
