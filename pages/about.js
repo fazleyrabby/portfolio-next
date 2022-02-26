@@ -57,7 +57,7 @@ export default function About({about}) {
 
 
 export async function getServerSideProps(){
-  const about = await axios.get(`https://next-portfolio-strapi-cms.herokuapp.com/api/about`);
+  const about = await axios.get(`${process.env.STRAPI_URL}/about`);
   const data = about?.data?.data?.attributes
   if (!about?.data?.data?.attributes || !data) {
     return { notFound: true };
