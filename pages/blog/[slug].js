@@ -26,7 +26,7 @@ export default function BlogPage({post}) {
         <div className='text-md text-slate-600 mb-2 dark:text-slate-400'>{format(parseISO(post.publishedAt),'MMMM do, uuu, HH:mm:ss')}</div>
         <div className='mb-4 text-sm text-slate-700 dark:text-slate-400 border-b-2 pb-2'>{post.description}</div>
         <section className='markdown'> 
-          <div className='mb-4 prose dark:prose-invert' dangerouslySetInnerHTML={{__html: markdown_content}}></div>
+          <div className='mb-4 prose dark:prose-invert text-justify inline' dangerouslySetInnerHTML={{__html: markdown_content}}></div>
         </section>
         <Link href={`/blogs`}>
         <a className="inline-block bg-black dark:bg-white dark:text-black hover:text-slate-100 text-white text-xs py-2 px-3 rounded group mb-12">
