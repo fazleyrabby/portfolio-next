@@ -3,7 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+.skill-items li{
+  @apply border border-gray-700 dark:border-gray-100 rounded-md px-3 py-2 uppercase text-xs;
+}
 /* 
 html.dark 
 .markdown p,
@@ -39,7 +41,7 @@ html.light .markdown > p,
 #nprogress .bar {
   background: #29d !important;
 }
-  
+
 .custom-height{
   min-height: calc(100vh - 96px - 56px);
 }

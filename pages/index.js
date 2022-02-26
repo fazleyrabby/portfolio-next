@@ -28,7 +28,7 @@ export default function Home({ posts }) {
           <p className='mb-4'>A Passionate Web Developer & Tech Enthusiast</p>
           <p className='mb-4'>Based on Bangladesh</p>
           <Link href='https://drive.google.com/file/d/1lYJ5n8vDHfBt2rnzgv2AzjNkxX9OyG_V/view?usp=sharing'>
-            <a target='_blank'  rel="noreferrer " className='bg-black dark:bg-white dark:text-black lg:inline-flex lg:w-auto w-full text-white px-3 py-2 rounded items-center justify-center hover:bg-slate-700 dark:hover:text-white dark:hover:bg-slate-700'>
+            <a target='_blank'  rel="noreferrer " className='bg-black dark:bg-white dark:text-black lg:inline-flex lg:w-auto text-white px-3 py-2 rounded items-center justify-center hover:bg-slate-700 dark:hover:text-white dark:hover:bg-slate-700'>
               Resume
             </a>
           </Link>
@@ -36,14 +36,14 @@ export default function Home({ posts }) {
         </div>
 
 
-        <div className='mb-48'>
+        <div className='lg:mb-48 mb-24'>
           <h1 className="text-4xl font-bold m-6 text-center">Projects</h1>
           <div className='mx-auto space-y-2 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2'>
             {projects.map((item) => (
               <div className="flex justify-center" key={item.title}>
                 <div className="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform bg-white max-w-md overflow-hidden">
                   <a href={item.live || item.github || '#!'} target="_blank" rel="noreferrer " data-mdb-ripple="true" data-mdb-ripple-color="light">
-                    <img src={item.thumbnail} alt="" className='h-60 w-full object-cover object-left-top' />
+                    <img src={item.thumbnail} alt="" className='h-1/2 w-full object-cover object-left-top' />
                   </a>
                   <div className="p-6">
                     <h5 className="text-gray-900 text-2xl font-bold mb-2">{item.title}</h5>
@@ -78,7 +78,35 @@ export default function Home({ posts }) {
           </div>
         </div>
 
-        <div className='mb-48'>
+        <div className='lg:mb-48 mb-24'>
+          <h1 className="text-4xl font-bold m-6 text-center">Skills</h1>
+          <div className='mx-auto space-y-2 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2'>
+          <div className='mb-4'>
+            <h3 className='mb-4 font-bold'>Tools / Languages I mostly work with</h3>
+                <ul className='flex gap-3 skill-items flex-wrap'>
+                  <li>Javascript</li>
+                  <li>PHP</li>
+                  <li>Laravel</li>
+                  <li>MySQL</li>
+                  <li>Bootstrap</li>
+                  <li>Github</li>
+                </ul>
+          </div>
+
+          <div>
+          <h3 className='mb-4 font-bold'>Tools I try out as hobby</h3>
+            <ul className='flex gap-3 skill-items flex-wrap'>
+                  <li>React JS</li>
+                  <li>Tailwind CSS</li>
+                  <li>Heroku</li>
+                  <li>Vercel</li>
+                </ul>
+          </div>
+          </div>
+
+        </div>
+
+        <div className='lg:mb-48 mb-24'>
           <h1 className="text-4xl font-bold m-6 text-center">Experience</h1>
           <div>
             <ol className="relative border-l border-gray-200 dark:border-gray-700">
@@ -90,9 +118,7 @@ export default function Home({ posts }) {
                   <p className="mb-2 text-sm text-gray-500">{item.role}</p>
                   {item.contributions.length > 1 ? <ul className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">{item.contributions?.map(each => (<li className="mb-1" key={each}>- {each}</li>))}</ul> : <p className='mb-4 text-base font-normal text-gray-500 dark:text-gray-400'>
                     {item.contributions}</p>
-                  }
-
-                  {/* <a href="#" className="inline-flex items-center py-2 px-4 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Learn more <svg className="ml-2 w-3 h-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></a> */}
+                  }       
                 </li>
               ))}
             </ol>
