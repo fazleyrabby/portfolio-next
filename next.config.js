@@ -3,6 +3,9 @@ require('dotenv').config()
 const webpack = require('webpack')
 
 const nextConfig = {
+  images: {
+    domains: ["res.cloudinary.com"]
+  },
   reactStrictMode: true,
   webpack: (config) => {
     config.plugins.push(

@@ -22,7 +22,7 @@ export default function Home({ posts }) {
       <main className='mb-auto'>
         <div className='mb-6 custom-section-height flex flex-col justify-center items-center -mt-6 text-center'>
           <div className='mb-4'>
-            <img src="/me.jpg" width={240} height={240} className='rounded-full overflow-hidden' />
+            <img src="https://res.cloudinary.com/fazleyrabbi-vercel-app/image/upload/v1645896252/photo_2022-02-01_18-19-55_q0qtin.jpg" width={240} height={240} className='rounded-full overflow-hidden' />
           </div>
           <h1 className="lg:text-5xl text-3xl font-bold mb-4">I am Fazley Rabbi <span className="animate-wiggle inline-flex origin-bottom">👋</span></h1>
           <p className='mb-4'>A Passionate Web Developer & Tech Enthusiast</p>

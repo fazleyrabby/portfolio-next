@@ -3,6 +3,7 @@ import MarkdownIt from 'markdown-it/lib'
 import Head from 'next/head'
 import Link from 'next/link'
 import { Container } from '../components/Container'
+import Image from 'next/image';
 // import { about } from '../lib/static'
 
 export default function About({about}) {
@@ -11,7 +12,7 @@ export default function About({about}) {
   });
   const html = about.content.replace(/<script[^>]*>(?:(?!<\/script>)[^])*<\/script>/g, "")
   const markdown_content = md.render(html)
-
+  const photo = about?.photo?.data?.attributes?.formats?.medium?.url
   return (
     <Container>
       <Head>
@@ -22,6 +23,12 @@ export default function About({about}) {
 
       <main>
         <h1 className="text-4xl font-bold m-6 text-center">{about.title}</h1>
+        
+        {photo && (<div className='text-center mb-4'>
+          <Image src={photo} layout="fixed" height="300px" width="300px"/>
+        </div>) }
+        
+
         <section className='markdown text-center mb-4'> 
           <div className='prose dark:prose-invert w-full text-justify mr-0 ml-0 inline' dangerouslySetInnerHTML={{__html: markdown_content}}></div>
         </section>
@@ -57,14 +64,18 @@ export default function About({about}) {
 
 
 export async function getServerSideProps(){
-  const about = await axios.get(`${process.env.STRAPI_URL}/about`);
+  // ${process.env.STRAPI_URL}/about?populate=*
+  
+  const about = await axios.get(`${process.env.STRAPI_URL}/about?populate=*`);
   const data = about?.data?.data?.attributes
+
   if (!about?.data?.data?.attributes || !data) {
     return { notFound: true };
   }
   return {
       props: {
           about: data
+          
       }
   }
 }
