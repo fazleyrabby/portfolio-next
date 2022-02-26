@@ -95,6 +95,7 @@ export default function Home({ posts }) {
             <ul className='flex gap-3 skill-items flex-wrap'>
                   <li>React JS</li>
                   <li>Tailwind CSS</li>
+                  <li>Markdown</li>
                   <li>Heroku</li>
                   <li>Vercel</li>
                 </ul>

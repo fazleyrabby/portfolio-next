@@ -12,7 +12,7 @@ export const Navbar = () => {
     };
     
     return (
-        <div className="fixed w-full z-10 top-0 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 backdrop-brightness-100 firefox:bg-white  firefox:bg-opacity-30 border-b border-b-gray-100 dark:border-b-gray-800">
+        <div className="custom-navbar">
             <nav className='container mx-auto flex items-center justify-items-center justify-between flex-wrap bg-transparent py-6 text-black dark:text-white dark:bg-transparent order-1 gap-4 '>
                 <Link href='/'>
                     <a className='inline-flex items-center mr-4'>
