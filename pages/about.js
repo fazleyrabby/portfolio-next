@@ -1,3 +1,5 @@
+/*eslint-disable jsx-a11y/alt-text*/
+/*eslint-disable @next/next/no-img-element*/
 import axios from 'axios'
 import MarkdownIt from 'markdown-it/lib'
 import Head from 'next/head'
@@ -25,7 +27,7 @@ export default function About({about}) {
         <h1 className="text-4xl font-bold m-6 text-center">{about.title}</h1>
         
         {photo && (<div className='text-center mb-4'>
-          <Image src={photo} layout="fixed" height="300px" width="300px"/>
+          <Image src={photo} layout="fixed" height="300px" width="300px" alt=""/>
         </div>) }
         
 
