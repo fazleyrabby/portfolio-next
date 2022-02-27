@@ -4,6 +4,7 @@ import { Container } from '../components/Container'
 import axios from 'axios';
 import { SingleBlogItem } from '../components/SingleBlogItem';
 import { gql, GraphQLClient } from 'graphql-request';
+import { getAllblogPosts } from '../lib/data';
 
 export default function Blogs({posts}) {
    
@@ -18,7 +19,7 @@ export default function Blogs({posts}) {
             <main>
                 <div className='mb-4'>
                     <h1 className="text-4xl font-bold m-6 text-center">Blogs</h1>
-                    <div className="space-y-5">
+                    <div className="space-y-10">
                         {posts.map((post) => {
                             return <SingleBlogItem key={post.id} {...post} />
                         })}
@@ -40,28 +41,7 @@ export default function Blogs({posts}) {
 // }
 
 export const getStaticProps = async () => {
-    const url = 'https://api-ap-south-1.graphcms.com/v2/cl04x782g1gqi01z2cu4c49je/master';
-    const graphcms = new GraphQLClient(url);
-    const QUERY = gql`
-    {
-        posts {
-          id
-          title
-          content
-          slug 
-          description 
-          date
-          photo{
-            url(
-            transformation: {
-              image: { resize: { width: 400, height: 400, fit: clip } }
-            }
-              )
-          }
-        }
-      }
-  `
-    const data = await graphcms.request(QUERY)
+    const data = await getAllblogPosts();
     
     return {
       props: { 

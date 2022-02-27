@@ -7,6 +7,8 @@ import axios from 'axios';
 import Link from 'next/link';
 import MarkdownIt from 'markdown-it'
 import { gql, GraphQLClient } from 'graphql-request';
+import { getAllSlugsPost, getSingleBlog, staticData } from '../../lib/data';
+import Image from 'next/image';
 
 export default function BlogPage({post}) {
   const md = new MarkdownIt({
@@ -14,6 +16,7 @@ export default function BlogPage({post}) {
   });
   const html = post?.content?.replace(/<script[^>]*>(?:(?!<\/script>)[^])*<\/script>/g, "")
   const markdown_content = md.render(html)
+  const photo = post?.photo?.url ?? staticData.blog_img
   return (
     <Container>
       <Head>
@@ -23,6 +26,7 @@ export default function BlogPage({post}) {
       </Head>
 
       <main className='mt-10'>
+      <Image src={photo} layout="fixed" alt='' width="100%" height="70%" layout="responsive" objectFit="contain"/>
         <h1 className="text-3xl font-bold mb-4 capitalize">{post.title}</h1>
         <div className='text-md text-slate-600 mb-2 dark:text-slate-400'>{format(parseISO(post.date),'MMMM do, uuu, HH:mm:ss')}</div>
         <div className='mb-4 text-sm text-slate-700 dark:text-slate-400 border-b-2 pb-2'>{post.description}</div>
@@ -68,49 +72,18 @@ export default function BlogPage({post}) {
 //     }
 // }
 export async function getStaticProps({params}) {
-  const url = 'https://api-ap-south-1.graphcms.com/v2/cl04x782g1gqi01z2cu4c49je/master';
-    const graphcms = new GraphQLClient(url);
-    const QUERY = gql`
-    {
-      post(where: {slug: "${params.slug}"}) {
-        id
-        title
-        content
-        slug 
-        date
-        description 
-        photo{
-          url(
-          transformation: {
-            image: { resize: { width: 400, height: 400, fit: clip } }
-          }
-          )
-        }
-      }
-    }
-  `
-    const data = await graphcms.request(QUERY)
-  
+    const data = await getSingleBlog(params.slug)
     return {
       props: { 
         post: data.post,
       }
     }
 }
+
 export async function getStaticPaths() {
-  const url = 'https://api-ap-south-1.graphcms.com/v2/cl04x782g1gqi01z2cu4c49je/master';
-  const graphcms = new GraphQLClient(url);
-  const QUERY = gql`
-  {
-    posts {
-      slug 
-    }
-  }
-`
-   const data = await graphcms.request(QUERY)
+   const data = await getAllSlugsPost();
    
     const paths = data.posts.map((post) => {
-       console.log(post.slug)
       return { params: { slug: post.slug } }
     })
     
