@@ -6,12 +6,13 @@ import { format, parseISO, parseJSON } from 'date-fns'
 import axios from 'axios';
 import Link from 'next/link';
 import MarkdownIt from 'markdown-it'
+import { gql, GraphQLClient } from 'graphql-request';
 
 export default function BlogPage({post}) {
   const md = new MarkdownIt({
     html: true
   });
-  const html = post.content.replace(/<script[^>]*>(?:(?!<\/script>)[^])*<\/script>/g, "")
+  const html = post?.content?.replace(/<script[^>]*>(?:(?!<\/script>)[^])*<\/script>/g, "")
   const markdown_content = md.render(html)
   return (
     <Container>
@@ -23,7 +24,7 @@ export default function BlogPage({post}) {
 
       <main className='mt-10'>
         <h1 className="text-3xl font-bold mb-4 capitalize">{post.title}</h1>
-        <div className='text-md text-slate-600 mb-2 dark:text-slate-400'>{format(parseISO(post.publishedAt),'MMMM do, uuu, HH:mm:ss')}</div>
+        <div className='text-md text-slate-600 mb-2 dark:text-slate-400'>{format(parseISO(post.date),'MMMM do, uuu, HH:mm:ss')}</div>
         <div className='mb-4 text-sm text-slate-700 dark:text-slate-400 border-b-2 pb-2'>{post.description}</div>
         <section className='markdown'> 
           <div className='mb-4 prose dark:prose-invert text-justify inline' dangerouslySetInnerHTML={{__html: markdown_content}}></div>
@@ -40,19 +41,19 @@ export default function BlogPage({post}) {
 }
 
 
-export async function getServerSideProps(context){
-  const { params } = context
-  const postRes = await axios.get(`${process.env.STRAPI_URL}/posts/?filters[slug]=${params.slug}`);
-  const data = postRes?.data?.data[0]?.attributes
-  if (!data) {
-    return { notFound: true };
-  }
-  return {
-      props: {
-          post: data
-      }
-  }
-}
+// export async function getServerSideProps(context){
+//   const { params } = context
+//   const postRes = await axios.get(`${process.env.STRAPI_URL}/posts/?filters[slug]=${params.slug}`);
+//   const data = postRes?.data?.data[0]?.attributes
+//   if (!data) {
+//     return { notFound: true };
+//   }
+//   return {
+//       props: {
+//           post: data
+//       }
+//   }
+// }
 
 // export async function getStaticProps(context) {
 //     const { params } = context
@@ -66,26 +67,61 @@ export async function getServerSideProps(context){
 //       }
 //     }
 // }
-// export async function getStaticProps({params}) {
-//   const post = await axios.get(`${process.env.STRAPI_URL}/posts/?filters[slug]=${params.slug}`);
-//    return {
-//       props: {
-//           post: post?.data?.data[0]?.attributes
-//       }
-//   }
-// }
-// export async function getStaticPaths() {
-//     const postRes = await axios.get(`${process.env.STRAPI_URL}/posts`);
+export async function getStaticProps({params}) {
+  const url = 'https://api-ap-south-1.graphcms.com/v2/cl04x782g1gqi01z2cu4c49je/master';
+    const graphcms = new GraphQLClient(url);
+    const QUERY = gql`
+    {
+      post(where: {slug: "${params.slug}"}) {
+        id
+        title
+        content
+        slug 
+        date
+        description 
+        photo{
+          url(
+          transformation: {
+            image: { resize: { width: 400, height: 400, fit: clip } }
+          }
+          )
+        }
+      }
+    }
+  `
+    const data = await graphcms.request(QUERY)
+  
+    return {
+      props: { 
+        post: data.post,
+      }
+    }
+}
+export async function getStaticPaths() {
+  const url = 'https://api-ap-south-1.graphcms.com/v2/cl04x782g1gqi01z2cu4c49je/master';
+  const graphcms = new GraphQLClient(url);
+  const QUERY = gql`
+  {
+    posts {
+      slug 
+    }
+  }
+`
+   const data = await graphcms.request(QUERY)
+   
+    const paths = data.posts.map((post) => {
+       console.log(post.slug)
+      return { params: { slug: post.slug } }
+    })
     
-//     const paths = postRes.data.data.map(({id, attributes}) => {
-//       return { params: { slug: attributes.slug } }
-//     })
-    
-//     return {
-//       paths,
-//       fallback: false
-//     }
-//   }
+    return {
+      paths,
+      fallback: false
+    }
+  }
+
+
+  
   
   
   

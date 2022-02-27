@@ -4,7 +4,7 @@ const webpack = require('webpack')
 
 const nextConfig = {
   images: {
-    domains: ["res.cloudinary.com"]
+    domains: ["res.cloudinary.com","media.graphcms.com"]
   },
   reactStrictMode: true,
   webpack: (config) => {

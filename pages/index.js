@@ -12,7 +12,6 @@ import Link from 'next/link';
 export default function Home({ posts }) {
   experiences.sort((a, b) => new Date(b.timeline) - new Date(a.timeline))
 
-
   return (
     <Container>
       <Head>

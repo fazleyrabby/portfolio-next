@@ -3,6 +3,7 @@ import { Container } from '../components/Container'
 // import { blogPosts } from '../lib/data'
 import axios from 'axios';
 import { SingleBlogItem } from '../components/SingleBlogItem';
+import { gql, GraphQLClient } from 'graphql-request';
 
 export default function Blogs({posts}) {
    
@@ -18,9 +19,8 @@ export default function Blogs({posts}) {
                 <div className='mb-4'>
                     <h1 className="text-4xl font-bold m-6 text-center">Blogs</h1>
                     <div className="space-y-5">
-                        {posts.data.map(({id, attributes}) => {
-                            attributes.id = id
-                            return <SingleBlogItem key={id} {...attributes} />
+                        {posts.map((post) => {
+                            return <SingleBlogItem key={post.id} {...post} />
                         })}
                     </div>
                 </div>
@@ -30,13 +30,46 @@ export default function Blogs({posts}) {
 }
 
 
-export async function getServerSideProps(){
-    const postRes = await axios.get(`${process.env.STRAPI_URL}/posts?&sort=publishedAt:desc`);
-    return {
-        props: {
-            posts: postRes.data
+// export async function getServerSideProps(){
+//     const postRes = await axios.get(`${process.env.STRAPI_URL}/posts?&sort=publishedAt:desc`);
+//     return {
+//         props: {
+//             posts: postRes.data
+//         }
+//     }
+// }
+
+export const getStaticProps = async () => {
+    const url = 'https://api-ap-south-1.graphcms.com/v2/cl04x782g1gqi01z2cu4c49je/master';
+    const graphcms = new GraphQLClient(url);
+    const QUERY = gql`
+    {
+        posts {
+          id
+          title
+          content
+          slug 
+          description 
+          date
+          photo{
+            url(
+            transformation: {
+              image: { resize: { width: 400, height: 400, fit: clip } }
+            }
+              )
+          }
         }
+      }
+  `
+    const data = await graphcms.request(QUERY)
+    
+    return {
+      props: { 
+        posts: data.posts,
+      }
     }
-}
+  }
+
+
 
 
