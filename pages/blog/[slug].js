@@ -25,7 +25,8 @@ export default function BlogPage({post}) {
       </Head>
 
       <main className='mt-10'>
-      <Image src={photo} alt='' width="100%" height="70%" layout="responsive" objectFit="contain"/>
+      <Image src={photo} alt='' width="100%" height="70%" layout="responsive" objectFit="contain" placeholder="blur"
+  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg="/>
         <h1 className="text-3xl font-bold mb-4 capitalize">{post.title}</h1>
         <div className='text-md text-slate-600 mb-2 dark:text-slate-400'>{format(parseISO(post.date),'MMMM do, uuu, HH:mm:ss')}</div>
         <div className='mb-4 text-sm text-slate-700 dark:text-slate-400 border-b-2 pb-2'>{post.description}</div>

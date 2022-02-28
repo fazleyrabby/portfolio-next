@@ -38,12 +38,13 @@ export default function Home({ posts }) {
 
         <div className='lg:mb-48 mb-24'>
           <h1 className="text-4xl font-bold m-6 text-center">Projects</h1>
-          <div className='mx-auto space-y-2 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2'>
+          <div className='mx-auto space-y-6 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2'>
             {projects.map((item) => (
-              <div className="" key={item.title}>
-                <div className="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform bg-white max-w-md overflow-hidden">
+              <div key={item.title}>
+                <div className="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform bg-white max-w-md overflow-hidden mx-auto">
                   <a href={item.live || item.github || '#!'} target="_blank" rel="noreferrer " data-mdb-ripple="true" data-mdb-ripple-color="light">
-                    <img src={item.thumbnail} alt="" className='h-60 w-full object-cover object-left-top' />
+                    <Image src={item.thumbnail} className="object-left-top" alt='' width={100} height="60px" layout="responsive" objectFit="cover" placeholder="blur"
+  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg="/>
                   </a>
                   <div className="p-3">
                     <h5 className="text-gray-900 text-2xl font-bold mb-2">{item.title}</h5>
