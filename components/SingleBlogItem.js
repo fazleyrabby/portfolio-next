@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { staticData } from "../lib/data";
 
-export function SingleBlogItem({ title, description, slug, date, photo, filename }) {
+export function SingleBlogItem({ title, description, slug, date, photo }) {
 
     return (
-        <Link href={`/blog/${slug}`}>
+        <Link href={`/blog/${slug}`} passHref>
             <div className="w-full lg:max-w-full lg:flex group cursor-pointer">
                 <div className="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
                     style={{
