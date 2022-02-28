@@ -17,7 +17,6 @@ export default function About({about}) {
   const markdown_content = md.render(html)
   // const photo = about?.photo?.data?.attributes?.formats?.medium?.url
   const photo = about?.photo?.url
-  console.log(about)
   return (
     <Container>
       <Head>
