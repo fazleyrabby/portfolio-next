@@ -27,7 +27,7 @@ export default function Home({ posts }) {
           <h1 className="lg:text-5xl text-3xl font-bold mb-4">I am Fazley Rabbi <span className="animate-wiggle inline-flex origin-bottom">👋</span></h1>
           <p className='mb-4'>A Passionate Web Developer & Tech Enthusiast</p>
           <p className='mb-4'>Based on Bangladesh</p>
-          <Link href='https://drive.google.com/file/d/1lYJ5n8vDHfBt2rnzgv2AzjNkxX9OyG_V/view?usp=sharing'>
+          <Link href='https://drive.google.com/file/d/1RvPW_tWLq1Y2IODKI7odbfGmgqpwioAj/view?usp=sharing' passHref>
             <a target='_blank'  rel="noreferrer " className='bg-black dark:bg-white dark:text-black lg:inline-flex lg:w-auto text-white px-3 py-2 rounded items-center justify-center hover:bg-slate-700 dark:hover:text-white dark:hover:bg-slate-700'>
               Resume
             </a>
