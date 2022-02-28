@@ -98,6 +98,9 @@ export default function Home({ posts }) {
                   <li>Markdown</li>
                   <li>Heroku</li>
                   <li>Vercel</li>
+                  <li>Netlify</li>
+                  <li>GraphCMS</li>
+                  <li>Strapi</li>
                 </ul>
           </div>
           </div>
