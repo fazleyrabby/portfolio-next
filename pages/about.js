@@ -29,8 +29,7 @@ export default function About({about}) {
         <h1 className="text-4xl font-bold m-6 text-center">{about.title}</h1>
         
         {photo && (<div className='text-center mb-4'>
-          <Image src={photo} layout="fixed" height="300px" width="300px" alt="" placeholder="blur"
-  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg="/>
+          <Image src={photo} layout="fixed" height="300px" width="300px" alt="" placeholder="blur" blurDataURL={photo} priority/>
         </div>) }
         
 

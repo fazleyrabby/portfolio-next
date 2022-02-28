@@ -25,8 +25,7 @@ export default function About() {
               <div key={item.title}>
                 <div className="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform bg-white max-w-md overflow-hidden mx-auto">
                   <a href={item.live || item.github || '#!'} target="_blank" rel="noreferrer " data-mdb-ripple="true" data-mdb-ripple-color="light">
-                    <Image src={item.thumbnail} className="object-left-top" alt='' width={100} height="60px" layout="responsive" objectFit="cover" placeholder="blur"
-  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg="/>
+                  <Image src={item.thumbnail} className="object-left-top" alt='' width={100} height="60px" layout="responsive" objectFit="cover" placeholder="blur" blurDataURL={item.thumbnail} priority/>
                   </a>
                   <div className="p-3">
                     <h5 className="text-gray-900 text-2xl font-bold mb-2">{item.title}</h5>
