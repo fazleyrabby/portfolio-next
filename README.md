@@ -1,4 +1,4 @@
-A Simple portfolio/blog site made with Next JS , Tailwind CSS & Strapi CMS
+A Simple portfolio/blog site made with Next JS , Tailwind CSS & Graph CMS 
 
 Currently on work! 
 Sample images:
