@@ -8,9 +8,9 @@ import { experiences, projects } from '../lib/static';
 import axios from 'axios';
 import { SingleBlogItem } from '../components/SingleBlogItem';
 import Link from 'next/link';
-import { getAllblogPosts } from '../lib/data';
+import { getAllblogPosts, getIndexData } from '../lib/data';
 
-export default function Home({ posts }) {
+export default function Home({ posts, cv }) {
   experiences.sort((a, b) => new Date(b.timeline) - new Date(a.timeline))
 
   return (
@@ -27,7 +27,7 @@ export default function Home({ posts }) {
           <h1 className="lg:text-5xl text-3xl font-bold mb-4">I am Fazley Rabbi <span className="animate-wiggle inline-flex origin-bottom">👋</span></h1>
           <p className='mb-4'>A Passionate Web Developer & Tech Enthusiast</p>
           <p className='mb-4'>Based on Bangladesh</p>
-          <Link href='https://drive.google.com/file/d/1RvPW_tWLq1Y2IODKI7odbfGmgqpwioAj/view?usp=sharing' passHref>
+          <Link href={`${cv ?? 'https://drive.google.com/file/d/1RvPW_tWLq1Y2IODKI7odbfGmgqpwioAj/view?usp=sharing'}`} passHref>
             <a target='_blank'  rel="noreferrer " className='bg-black dark:bg-white dark:text-black lg:inline-flex lg:w-auto text-white px-3 py-2 rounded items-center justify-center hover:bg-slate-700 dark:hover:text-white dark:hover:bg-slate-700'>
               Resume
             </a>
@@ -153,10 +153,12 @@ export default function Home({ posts }) {
 
 export const getStaticProps = async () => {
   const data = await getAllblogPosts();
+  const index = await getIndexData();
   
   return {
     props: { 
       posts: data.posts,
+      cv: index?.abouts[0]?.cv
     }
   }
 }
