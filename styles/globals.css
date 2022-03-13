@@ -70,7 +70,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family:  'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family:  'Inter','Segoe UI', 'system-ui', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     height: 100vh;
 }
@@ -82,4 +82,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.after-border{
+  position: relative;
+}
+.after-border::after{
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: "";
+  width: 75px;
+  height: 3px;
+  background: #fff;
 }
