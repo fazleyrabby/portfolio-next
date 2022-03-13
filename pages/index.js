@@ -16,7 +16,7 @@ export default function Home({ posts, cv }) {
   return (
     <Container>
       <Head>
-        <title>Portfolio | Fazley 💻</title>
+        <title>Portfolio | Home 💻</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="mb-auto">
