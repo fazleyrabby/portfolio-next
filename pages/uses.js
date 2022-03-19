@@ -46,7 +46,7 @@ export default function Uses() {
                       blurDataURL="/setup.png"
                       priority
                 />
-                <p className="text-small italic -mt-12">- My current desk setup</p>
+                <p className="text-small italic lg:-mt-10">- My current desk setup</p>
           </div>
         </div>
       </main>
