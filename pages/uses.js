@@ -33,7 +33,7 @@ export default function Uses() {
                   </ul>
                 </div>
               ))}
-              <p className="text-2xl font-bold mb-4">Desk Setup</p>
+              
               <Image
                       src="/setup.png"
                       className="object-left-top"
@@ -46,7 +46,7 @@ export default function Uses() {
                       blurDataURL="/setup.png"
                       priority
                 />
-                
+                <p className="text-small italic -mt-12">- My current desk setup</p>
           </div>
         </div>
       </main>
