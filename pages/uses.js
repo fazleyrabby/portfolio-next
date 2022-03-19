@@ -33,6 +33,20 @@ export default function Uses() {
                   </ul>
                 </div>
               ))}
+              <p className="text-2xl font-bold mb-4">Desk Setup</p>
+              <Image
+                      src="/setup.png"
+                      className="object-left-top"
+                      alt=""
+                      width="100"
+                      height="100"
+                      layout="responsive"
+                      objectFit="contain"
+                      placeholder="blur"
+                      blurDataURL="/setup.png"
+                      priority
+                />
+                
           </div>
         </div>
       </main>

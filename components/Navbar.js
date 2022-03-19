@@ -50,9 +50,6 @@ export const Navbar = () => {
                                 Uses
                             </a>
                         </Link>
-
-                        
-
                     </div>
                 </div>
 
