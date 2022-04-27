@@ -38,7 +38,7 @@ export default function Home({ posts, cv }) {
           <Link
             href={`${
               cv ??
-              "https://drive.google.com/file/d/1RvPW_tWLq1Y2IODKI7odbfGmgqpwioAj/view?usp=sharing"
+              "https://drive.google.com/file/d/1Dnoua4GT1IZU3xpSuHgjwWc_RE0_G11U/view"
             }`}
             passHref
           >
