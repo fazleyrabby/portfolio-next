@@ -12,7 +12,6 @@ import { getAllblogPosts, getIndexData } from "../lib/data";
 
 export default function Home({ posts, cv }) {
   experiences.sort((a, b) => new Date(b.timeline) - new Date(a.timeline));
-
   return (
     <Container>
       <Head>
@@ -37,8 +36,7 @@ export default function Home({ posts, cv }) {
           <p className="mb-4">Based on Bangladesh</p>
           <Link
             href={`${
-              cv ??
-              "https://drive.google.com/file/d/1Dnoua4GT1IZU3xpSuHgjwWc_RE0_G11U/view"
+              cv === '' ? "https://drive.google.com/file/d/1hygjZWNdm1k73QRF-sbOjh84QjcYBy7O/view" : cv
             }`}
             passHref
           >
@@ -236,6 +234,7 @@ export default function Home({ posts, cv }) {
           </div>
         </div>
 
+
         <div className="mb-10">
           <h1 className="text-4xl font-bold m-6 text-center">Blogs</h1>
           <div className="space-y-10">
@@ -262,7 +261,7 @@ export default function Home({ posts, cv }) {
 export const getStaticProps = async () => {
   const data = await getAllblogPosts();
   const index = await getIndexData();
-
+ 
   return {
     props: {
       posts: data.posts,
