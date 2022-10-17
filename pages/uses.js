@@ -8,7 +8,6 @@ import { Container } from "../components/Container";
 import { uses } from "../lib/static";
 
 export default function Uses() {
-  console.log(uses);
   return (
     <Container>
       <Head>
