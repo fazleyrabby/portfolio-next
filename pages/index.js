@@ -214,7 +214,7 @@ export default function Home({ posts, cv }) {
                     {item.from} - {item.to}
                   </time>
                   <h3 className="text-2xl font-bold">
-                    <a href={item.link} target='_blank'>
+                    <a href={item.link} target='_blank' rel="noreferrer">
                       {item.name}
                     </a>
                   </h3>
