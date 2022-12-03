@@ -41,7 +41,6 @@ export default function Home({ posts, cv }) {
             href="/resume" passHref
           >
             <a
-              rel="noreferrer "
               className="bg-black dark:bg-white dark:text-black lg:inline-flex lg:w-auto text-white px-3 py-2 rounded items-center justify-center hover:bg-slate-700 dark:hover:text-white dark:hover:bg-slate-700"
             >
               Resume
