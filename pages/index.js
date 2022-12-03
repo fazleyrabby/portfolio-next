@@ -133,7 +133,6 @@ export default function Home({ posts, cv }) {
                         ) : (
                           ""
                         )}
-
                         {item.live ? (
                           <a
                             target="_blank"
