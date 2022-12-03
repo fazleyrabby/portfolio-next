@@ -1,3 +1,5 @@
+/* eslint-disable jsx-no-target-blank */
+
 import Head from "next/head";
 import Image from "next/image";
 import { Container } from "../components/Container";
