@@ -1,4 +1,4 @@
-/* eslint-disable jsx-no-target-blank */
+/* eslint-disable react/jsx-no-target-blank */
 
 import Head from "next/head";
 import Image from "next/image";
