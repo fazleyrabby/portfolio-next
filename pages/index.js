@@ -35,13 +35,12 @@ export default function Home({ posts, cv }) {
           <p className="mb-4">A Passionate Web Developer & Tech Enthusiast</p>
           <p className="mb-4">Based on Bangladesh</p>
           <Link
-            href={`${
-              cv === '' ? "https://drive.google.com/file/d/1hygjZWNdm1k73QRF-sbOjh84QjcYBy7O/view" : cv
-            }`}
-            passHref
+            // href={`${
+            //   cv === '' ? "https://drive.google.com/file/d/1hygjZWNdm1k73QRF-sbOjh84QjcYBy7O/view" : cv
+            // }`}
+            href="/resume" passHref
           >
             <a
-              target="_blank"
               rel="noreferrer "
               className="bg-black dark:bg-white dark:text-black lg:inline-flex lg:w-auto text-white px-3 py-2 rounded items-center justify-center hover:bg-slate-700 dark:hover:text-white dark:hover:bg-slate-700"
             >

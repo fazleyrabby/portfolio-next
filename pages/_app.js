@@ -1,6 +1,7 @@
 import { ScrollToTop } from '../components/ScrollToTop'
 import { ThemeProvider } from 'next-themes'
 import '../styles/globals.css'
+import '../styles/cv.css'
 import "nprogress/nprogress.css";
 
 import NProgress from "nprogress";
