@@ -39,12 +39,16 @@
 .content {
     /* margin: 1rem; */
     padding: 1rem;
-    font-size: 0.95rem;
+    /* font-size: 0.95rem; */
     /* border: 1px dashed; */
 }
 
 .content div {
     min-height: max-content;
+}
+
+.content a:hover{
+    text-decoration: underline;
 }
 
 .content.left {

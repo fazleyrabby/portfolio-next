@@ -5,12 +5,40 @@ import Image from "next/image";
 import { Container } from "../components/Container";
 import { useReactToPrint } from 'react-to-print';
 import { useRef } from "react";
+import jsPDF from "jspdf";
 
 export default function Resume() {
     const componentRef = useRef();
-    const handlePrint = useReactToPrint({
-      content: () => componentRef.current,
-    });
+    // const handlePrint = useReactToPrint({
+    //   content: () => componentRef.current,
+    // });
+
+    const handlePrint = () => {
+        // const doc = new jsPDF({
+        //   format: "a4",
+        //   orientation: 'p',
+        //   unit: "pt"
+        // });
+        let doc = new jsPDF('p', 'pt', 'a4');
+
+        doc.html(componentRef.current, {
+          async callback(doc) {
+            await doc.save("cv.pdf");
+            // await window.open(doc.output('bloburl'));
+          },
+          html2canvas: { scale: 0.67 } 
+        });
+
+        // let pdf = new jsPDF('p', 'pt', 'a4');
+        // pdf.html(componentRef.current, {
+        //     callback: function () {
+        //         window.open(pdf.output('bloburl')); // To debug.
+        //     },
+        //     html2canvas: { scale: 0.67 }
+        // });
+
+
+    };
 
     return (
         <Container>
@@ -43,8 +71,8 @@ export default function Resume() {
                                         <h3 className="font-bold">Experience</h3>
                                         <div className="mb-1">
                                             <div>
-                                                <h4>Laravel&nbsp;Developer,&nbsp;Electronic&nbsp;First</h4>
-                                                <small>October, 2021 - Present</small>
+                                                <h4>Laravel Developer, Electronic First</h4>
+                                                <span className="text-sm">October, 2021 - Present</span>
                                             </div>
                                             <ul>
                                                 <li>- In house Software Maintenance</li>
@@ -56,8 +84,8 @@ export default function Resume() {
                                         </div>
                                         <div>
                                             <div>
-                                                <h4 >Laravel&nbsp;Developer&nbsp;-&nbsp;Amcoders</h4>
-                                                <small>January, 2021 - July, 2021</small>
+                                                <h4 >Laravel Developer - Amcoders</h4>
+                                                <span className="text-sm">January, 2021 - July, 2021</span>
                                             </div>
                                             <ul>
                                                 <li>- Payment Gateway Integration (Stripe, Paypal)</li>
@@ -71,18 +99,18 @@ export default function Resume() {
                                     </div>
                                     <div className="education mb-1">
                                         <h3 className="font-bold">Education</h3>
-                                        <h4>B.Sc.&nbsp;in&nbsp;Engineering:</h4>
+                                        <h4>B.Sc. in Engineering:</h4>
                                         <div className="mb-1">
-                                            <div>Department : Computer Science & Engineering </div>
-                                            <div>Institute : Port City International University, Chittagong</div>
-                                            <div>Passing Year : 2020</div>
+                                            <div>Department: Computer Science & Engineering </div>
+                                            <div>Institute: Port City International University, Chittagong</div>
+                                            <div>Passing Year: 2020</div>
                                         </div>
 
-                                        <h4>Diploma&nbsp;in&nbsp;Engineering: </h4>
+                                        <h4>Diploma in Engineering: </h4>
                                         <div>
-                                            <div>Department : Computer Technology </div>
-                                            <div>Institute : Daffodil Institute of IT, Chittagong </div>
-                                            <div>Passing Year : 2016</div>
+                                            <div>Department: Computer Technology </div>
+                                            <div>Institute: Daffodil Institute of IT, Chittagong </div>
+                                            <div>Passing Year: 2016</div>
                                         </div>
                                     </div>
                                     <div className="projects mb-1">
@@ -106,27 +134,22 @@ export default function Resume() {
                                             <h4 className="font-bold">Address</h4>
                                             West High Level Road, Lalkhan Bazar, Chittagong, Bangladesh
                                         </div>
-                                        <div>
-                                            <h4 className="font-bold">Phone</h4>
-                                            <div>+8801954137632</div>
-                                            <div>+8801872512499</div>
-                                        </div>
                                     </div>
                                     <div className="personalInfo mb-1">
                                         <div className="mb-1">
-                                            <h4 className="font-bold">Date&nbsp;of&nbsp;birth:</h4>
-                                            26-11-1993
+                                            <h4 className="font-bold">Date of birth:</h4>
+                                            <span>Nov 26, 1993</span>
                                         </div>
 
                                         <div className="mb-1">
                                             <h4 className="font-bold">Email:</h4>
-                                            fazley111@gmail.com
+                                            <a href="mailto:fazley111@gmail.com">fazley111@gmail.com</a>
                                         </div>
                                     </div>
                                     <div className="links mb-1">
                                         <div className="mb-1">
-                                            <h4 className="font-bold">Portfolio&nbsp;Site:</h4>
-                                            <a href="https://fazleyrabbi.xyz/">https://fazleyrabbi.xyz</a>
+                                            <h4 className="font-bold">Portfolio Site:</h4>
+                                            <a name="portfolio" href="https://fazleyrabbi.xyz/">fazleyrabbi.xyz</a>
                                         </div>
 
                                         <div className="mb-1">
@@ -162,12 +185,12 @@ export default function Resume() {
                                     </div>
                                     <div className="tools">
                                         <div className="mb-1">
-                                            <h4 className="font-bold">Languages&nbsp;&&nbsp;Frameworks: </h4>
+                                            <h4 className="font-bold">Languages & Frameworks: </h4>
                                             Codeigniter, Laravel,
                                             Bootstrap, Jquery, Tailwind CSS, MySQL.
                                         </div>
                                         <div>
-                                            <h4 className="font-bold">Tools&nbsp;&&nbsp;Technology: </h4>
+                                            <h4 className="font-bold">Tools & Technology: </h4>
                                             MySQL workbench, VS Code, PHP Storm, Bash, Slack, Git, Linux OS
                                         </div>
                                     </div>
