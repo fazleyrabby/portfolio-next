@@ -1,45 +1,9 @@
 /* eslint-disable react/jsx-no-target-blank */
 
 import Head from "next/head";
-import Image from "next/image";
 import { Container } from "../components/Container";
-import { useReactToPrint } from 'react-to-print';
-import { useRef } from "react";
-import jsPDF from "jspdf";
 
 export default function Resume() {
-    const componentRef = useRef();
-    // const handlePrint = useReactToPrint({
-    //   content: () => componentRef.current,
-    // });
-
-    const handlePrint = () => {
-        // const doc = new jsPDF({
-        //   format: "a4",
-        //   orientation: 'p',
-        //   unit: "pt"
-        // });
-        let doc = new jsPDF('p', 'pt', 'a4');
-
-        doc.html(componentRef.current, {
-          async callback(doc) {
-            await doc.save("cv.pdf");
-            // await window.open(doc.output('bloburl'));
-          },
-          html2canvas: { scale: 0.67 } 
-        });
-
-        // let pdf = new jsPDF('p', 'pt', 'a4');
-        // pdf.html(componentRef.current, {
-        //     callback: function () {
-        //         window.open(pdf.output('bloburl')); // To debug.
-        //     },
-        //     html2canvas: { scale: 0.67 }
-        // });
-
-
-    };
-
     return (
         <Container>
             <Head>
@@ -50,153 +14,11 @@ export default function Resume() {
 
             <main>
                 <div className="mb-10">
-                    <h1 className="text-3xl font-bold m-6 text-center">Resume</h1>
-                    <span className="block text-center" id="download-button" onClick={handlePrint}>Download</span>
                     <div className="p-4 cv-wrapper">
-                        <div id="cv" className="cv-container" ref={componentRef}>
-                            <div className="top">
-                                {/* <img src="img.jpg" width="160px" height="200px"> */}
-                                <div className="title">
-                                    <h1 className="text-3xl font-bold">Md. Fazley Rabbi</h1>
-                                    <h3>Laravel Developer</h3>
-                                </div>
-                            </div>
-                            <div className="bottom">
-                                <div className="content left">
-                                    <div className="summary mb-1">
-                                        <h3 className="font-bold">Summary</h3>
-                                        A passionate self-taught web developer specializing in building web applications with more than a year of professional experience working with PHP, Laravel and MySQL
-                                    </div>
-                                    <div className="experience mb-1">
-                                        <h3 className="font-bold">Experience</h3>
-                                        <div className="mb-1">
-                                            <div>
-                                                <h4>Laravel Developer, Electronic First</h4>
-                                                <span className="text-sm">October, 2021 - Present</span>
-                                            </div>
-                                            <ul>
-                                                <li>- In house Software Maintenance</li>
-                                                <li>- Code Refactoring, Debugging errors and Optimization </li>
-                                                <li>- Custom Newsletter Feature</li>
-                                                <li>- Backend Support and maintenance</li>
-                                                <li>- Worked on migrating from Laravel 5.6 to 9</li>
-                                            </ul>
-                                        </div>
-                                        <div>
-                                            <div>
-                                                <h4 >Laravel Developer - Amcoders</h4>
-                                                <span className="text-sm">January, 2021 - July, 2021</span>
-                                            </div>
-                                            <ul>
-                                                <li>- Payment Gateway Integration (Stripe, Paypal)</li>
-                                                <li>- Two Step Authentication, Multi Auth, Email Validation</li>
-                                                <li>- Multiple API Integration (Mailchimp, Twilio)</li>
-                                                <li>- Dynamic CV Builder with Jquery and Ajax</li>
-                                                <li>- Dynamic Kanban Layout for project management with Jquery UI</li>
-                                            </ul>
-
-                                        </div>
-                                    </div>
-                                    <div className="education mb-1">
-                                        <h3 className="font-bold">Education</h3>
-                                        <h4>B.Sc. in Engineering:</h4>
-                                        <div className="mb-1">
-                                            <div>Department: Computer Science & Engineering </div>
-                                            <div>Institute: Port City International University, Chittagong</div>
-                                            <div>Passing Year: 2020</div>
-                                        </div>
-
-                                        <h4>Diploma in Engineering: </h4>
-                                        <div>
-                                            <div>Department: Computer Technology </div>
-                                            <div>Institute: Daffodil Institute of IT, Chittagong </div>
-                                            <div>Passing Year: 2016</div>
-                                        </div>
-                                    </div>
-                                    <div className="projects mb-1">
-                                        <h3 className="font-bold">Projects</h3>
-                                        <div>1. <a href="https://github.com/fazleyrabby/routine-lte" target="_blank">Faculty class Routine Management System</a> (Final Year Project) [Laravel, Bootstrap, MySQL]  </div>
-                                        <div>2. <a href="https://codecanyon.net/item/ebank-complete-online-banking-system-with-dps-loan/30597974" target="_blank">E-Bank</a> - Online Banking System (for AMCoders)  </div>
-                                        <div>3. <a href="https://codecanyon.net/item/lenden-multipurpose-payment-gateway-system-saas/32131005" target="_blank">Lenden</a> - Multipurpose Payment Gateway System (for AMCoders) </div>
-                                        <div>4. <a href="https://codecanyon.net/item/timelock-project-management-system-with-screenshot-capture/32354442" target="_blank">Timelock</a> - Project Management System </div>
-                                    </div>
-                                    <div className="reference mb-1">
-                                        <h3 className="font-bold">Reference</h3>
-                                        <div>Ashiqul Islam</div>
-                                        <div>Software Engineer SSL Wireless</div>
-                                        <div>Contact No: 01521401595 </div>
-                                        <div>Email:ashiq201@yahoo.com</div>
-                                    </div>
-                                </div>
-                                <div className="content right">
-                                    <div className="contact mb-1">
-                                        <div className="mb-1">
-                                            <h4 className="font-bold">Address</h4>
-                                            West High Level Road, Lalkhan Bazar, Chittagong, Bangladesh
-                                        </div>
-                                    </div>
-                                    <div className="personalInfo mb-1">
-                                        <div className="mb-1">
-                                            <h4 className="font-bold">Date of birth:</h4>
-                                            <span>Nov 26, 1993</span>
-                                        </div>
-
-                                        <div className="mb-1">
-                                            <h4 className="font-bold">Email:</h4>
-                                            <a href="mailto:fazley111@gmail.com">fazley111@gmail.com</a>
-                                        </div>
-                                    </div>
-                                    <div className="links mb-1">
-                                        <div className="mb-1">
-                                            <h4 className="font-bold">Portfolio Site:</h4>
-                                            <a name="portfolio" href="https://fazleyrabbi.xyz/">fazleyrabbi.xyz</a>
-                                        </div>
-
-                                        <div className="mb-1">
-                                            <h4 className="font-bold">LinkedIn: </h4>
-                                            <a href="https://linkedin.com/in/fazley-rabby">linkedin.com/in/fazley-rabby</a>
-                                        </div>
-                                    </div>
-                                    <div className="skill mb-1">
-                                        <div className="mb-1">
-                                            <h4 className="font-bold">Languages</h4>
-                                            <div>
-                                                1. Native Bengali
-                                            </div>
-                                            <div>
-                                                2. Fluent in Reading, Writing & Speaking in English
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold">Skills</h4>
-                                            <ul>
-                                                <li>-Complex problem solver</li>
-                                                <li>-Innovative</li>
-                                                <li>-Service-focused</li>
-                                                <li>-Quick Learner</li>
-                                                <li>-Dedicated</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="hobbies mb-1">
-                                        <h4 className="font-bold">Hobbies</h4>
-                                        <div>Photography</div>
-                                        <div>Travelling</div>
-                                    </div>
-                                    <div className="tools">
-                                        <div className="mb-1">
-                                            <h4 className="font-bold">Languages & Frameworks: </h4>
-                                            Codeigniter, Laravel,
-                                            Bootstrap, Jquery, Tailwind CSS, MySQL.
-                                        </div>
-                                        <div>
-                                            <h4 className="font-bold">Tools & Technology: </h4>
-                                            MySQL workbench, VS Code, PHP Storm, Bash, Slack, Git, Linux OS
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <object type="application/pdf" data="/cv.pdf"
+                        width="800px"
+                        height="700px"
+                        ></object>
                     </div>
                 </div>
             </main>
