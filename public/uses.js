@@ -20,7 +20,7 @@ export default function Uses() {
         <div className="mb-10">
           <h1 className="text-3xl font-bold m-6 text-center">Uses</h1>
           <div className="custom-height">
-              {uses?.map((each) => (
+              {/* {uses?.map((each) => (
                 <div key={each.title} className="mb-12">
                   <h1 className="text-2xl font-bold mb-6 after-border">{each.title}</h1>
                   <ul className="mb-4 text-base text-gray-500 dark:text-gray-400 list-disc">
@@ -31,7 +31,7 @@ export default function Uses() {
                     ))}
                   </ul>
                 </div>
-              ))}
+              ))} */}
               
               {/* <Image
                       src="/setup.png"

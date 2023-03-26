@@ -44,12 +44,12 @@ export const Navbar = () => {
                                 Blogs
                             </a>
                         </Link>
-
+{/* 
                         <Link href='/uses'>
                             <a className={`${router.pathname.includes("/uses") || router.pathname.includes("/uses") ? 'bg-gray-100' : "dark:text-white"} lg:inline-flex lg:w-auto w-full text-black px-3 py-2 rounded items-center justify-center hover:bg-gray-100 dark:hover:text-black`}>
                                 Uses
                             </a>
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
 
