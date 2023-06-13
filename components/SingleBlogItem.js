@@ -24,8 +24,8 @@ export function SingleBlogItem({ title, description, slug, date, photo }) {
                         <div className="text-sm">
                             <a className="bg-black dark:bg-slate-100 dark:text-black hover:text-slate-100 text-white text-xs py-2 px-3 rounded group w-max flex justify-center items-center">
                                 <span>Read More</span>
-                                <span className='inline-block group-hover:translate-x-1 transition-transform ml-1'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+                                <span className='inline-block group-hover:translate-x-1 transition-transform ml-1'><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-4 h-4">
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
                                 </svg>
                                 </span>
                             </a>
