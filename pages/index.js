@@ -13,11 +13,7 @@ import { getAllblogPosts, getIndexData } from "../lib/data";
 export default function Home({ posts, cv }) {
   experiences.sort((a, b) => new Date(b.timeline) - new Date(a.timeline));
   return (
-    <Container>
-      <Head>
-        <title>Portfolio | Home 💻</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <Container title="Portfolio | Home 💻">
       <main className="mb-auto">
         <div className="mb-6 custom-section-height flex flex-col justify-center items-center -mt-6 text-center">
           <div className="mb-4">
