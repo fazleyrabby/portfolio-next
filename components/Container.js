@@ -10,7 +10,11 @@ export const Container = ({ title, children }) => {
             <title>{title}</title>
             <link rel="icon" href="/favicon.ico" />
             {typeof window !== 'undefined' && (
-                <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5912010310110935" />
+                <Script
+                id="adsbygoogle-init"
+                strategy="afterInteractive"
+                crossOrigin="anonymous"
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5912010310110935" />
             )}
         </Head>
         <Navbar />

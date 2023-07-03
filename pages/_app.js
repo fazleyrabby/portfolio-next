@@ -27,8 +27,8 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <ThemeProvider attribute="class" defaultTheme="system">
-      <Component {...pageProps}/>
-      <ScrollToTop/>
+      <Component {...pageProps} />
+      <ScrollToTop />
     </ThemeProvider>
   )
 }
