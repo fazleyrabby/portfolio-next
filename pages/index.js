@@ -168,9 +168,9 @@ export default function Home({ posts, cv }) {
           <h1 className="text-4xl font-bold m-6 text-center">Skills</h1>
           <div className="mx-auto space-y-2 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2">
             <div className="mb-4">
-              <h3 className="mb-4 font-bold">
+              <h2 className="mb-4 font-bold">
                 Tools / Languages I mostly work with
-              </h3>
+              </h2>
               <ul className="flex gap-3 skill-items flex-wrap">
                 <li>Javascript</li>
                 <li>PHP</li>
@@ -182,7 +182,7 @@ export default function Home({ posts, cv }) {
             </div>
 
             <div>
-              <h3 className="mb-4 font-bold">Tools I try out as hobby</h3>
+              <h2 className="mb-4 font-bold">Tools I try out as hobby</h2>
               <ul className="flex gap-3 skill-items flex-wrap">
                 <li>React JS</li>
                 <li>Tailwind CSS</li>
@@ -207,11 +207,11 @@ export default function Home({ posts, cv }) {
                   <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                     {item.from} - {item.to}
                   </time>
-                  <h3 className="text-2xl font-bold">
+                  <h2 className="text-2xl font-bold">
                     <a href={item.link} target='_blank' rel="noreferrer">
                       {item.name}
                     </a>
-                  </h3>
+                  </h2>
                   <p className="mb-2 text-sm text-gray-500">{item.role}</p>
                   {item.contributions.length > 1 ? (
                     <ul className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
