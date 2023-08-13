@@ -16,6 +16,16 @@ export const Container = ({ title, children }) => {
                 crossOrigin="anonymous"
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5912010310110935" />
             )}
+            <meta name="description" content="Fazley Rabbi Portfolio" key="desc" />
+            <meta property="og:title" content="Fazley Rabbi Web Developer Portfolio" />
+            <meta
+            property="og:description"
+            content="Web developer portfolio laravel developer"
+            />
+            <meta
+            property="og:image"
+            content="https://fazleyrabbi.xyz/me.jpg"
+            />
         </Head>
         <Navbar />
         <div className='flex flex-col h-screen justify-between'>
