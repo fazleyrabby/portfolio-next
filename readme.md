@@ -1,11 +1,12 @@
-A Simple portfolio/blog site made with Next JS , Tailwind CSS & Strapi CMS
+A Simple portfolio/blog site made with Next JS , Tailwind CSS & GraphCMS
 
-Currently on work! 
-Sample images:
+Screenshots:
+
+## Index Page hero section 
 
 ![image](https://user-images.githubusercontent.com/26044286/155837899-a783effa-a050-4643-8438-1b24830bf3b6.png)
 
-<!-- ## Index Page hero section (Dark mode)
+## Index Page hero section (Dark mode)
 
 ![image](https://user-images.githubusercontent.com/26044286/155837872-930d062a-53ef-4008-b5a7-687bfaeca860.png)
 
@@ -23,4 +24,4 @@ Sample images:
 
 ## Experience section
  
-![image](https://user-images.githubusercontent.com/26044286/155837941-b3d47bef-d2cb-4cb9-8c47-b31e80fc3418.png) -->
+![image](https://user-images.githubusercontent.com/26044286/155837941-b3d47bef-d2cb-4cb9-8c47-b31e80fc3418.png)
