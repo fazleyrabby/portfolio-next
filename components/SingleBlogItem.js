@@ -29,7 +29,6 @@ export function SingleBlogItem({ title, description, slug, date, photo }) {
                                 </svg>
                                 </span>
                             </a>
-
                         </div>
                     </div>
                 </div>
