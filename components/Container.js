@@ -24,7 +24,7 @@ export const Container = ({ title, children }) => {
             />
             <meta
             property="og:image"
-            content="https://fazleyrabbi.xyz/me.jpg"
+            content="https://fazleyrabbi.xyz/me.webp"
             />
         </Head>
         <Navbar />

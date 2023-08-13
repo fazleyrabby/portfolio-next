@@ -18,7 +18,7 @@ export default function Home({ posts, cv }) {
         <div className="mb-6 custom-section-height flex flex-col justify-center items-center -mt-6 text-center">
           <div className="mb-4">
             <img
-              src="/me.jpg"
+              src="/me.webp"
               width={240}
               height={240}
               className="rounded-full overflow-hidden"
