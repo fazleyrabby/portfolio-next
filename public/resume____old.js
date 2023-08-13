@@ -115,10 +115,10 @@ export default function Resume() {
                                     </div>
                                     <div className="projects mb-1">
                                         <h3 className="font-bold">Projects</h3>
-                                        <div>1. <a href="https://github.com/fazleyrabby/routine-lte" target="_blank">Faculty class Routine Management System</a> (Final Year Project) [Laravel, Bootstrap, MySQL]  </div>
-                                        <div>2. <a href="https://codecanyon.net/item/ebank-complete-online-banking-system-with-dps-loan/30597974" target="_blank">E-Bank</a> - Online Banking System (for AMCoders)  </div>
-                                        <div>3. <a href="https://codecanyon.net/item/lenden-multipurpose-payment-gateway-system-saas/32131005" target="_blank">Lenden</a> - Multipurpose Payment Gateway System (for AMCoders) </div>
-                                        <div>4. <a href="https://codecanyon.net/item/timelock-project-management-system-with-screenshot-capture/32354442" target="_blank">Timelock</a> - Project Management System </div>
+                                        <div>1. <a aria-label="Routine" href="https://github.com/fazleyrabby/routine-lte" target="_blank">Faculty class Routine Management System</a> (Final Year Project) [Laravel, Bootstrap, MySQL]  </div>
+                                        <div>2. <a aria-label="Ebank" href="https://codecanyon.net/item/ebank-complete-online-banking-system-with-dps-loan/30597974" target="_blank">E-Bank</a> - Online Banking System (for AMCoders)  </div>
+                                        <div>3. <a aria-label="Lenden" href="https://codecanyon.net/item/lenden-multipurpose-payment-gateway-system-saas/32131005" target="_blank">Lenden</a> - Multipurpose Payment Gateway System (for AMCoders) </div>
+                                        <div>4. <a aria-label="Timelock" href="https://codecanyon.net/item/timelock-project-management-system-with-screenshot-capture/32354442" target="_blank">Timelock</a> - Project Management System </div>
                                     </div>
                                     <div className="reference mb-1">
                                         <h3 className="font-bold">Reference</h3>

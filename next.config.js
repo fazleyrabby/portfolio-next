@@ -12,6 +12,10 @@ const nextConfig = {
       new webpack.EnvironmentPlugin(process.env)
     )
     return config
+  },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
   }
 }
 

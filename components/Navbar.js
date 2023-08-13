@@ -57,6 +57,7 @@ export const Navbar = () => {
 
                 <div className='lg:order-3'>
                     <button
+                        aria-label="Theme"
                         className=' inline-flex p-3 hover:bg-gray-100 rounded lg:hidden text-black ml-auto  outline-none dark:text-white dark:hover:text-black'
                         onClick={handleClick}
                     >

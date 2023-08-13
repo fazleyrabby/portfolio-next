@@ -22,6 +22,7 @@ export default function Home({ posts, cv }) {
               width={240}
               height={240}
               className="rounded-full overflow-hidden"
+              alt="profile img"
             />
           </div>
           <h1 className="lg:text-5xl text-3xl font-bold mb-4">
@@ -85,9 +86,9 @@ export default function Home({ posts, cv }) {
                     />
                   </a>
                   <div className="p-3">
-                    <h5 className="text-gray-900 text-2xl font-bold mb-2">
+                    <h2 className="text-gray-900 text-2xl font-bold mb-2">
                       {item.title}
-                    </h5>
+                    </h2>
                     <p className="text-gray-700 text-sm mb-4">
                       {item.description}
                     </p>

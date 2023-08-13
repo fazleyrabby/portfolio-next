@@ -22,7 +22,7 @@ export default function About() {
                   <Image src={item.thumbnail} className="object-left-top" alt='' width={100} height="60px" layout="responsive" objectFit="cover" placeholder="blur" blurDataURL={item.thumbnail} priority/>
                   </a>
                   <div className="p-3">
-                    <h5 className="text-gray-900 text-2xl font-bold mb-2">{item.title}</h5>
+                    <h2 className="text-gray-900 text-2xl font-bold mb-2">{item.title}</h2>
                     <p className="text-gray-700 text-sm mb-4">
                       {item.description}
                     </p>
