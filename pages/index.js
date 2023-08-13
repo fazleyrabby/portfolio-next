@@ -71,6 +71,7 @@ export default function Home({ posts, cv }) {
                     rel="noreferrer "
                     data-mdb-ripple="true"
                     data-mdb-ripple-color="light"
+                    aria-label={`${item.title}`}
                   >
                     <Image
                       src={item.thumbnail}
