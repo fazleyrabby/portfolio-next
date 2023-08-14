@@ -1,0 +1,81 @@
+.cv-container {
+    width: 210mm;
+    min-height: 290mm;
+    margin: 0 auto; 
+    /* padding: 0.5rem;  */
+    background-color: #fff;
+    color:black;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    /* backgroundColor: '#f5f5f5',
+        width: '210mm',
+        minHeight: '297mm',
+        marginLeft: 'auto',
+        marginRight: 'auto' */
+}
+
+.cv-wrapper{
+    overflow-y: hidden;
+}
+
+
+.top {
+    /* min-height: max-content; */
+    padding: 1rem 1rem 0 1rem;
+    /* display: flex; */
+    /* gap: 1rem; */
+}
+
+.title {
+    min-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bottom {
+    display: flex;
+}
+
+.content {
+    /* margin: 1rem; */
+    padding: 1rem;
+    /* font-size: 0.95rem; */
+    /* border: 1px dashed; */
+}
+
+.content div {
+    min-height: max-content;
+}
+
+.content a:hover{
+    text-decoration: underline;
+}
+
+.content.left {
+    width: 100%;
+    /* margin-left: 1rem; */
+}
+
+.content.right {
+    width: 50%;
+    /* margin-right: 1rem; */
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style: none;
+}
+
+
+#download-button{
+    /* position: absolute; */
+    cursor: pointer;
+}
+
+#download-button:hover{
+    text-decoration: underline;
+    color: blueviolet;
+}

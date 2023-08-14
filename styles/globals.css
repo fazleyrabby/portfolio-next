@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Jost:wght@100;400;800&family=Lora:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&family=Jost:wght@100;400;800&family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&display=swap'); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +12,6 @@
 }
 .skill-items li{
   @apply border border-gray-700 dark:border-gray-100 rounded-md px-3 py-2 uppercase text-xs;
-  
 }
 /* 
 html.dark 
@@ -70,7 +72,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family:  'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family:  'Outfit','Segoe UI', 'system-ui', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     height: 100vh;
 }
@@ -82,4 +84,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.after-border{
+  position: relative;
+}
+.after-border::after{
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  content: "";
+  width: 75px;
+  height: 3px;
+  background: #fff;
 }

@@ -1,6 +1,7 @@
 import { ScrollToTop } from '../components/ScrollToTop'
 import { ThemeProvider } from 'next-themes'
 import '../styles/globals.css'
+import '../styles/cv.css'
 import "nprogress/nprogress.css";
 
 import NProgress from "nprogress";
@@ -26,8 +27,8 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <ThemeProvider attribute="class" defaultTheme="system">
-      <Component {...pageProps}/>
-      <ScrollToTop/>
+      <Component {...pageProps} />
+      <ScrollToTop />
     </ThemeProvider>
   )
 }

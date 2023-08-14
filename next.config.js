@@ -4,7 +4,7 @@ const webpack = require('webpack')
 
 const nextConfig = {
   images: {
-    domains: ["res.cloudinary.com"]
+    domains: ["res.cloudinary.com","media.graphcms.com","i.imgur.com","media.graphassets.com"]
   },
   reactStrictMode: true,
   webpack: (config) => {
@@ -12,6 +12,10 @@ const nextConfig = {
       new webpack.EnvironmentPlugin(process.env)
     )
     return config
+  },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
   }
 }
 
