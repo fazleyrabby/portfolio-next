@@ -4,11 +4,11 @@ Screenshots:
 
 ## Index Page hero section 
 
-![image](https://user-images.githubusercontent.com/26044286/155837899-a783effa-a050-4643-8438-1b24830bf3b6.png)
+<img width="1159" alt="image" src="https://github.com/fazleyrabby/portfolio-next/assets/26044286/0a5439cb-255c-412d-b560-740abb3969c5">
 
 ## Index Page hero section (Dark mode)
 
-![image](https://user-images.githubusercontent.com/26044286/155837872-930d062a-53ef-4008-b5a7-687bfaeca860.png)
+<img width="1159" alt="image" src="https://github.com/fazleyrabby/portfolio-next/assets/26044286/f069f391-b831-4847-aac1-b47f8636169f">
 
 ## Project Section 
 
