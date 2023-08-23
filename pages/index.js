@@ -43,7 +43,7 @@ export default function Home({ posts, cv }) {
               Resume
             </a>
           </Link>
-          <a href="#projects">
+          <a href="#projects" alt="projects" aria-label="projects" rel="noopener">
             <svg
               className="w-6 h-6 mt-12 " //animate-[bounce_2s_ease-in-out_infinite]
               fill="none"
