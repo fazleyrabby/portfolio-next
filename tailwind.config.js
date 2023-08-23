@@ -17,7 +17,6 @@ module.exports = {
     container: false
   },
   theme: {
-    
     fontFamily: {
       'sans' : ['Inter','sans-serif'],
       'serif' : ['Lora','serif'],

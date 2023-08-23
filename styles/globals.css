@@ -63,20 +63,20 @@ html {
 
 :root {
   /* Your default theme */
-  --background: white;
-  --foreground: black;
+  /* --background: white;
+  --foreground: black; */
 }
 
 [data-theme='dark'] {
-  --background: black;
-  --foreground: white;
+  /* --background: black;
+  --foreground: white; */
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family:  'Outfit','Segoe UI', 'system-ui', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family:  'Inter','Segoe UI', 'system-ui', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     height: 100vh;
 }

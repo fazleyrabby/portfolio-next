@@ -2,6 +2,7 @@ import Head from "next/head"
 import { Footer } from "./Footer"
 import { Navbar } from "./Navbar"
 import Script from "next/script"
+import { Html } from "next/document"
 
 export const Container = ({ title, children }) => {
     return (
@@ -28,7 +29,7 @@ export const Container = ({ title, children }) => {
             />
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-            <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;700&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap" rel="stylesheet" />
         </Head>
         <Navbar />
         <div className='flex flex-col h-screen justify-between'>
