@@ -2,7 +2,6 @@ import Head from "next/head"
 import { Footer } from "./Footer"
 import { Navbar } from "./Navbar"
 import Script from "next/script"
-import { Html } from "next/document"
 
 export const Container = ({ title, children }) => {
     return (
