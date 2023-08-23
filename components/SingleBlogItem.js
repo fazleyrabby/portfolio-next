@@ -14,7 +14,8 @@ export function SingleBlogItem({ title, description, slug, date, photo }) {
                     }}
                 >
                 </div>
-                <div className="border-r border-b border-l border-gray-400 dark:border-gray-900 lg:border-l-0 lg:border-t lg:border-gray-100  rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal w-full">
+                {/* border-r border-b border-l border-gray-100 dark:border-gray-900 lg:border-l-0 lg:border-t lg:border-gray-100 */}
+                <div className="blog-item">
                     <div className="mb-8">
                         <a href="#" className='text-2xl font-bold mb-2 block capitalize group-hover:underline'>{title}</a>
                         <div className="text-gray-700 text-base dark:text-white">{description}</div>

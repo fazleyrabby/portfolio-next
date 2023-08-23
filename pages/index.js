@@ -61,6 +61,7 @@ export default function Home({ posts, cv }) {
           </a>
         </div>
 
+        {/* Projects  */}
         <div className="lg:mb-48 mb-24" id="projects">
           <h1 className="text-4xl font-bold m-6 text-center">Projects</h1>
           <div className="mx-auto space-y-6 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2">
@@ -167,6 +168,7 @@ export default function Home({ posts, cv }) {
           </div>
         </div>
 
+        {/* Skills */}
         <div className="lg:mb-48 mb-24">
           <h1 className="text-4xl font-bold m-6 text-center">Skills</h1>
           <div className="mx-auto space-y-2 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2">
@@ -200,6 +202,7 @@ export default function Home({ posts, cv }) {
           </div>
         </div>
 
+        {/* Experience */}
         <div className="lg:mb-48 mb-24">
           <h1 className="text-4xl font-bold m-6 text-center">Experience</h1>
           <div>
@@ -235,15 +238,15 @@ export default function Home({ posts, cv }) {
           </div>
         </div>
 
-
-        <div className="mb-10">
+        {/* Blogs  */}
+        {/* <div className="mb-10">
           <h1 className="text-4xl font-bold m-6 text-center">Blogs</h1>
           <div className="space-y-10">
             {posts.map((post) => {
               return <SingleBlogItem key={post.id} {...post} />;
             })}
           </div>
-        </div>
+        </div> */}
       </main>
     </Container>
   );
