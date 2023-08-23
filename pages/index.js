@@ -15,7 +15,7 @@ export default function Home({ posts, cv }) {
   return (
     <Container title="Portfolio | Home 💻">
       <main className="mb-auto">
-        <div className="mb-6 custom-section-height flex flex-col justify-center items-center -mt-6 text-center">
+        <div className="mb-6 h-[calc(100vh-20rem)] flex flex-col justify-center items-center -mt-6 text-center">
           <div className="mb-4">
             <img
               src="/me.webp"
@@ -43,23 +43,25 @@ export default function Home({ posts, cv }) {
               Resume
             </a>
           </Link>
-          <svg
-            className="w-6 h-6 mt-12 animate-[bounce_2s_ease-in-out_infinite]"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"
-            ></path>
-          </svg>
+          <a href="#projects">
+            <svg
+              className="w-6 h-6 mt-12 " //animate-[bounce_2s_ease-in-out_infinite]
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M15 13l-3 3m0 0l-3-3m3 3V8m0 13a9 9 0 110-18 9 9 0 010 18z"
+              ></path>
+            </svg>
+          </a>
         </div>
 
-        <div className="lg:mb-48 mb-24">
+        <div className="lg:mb-48 mb-24" id="projects">
           <h1 className="text-4xl font-bold m-6 text-center">Projects</h1>
           <div className="mx-auto space-y-6 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2">
             {projects.map((item) => (

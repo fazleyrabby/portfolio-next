@@ -44,6 +44,10 @@ html.light .markdown > p,
 {
   color: #111 !important;
 } */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 12rem;
+}
 
 #nprogress .bar {
   background: #29d !important;

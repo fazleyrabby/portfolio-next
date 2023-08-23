@@ -2,7 +2,6 @@
 /*eslint-disable @next/next/no-img-element*/
 import axios from 'axios'
 import MarkdownIt from 'markdown-it/lib'
-import Head from 'next/head'
 import Link from 'next/link'
 import { Container } from '../components/Container'
 import Image from 'next/image';
@@ -21,12 +20,9 @@ export default function About({ about }) {
     <Container title='Portfolio | About 💻'>
       <main>
         <h1 className="text-4xl font-bold m-6 text-center">{about.title}</h1>
-
         {photo && (<div className='text-center mb-4'>
           <Image src={photo} layout="fixed" height="300px" width="300px" alt="" placeholder="blur" blurDataURL={photo} priority />
         </div>)}
-
-
         <section className='markdown text-center mb-4'>
           <div className='prose dark:prose-invert w-full text-justify mr-0 ml-0 inline' dangerouslySetInnerHTML={{ __html: markdown_content }}></div>
         </section>
