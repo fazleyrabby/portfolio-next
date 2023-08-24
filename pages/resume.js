@@ -10,8 +10,8 @@ export default function Resume() {
                 <div className="mb-10">
                     <div className="p-4 cv-wrapper">
                         <object type="application/pdf" data="/cv.pdf"
-                        width="800px"
-                        height="700px"
+                        width="100%"
+                        height="1000px"
                         ></object>
                     </div>
                 </div>
