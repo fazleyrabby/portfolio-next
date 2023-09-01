@@ -17,6 +17,7 @@ export const Container = ({ title, children }) => {
                 data-ad-client="ca-pub-5912010310110935"
                 async="true"
                 strategy="beforeInteractive"
+                crossorigin="anonymous"
                 onError={ (e) => { console.error('Script failed to load', e) }}
                 src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
             />
