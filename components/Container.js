@@ -12,13 +12,14 @@ export const Container = ({ title, children }) => {
                 strategy="lazyOnload"
                 src={`https://www.googletagmanager.com/gtag/js?id=${env.GOOGLE_ANALYTICS}`}
             />
-            {typeof window !== 'undefined' && (
-                <Script
-                    id="adsbygoogle-init"
-                    strategy="afterInteractive"
-                    crossOrigin="anonymous"
-                    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5912010310110935" />
-            )}
+            <Script
+                id="Adsense-id"
+                data-ad-client="ca-pub-5912010310110935"
+                async="true"
+                strategy="beforeInteractive"
+                onError={ (e) => { console.error('Script failed to load', e) }}
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+            />
             <Script id="googleAnalytics" strategy="lazyOnload">
                 {`
                     window.dataLayer = window.dataLayer || [];
