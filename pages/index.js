@@ -15,7 +15,7 @@ export default function Home({ posts, cv }) {
   return (
     <Container title="Portfolio | Home 💻">
       <main className="mb-auto">
-        <div className="mb-6 h-[calc(100vh-20rem)] flex flex-col justify-center items-center -mt-6 text-center">
+        <div className="mb-6 h-screen sm:h-[calc(100vh-20rem)] flex flex-col justify-center items-center -mt-6 text-center">
           <div className="mb-4">
             <img
               src="/me.webp"
