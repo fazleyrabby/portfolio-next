@@ -64,10 +64,10 @@ export default function Home({ posts, cv }) {
         {/* Projects  */}
         <div className="lg:mb-48 mb-24" id="projects">
           <h1 className="text-4xl font-bold m-6 text-center">Projects</h1>
-          <div className="mx-auto space-y-6 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2">
+          <div className="hover:blur mx-auto space-y-6 lg:space-y-0 lg:gap-6 lg:grid lg:grid-cols-2">
             {projects.map((item) => (
               <div key={item.title}>
-                <div className="rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform bg-white max-w-md overflow-hidden mx-auto">
+                <div className="hover:blur-none rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition-transform bg-white max-w-md overflow-hidden mx-auto">
                   <a
                     href={item.live || item.github || "#!"}
                     target="_blank"
@@ -78,7 +78,7 @@ export default function Home({ posts, cv }) {
                   >
                     <Image
                       src={item.thumbnail}
-                      className="object-left-top"
+                      className="object-contain object-left-top hover:animate-objtoright"
                       alt=""
                       width={100}
                       height="60px"

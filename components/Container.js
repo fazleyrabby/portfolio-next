@@ -31,7 +31,7 @@ export const Container = ({ title, children }) => {
                     });
                 `}
             </Script>
-            <Head>
+            <Head>``
                 <title>{title}</title>
                 <link rel="icon" href="/favicon.ico" />
 

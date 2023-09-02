@@ -35,7 +35,8 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 3s ease-in-out infinite',
         bounce: 'bounce 2s ease-in-out infinite',
-        fadein: 'fadein 200ms linear'
+        fadein: 'fadein 200ms linear',
+        objtoright: 'objtoright 10s alternate infinite'
       },
       keyframes: {
         wiggle: {
@@ -45,8 +46,11 @@ module.exports = {
         fadein: {
           '0%': { transform: 'translateY(-100%)'},
           '100%': { transform: 'translateY(0)'},
+        },
+        objtoright: {
+          '0%': { 'object-position': 'top left'},
+          '100%': { 'object-position': 'top right'},
         }
-        
       }
     },
   },
