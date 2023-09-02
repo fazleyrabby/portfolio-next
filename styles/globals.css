@@ -105,3 +105,11 @@ a {
   height: 3px;
   background: #fff;
 }
+
+.hover-parent:hover .hover-child{
+  filter: blur(2px);
+}
+
+.hover-parent .hover-child:hover{
+  filter: none;
+}
