@@ -31,10 +31,9 @@ export const Container = ({ title, children }) => {
                     });
                 `}
             </Script>
-            <Head>``
+            <Head>
                 <title>{title}</title>
                 <link rel="icon" href="/favicon.ico" />
-
                 <meta name="description" content="Fazley Rabbi Portfolio" key="desc" />
                 <meta property="og:title" content="Fazley Rabbi Web Developer Portfolio" />
                 <meta
