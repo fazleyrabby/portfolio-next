@@ -1,3 +1,5 @@
+---
+---
 A Simple portfolio/blog site made with Next JS , Tailwind CSS & GraphCMS
 
 Screenshots:
